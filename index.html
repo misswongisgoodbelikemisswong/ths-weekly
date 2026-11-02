@@ -5,34 +5,18 @@
 .pair{min-width:0}.choice>.pair{flex:1}header label>.pair{font-size:12px;margin-bottom:6px}nav button{text-align:left}.tag>.pair{display:inline-block;vertical-align:top}select{max-width:100%}header select{max-width:100%}@media(max-width:600px){header{align-items:flex-start;flex-wrap:wrap}header label{max-width:100%}h1 .pair .zh{font-size:.55em}}
 
 #connectionNotice{margin-bottom:24px}.identity-fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:14px 0}.submission-box{border-top:1px solid var(--line);padding-top:14px;margin-top:20px}.submission-status{margin:12px 0}.submission-bridge{position:absolute;width:1px;height:1px;border:0;left:-9999px}button:disabled{cursor:not-allowed;opacity:.55}@media(max-width:600px){.identity-fields{grid-template-columns:1fr}}
+
+.curriculum-map{border-top:2px solid var(--teal);padding:16px 0;margin:20px 0}.curriculum-map p{margin:5px 0}#editionNotice{margin-bottom:18px}
+.choice>.option-letter{flex:0 0 1.25em;font-weight:700}.curriculum-map .pair{display:inline-block;vertical-align:top}
 </style></head>
 <body data-lang="both"><header><div class="brand">THS / FIELDNOTES<small>THE TOURISM &amp; HOSPITALITY JOURNAL</small></div><label for="language"><span class="pair"><span class="en" lang="en">Language</span><span class="zh" lang="zh-Hant">語言</span></span><select id="language"><option value="both">Bilingual · English first / 中英對照</option><option value="en">English</option><option value="zh">繁體中文</option></select></label></header>
 <main><section class="hero"><div><div class="eyebrow">Student edition · October 2026</div><h1><span class="pair"><span class="en" lang="en">The world is your classroom.</span><span class="zh" lang="zh-Hant">看世界，學懂旅遊與款待。</span></span></h1><p><span class="pair"><span class="en" lang="en">Read real cases, connect course concepts, and build your answers with evidence.</span><span class="zh" lang="zh-Hant">從真實新聞出發：閱讀案例、連結課程概念，再用數據與觀點提出你的答案。</span></span></p><p class="muted"><span class="pair"><span class="en" lang="en">3 issues + Service Triangle spotlight · 17 cases · HKDSE THS</span><span class="zh" lang="zh-Hant">3 期週報＋服務金三角專題 · 17 個案例 · 香港中學文憑旅遊與款待科</span></span></p></div><div><div id="stats" class="stats"></div><p id="saveStatus" class="saved" role="status"></p></div></section>
 <nav role="tablist" aria-label="Learning areas / 學習區"><button role="tab" aria-selected="true" data-tab="read"><span class="pair"><span class="en" lang="en">01 / Explore</span><span class="zh" lang="zh-Hant">01 / 閱讀案例</span></span></button><button role="tab" aria-selected="false" data-tab="lab" class="secondary"><span class="pair"><span class="en" lang="en">02 / Numbers lab</span><span class="zh" lang="zh-Hant">02 / 數據實驗室</span></span></button><button role="tab" aria-selected="false" data-tab="export" class="secondary"><span class="pair"><span class="en" lang="en">03 / My work</span><span class="zh" lang="zh-Hant">03 / 我的學習紀錄</span></span></button></nav>
-<div id="connectionNotice" class="note" role="status"></div><section data-view="read"><div class="filters"><label for="week"><span class="pair"><span class="en" lang="en">Issue</span><span class="zh" lang="zh-Hant">週報日期</span></span><select id="week"><option value="">All content / 全部內容</option><option value="2026-10-29" selected>29 Oct · Service Triangle spotlight / 服務金三角專題</option><option value="2026-10-26">26 Oct 2026</option><option value="2026-10-19">19 Oct 2026</option><option value="2026-10-12">12 Oct 2026</option></select></label><label for="topic"><span class="pair"><span class="en" lang="en">Topic</span><span class="zh" lang="zh-Hant">課題</span></span><select id="topic"></select></label><label for="search"><span class="pair"><span class="en" lang="en">Search</span><span class="zh" lang="zh-Hant">搜尋</span></span><input id="search" type="search" placeholder="e.g. occupancy, sustainability / 例如：入住率"></label></div><p id="resultCount" class="muted" aria-live="polite"></p><div id="cards" class="grid"></div></section>
+<div id="editionNotice" class="note" hidden><span class="pair"><span class="en" lang="en">DSE exercises have been revised. Earlier drafts are retained in your text export and have not been reused as answers to the new questions.</span><span class="zh" lang="zh-Hant">DSE 練習已修訂。舊版草稿保留在文字匯出中，不會自動套用為新題的答案。</span></span></div><div id="connectionNotice" class="note" role="status"></div><section data-view="read"><div class="filters"><label for="week"><span class="pair"><span class="en" lang="en">Issue</span><span class="zh" lang="zh-Hant">週報日期</span></span><select id="week"><option value="">All content / 全部內容</option><option value="2026-10-29" selected>29 Oct · Service Triangle spotlight / 服務金三角專題</option><option value="2026-10-26">26 Oct 2026</option><option value="2026-10-19">19 Oct 2026</option><option value="2026-10-12">12 Oct 2026</option></select></label><label for="topic"><span class="pair"><span class="en" lang="en">Topic</span><span class="zh" lang="zh-Hant">課題</span></span><select id="topic"></select></label><label for="search"><span class="pair"><span class="en" lang="en">Search</span><span class="zh" lang="zh-Hant">搜尋</span></span><input id="search" type="search" placeholder="e.g. occupancy, sustainability / 例如：入住率"></label></div><p id="resultCount" class="muted" aria-live="polite"></p><div id="cards" class="grid"></div></section>
 <section data-view="lab" hidden><div class="panel"><div class="eyebrow">Numbers tell a story</div><h2><span class="pair"><span class="en" lang="en">Does a full hotel mean higher profit?</span><span class="zh" lang="zh-Hant">入住率高，就代表賺得多？</span></span></h2><p><span class="pair"><span class="en" lang="en">ADR is average daily room rate; occupancy is the share of available rooms sold; RevPAR is room revenue per available room. None directly measures profit.</span><span class="zh" lang="zh-Hant">ADR 是平均每日房價；入住率是已出租客房佔可供出租客房的比例；RevPAR 是每間可供出租客房的房間收入。三者均不直接量度利潤。</span></span></p><div class="note"><span class="pair"><span class="en" lang="en">RevPAR = ADR × Occupancy</span><span class="zh" lang="zh-Hant">RevPAR = ADR × 入住率</span></span><span class="pair"><span class="en" lang="en">Convert the percentage to a decimal: 80% = 0.80.</span><span class="zh" lang="zh-Hant">計算時將百分比化為小數，例如 80% = 0.80。</span></span></div></div><div class="lab-grid"><div class="panel"><h3><span class="pair"><span class="en" lang="en">Practice</span><span class="zh" lang="zh-Hant">練習</span></span></h3><label for="exercise"><span class="pair"><span class="en" lang="en">Select exercise</span><span class="zh" lang="zh-Hant">選擇題目</span></span><select id="exercise"><option value="0">1 · RevPAR</option><option value="1">2 · ADR</option><option value="2">3 · Occupancy / 入住率</option></select></label><p id="exerciseQ"></p><div id="labIdentity"></div><label for="exerciseAnswer"><span class="pair"><span class="en" lang="en">Your numerical answer</span><span class="zh" lang="zh-Hant">你的數值答案</span></span><input type="number" step="any" min="0" required id="exerciseAnswer"></label><div id="exerciseSubmission"></div></div><div class="panel"><h3><span class="pair"><span class="en" lang="en">Scenario calculator</span><span class="zh" lang="zh-Hant">情境計算器</span></span></h3><p class="muted"><span class="pair"><span class="en" lang="en">Hypothetical teaching inputs</span><span class="zh" lang="zh-Hant">教學假設數據</span></span></p><label for="adr">ADR · HK$<input id="adr" type="number" min="0" step="any" required value="1000"></label><label for="occupancy"><span class="pair"><span class="en" lang="en">Occupancy · %</span><span class="zh" lang="zh-Hant">入住率 · %</span></span><input id="occupancy" type="number" min="0" max="100" step="any" required value="80"></label><div class="row"><button id="calculate"><span class="pair"><span class="en" lang="en">Calculate</span><span class="zh" lang="zh-Hant">計算</span></span></button></div><div id="calcResult" aria-live="polite"></div><p class="muted"><span class="pair"><span class="en" lang="en">Try ADR of $1,200 and occupancy of 65%. How does RevPAR change? What else is needed to assess profit?</span><span class="zh" lang="zh-Hant">試把房價提高至 $1,200、入住率降至 65%。RevPAR 有何改變？還需要甚麼資料才能判斷盈利？</span></span></p></div></div></section>
 <section data-view="export" hidden><div class="panel"><div class="eyebrow">Your learning portfolio</div><h2><span class="pair"><span class="en" lang="en">Take your thinking with you.</span><span class="zh" lang="zh-Hant">帶走你的想法。</span></span></h2><div id="portfolioIdentity"></div><p><span class="pair"><span class="en" lang="en">Export your drafts and submission receipts across all issues and the spotlight. Only confirmed submissions unlock feedback. You can also download a text file or print to PDF for Google Classroom.</span><span class="zh" lang="zh-Hant">匯出各期週報及專題中的草稿與提交收據。只有已確認的提交才解鎖回饋。你也可以下載文字檔或列印為 PDF，供 Google Classroom 使用。</span></span></p><label class="choice"><input id="includeRefs" type="checkbox"><span class="pair"><span class="en" lang="en">Include unlocked feedback / thinking prompts</span><span class="zh" lang="zh-Hant">包含已解鎖的回饋／思考方向</span></span></label><div class="row"><button id="exportTxt"><span class="pair"><span class="en" lang="en">Download answers · TXT</span><span class="zh" lang="zh-Hant">下載答案文字檔</span></span></button><button id="print" class="secondary"><span class="pair"><span class="en" lang="en">Print / Save PDF</span><span class="zh" lang="zh-Hant">列印／儲存 PDF</span></span></button></div><div class="note"><span class="pair"><span class="en" lang="en">Drafts stay in this browser. Submit sends the selected assignment, name, class and optional student number to your teacher’s Google Sheet and triggers an email notification. Submitted records remain with your teacher after local records are cleared. Export before switching devices or using a shared computer.</span><span class="zh" lang="zh-Hant">草稿保存在目前瀏覽器。按提交才會把該題作答、姓名、班別及選填學號傳送至老師的 Google 試算表，並觸發電郵通知。清除本機紀錄不會刪除老師收到的提交。轉換裝置或使用共用電腦前請先匯出。</span></span></div><div class="row"><button id="reset" class="secondary"><span class="pair"><span class="en" lang="en">Clear local records</span><span class="zh" lang="zh-Hant">清除本機紀錄</span></span></button></div></div></section>
 <footer><p><span class="pair"><span class="en" lang="en">Scope: the 12, 19 and 26 October 2026 briefings plus a Service Triangle supplement added on 29 October (news dated 5 October and 21 September), not a live news feed. Cases preserve reporting dates and data periods. Analysis, questions and suggested points are teaching materials, not official HKEAA content. Consult linked sources for original reports and subsequent corrections.</span><span class="zh" lang="zh-Hant">資料範圍：2026 年 10 月 12、19、26 日三期週報，另於 10 月 29 日加入服務金三角專題（新聞日期為 10 月 5 日及 9 月 21 日），並非即時新聞。各案例保留報道日期及數據所屬期間；分析、題目及參考思路為教學設計，並非香港考評局官方材料。請按來源連結查看原文及後續更正。</span></span></p><p>THS FIELDNOTES · READ. QUESTION. CONNECT.</p></footer></main>
 <dialog id="articleDialog" aria-label="Case and activities / 案例與練習"><div class="dialog-bar"><span>FIELDNOTES / CASE STUDY</span><button id="closeDialog"><span class="pair"><span class="en" lang="en">Close ×</span><span class="zh" lang="zh-Hant">關閉 ×</span></span></button></div><div class="inner" id="articleBody"></div></dialog><div id="printReport"></div><script>const articles = [
-{ id:'1012-1',week:'2026-10-12',topic:'hotel',title:['香港黃金周：入住率與盈利','Golden Week: Occupancy and profit'],news:['10 月 8 日公布：10 月 1–7 日香港錄得約 160 萬訪客人次，酒店整體入住率達 90%。','Announced on 8 October: Hong Kong recorded about 1.6 million visitor arrivals during 1–7 October, with overall hotel occupancy reaching 90%.'],concept:['住宿業・季節性・房價策略','Accommodation · Seasonality · Pricing'],analysis:['高入住率代表房間使用情況良好，但盈利仍取決於房價及成本。','High occupancy indicates strong room use, but profit also depends on rates and costs.'],q:['入住率達 90% 是否足以證明盈利理想？提出兩項還需收集的資料並解釋。','Does 90% occupancy prove high profitability? Identify and explain two additional types of data needed.'],ref:['不一定。平均房價能顯示每間已售客房帶來多少收入；員工、清潔及能源等成本可用來判斷收入扣除開支後是否仍有盈利。','Not necessarily. ADR indicates revenue per room sold; labour, cleaning and energy costs help establish whether revenue exceeds expenses.'],mcq:['哪項最能直接反映盈利？','Which most directly indicates profitability?'],options:[['入住率','Occupancy'],['收入減開支','Revenue minus expenses'],['訪港總人次','Total visitor arrivals']],correct:1,explain:['盈利須考慮收入與開支；入住率並沒有計算成本。','Profit requires both revenue and expenses; occupancy does not account for costs.'],source:'https://www.info.gov.hk/gia/general/202610/08/P2026100800615.htm',publisher:'Hong Kong Government',date:'2026-10-08'},
-{ id:'1012-2',week:'2026-10-12',topic:'demand',title:['出遊熱度與消費可以走不同方向','Travel demand and spending can diverge'],news:['10 月 9 日路透社按政府數據計算：10 月 1–7 日內地國內旅遊平均每人次消費為人民幣 893.92 元，按年跌 1.9%。Trip.com 海外酒店七晚或以上預訂按年增 123%，僅代表該平台。','Reuters reported on 9 October that domestic spending per trip during 1–7 October was RMB893.92, down 1.9% year on year. Trip.com reported 123% growth in overseas hotel bookings of at least seven nights; this is platform-specific.'],concept:['旅遊需求・市場細分','Tourism demand · Segmentation'],analysis:['旅客仍想旅行，但可能選擇較便宜住宿以延長旅程。平台增長不能直接等同整體市場增長。','Travellers may choose cheaper accommodation to extend a trip. Platform growth is not the same as total market growth.'],q:['為預算有限但希望延長旅程的旅客，提出兩項產品設計。','Suggest two product features for travellers wanting longer holidays on a limited budget.'],ref:['提供長住折扣以降低每晚房價；設含廚房的住宿或自助餐飲選項，讓旅客控制膳食開支。解釋每項如何配合預算。','Offer long-stay discounts to reduce nightly costs; provide kitchen facilities or self-catering options to control food spending. Explain each link to the budget.'],mcq:['平台預訂上升 123% 可證明甚麼？','What does 123% growth in platform bookings establish?'],options:[['所有旅客消費增加','All travellers spent more'],['全球住宿需求增 123%','Global lodging demand rose 123%'],['該平台指定類別預訂增加','That booking category grew on the platform']],correct:2,explain:['樣本及統計範圍有限，不可推論至所有旅客。','The coverage is limited; it cannot be generalised to all travellers.'],source:'https://www.reuters.com/business/retail-consumer/chinas-domestic-travel-spend-during-golden-week-hits-110-billion-2026-10-09/',publisher:'Reuters',date:'2026-10-09'},
-{ id:'1012-3',week:'2026-10-12',topic:'service',title:['颶風撤離與酒店危機管理','Hurricane evacuation and hotel response'],news:['阿拉巴馬州部分沿海地區於 10 月 8 日因颶風 Isaias 要求旅客撤離。Orange Beach 於 10 月 10 日公布解除相關撤離要求及當地緊急狀態。','Parts of coastal Alabama required visitor evacuation on 8 October due to Hurricane Isaias. Orange Beach announced the lifting of the relevant evacuation requirement and local emergency on 10 October.'],concept:['危機管理・跨部門協作・顧客服務','Crisis management · Coordination · Customer service'],analysis:['前堂須傳達準確訊息，與房務及交通服務協調，特別照顧有額外需要的住客。','The front office must communicate accurately and coordinate housekeeping and transport, including help for guests with additional needs.'],q:['前堂經理收到撤離通知後，應優先採取哪三項行動？解釋次序。','What three actions should a front office manager prioritise after an evacuation notice? Explain the order.'],ref:['先核實及傳達官方指示；核對住客並安排撤離協助，優先支援行動不便者；確認撤離及聯絡紀錄後處理更改預訂和退款。安全優先。','Verify and communicate official instructions; account for guests and coordinate evacuation assistance, prioritising mobility needs; record outcomes and then handle rebooking and refunds. Safety comes first.'],mcq:['最優先的處理是？','What should take priority?'],options:[['推廣下次住宿','Promoting a future stay'],['保障安全及傳達官方指示','Safety and official instructions'],['計算失去的收入','Calculating lost revenue']],correct:1,explain:['危機中的首要任務是安全，之後才處理商業安排。','Safety takes priority over commercial arrangements.'],source:'https://www.orangebeachal.gov/m/newsflash/home/detail/350',publisher:'City of Orange Beach',date:'2026-10-10'},
-{ id:'1012-4',week:'2026-10-12',topic:'transport',title:['鐵路與私家車出行的不同變化','Rail and private-car travel trends'],news:['10 月 9 日路透社引述交通數據：10 月 1–7 日平均每日鐵路客運人次按年增 13%，私家車出行人次跌 1.4%。這是跨區域出行，並非全屬旅遊。','Reuters reported on 9 October that average daily rail passenger trips during 1–7 October rose 13% year on year, while private-car passenger trips fell 1.4%. These are cross-regional journeys, not exclusively tourism.'],concept:['交通・可達性・旅客需要','Transport · Accessibility · Traveller needs'],analysis:['交通選擇應兼顧成本、時間、行李及長者需要，不只是車票價格。','Transport decisions involve cost, time, luggage and older travellers’ needs, not only ticket prices.'],q:['為帶同長者及大型行李的家庭，比較高鐵與自駕並提出建議。','Compare high-speed rail and self-drive travel for a family with elderly members and large luggage. Make a justified recommendation.'],ref:['高鐵減少駕駛疲勞，但轉乘及搬運行李可能不便；自駕提供點到點及彈性休息，但有疲勞和泊車問題。按目的地交通及家庭需要作有條件建議。','Rail reduces driving fatigue but transfers and luggage handling may be difficult. Driving offers door-to-door travel and flexible breaks but adds fatigue and parking issues. Make a conditional recommendation.'],mcq:['哪項最能支持為此家庭選擇自駕？','Which best supports choosing a car for this family?'],options:[['可直達住宿並靈活休息','Door-to-door travel and flexible breaks'],['所有公路均暢通','All roads are uncongested'],['不需計算成本','No need to consider costs']],correct:0,explain:['點到點服務直接回應行李及長者的需要；其他選項是不成立的概括。','Door-to-door service addresses the stated needs; the other options are unjustified generalisations.'],source:'https://www.reuters.com/world/asia-pacific/fewer-cars-hit-road-during-chinas-golden-week-2026-10-09/',publisher:'Reuters',date:'2026-10-09'},
-{ id:'1012-5',week:'2026-10-12',topic:'demand',title:['敘利亞：客量不等於酒店需求','Syria: Arrivals are not hotel demand'],news:['10 月 8 日報道：多家酒店集團研究敘利亞市場。報道引述官方數據，2026 上半年旅客約 352 萬，其中約 213 萬為海外居住的敘利亞人。','An 8 October report described hotel groups exploring Syria. It cited official figures of about 3.52 million visitors in H1 2026, including 2.13 million Syrians living abroad.'],concept:['探親訪友 VFR・住宿需求','Visiting friends and relatives (VFR) · Lodging demand'],analysis:['海外居民不一定全部是探親旅客，也不一定住酒店；應調查目的、住宿選擇及逗留日數。','Overseas residents are not necessarily all VFR travellers or hotel users. Purpose, accommodation choice and length of stay need investigation.'],q:['若不少訪客可能住親友家中，酒店投資者還應收集哪兩項資料？','If many visitors may stay with friends or relatives, what two additional types of data should hotel investors collect?'],ref:['收集使用付費住宿的比例，以估算真正客源；收集酒店住客平均逗留日數及房價接受程度，以估算客房晚數和收入。','Collect the share using paid accommodation to estimate customers; examine hotel guests’ length of stay and willingness to pay to estimate room-nights and revenue.'],mcq:['下列哪個推論最合理？','Which inference is most reasonable?'],options:[['每名訪客必需一間酒店客房','Each visitor needs a hotel room'],['海外居民全部是商務旅客','All expatriates are business travellers'],['須調查住宿選擇才可估算酒店需求','Accommodation choices must be studied']],correct:2,explain:['訪客總數沒有交代住宿方式及同行人數。','Arrival totals do not describe lodging choices or travel-party size.'],source:'https://www.reuters.com/world/europe/hotel-groups-target-syria-tourism-it-rebuilds-rubble-civil-war-2026-10-08/',publisher:'Reuters',date:'2026-10-08'},
-{ id:'1019-1',week:'2026-10-19',topic:'hotel',title:['一晚短假：短住宿的新需要','One-night breaks: New guest needs'],news:['Expedia 於 10 月 14 日發布 Unpack ’27：Hotels.com 一晚住宿搜尋按年增近 10%。涵蓋 2025-09-01 至 2026-08-25、星期四至日入住的搜尋，並非實際入住。','Expedia’s Unpack ’27, released 14 October, reported nearly 10% growth in Hotels.com searches for one-night stays. Data covers 1 September 2025–25 August 2026, for Thursday–Sunday check-ins, not actual stays.'],concept:['市場細分・前堂與房務','Segmentation · Front office and housekeeping'],analysis:['短住增加客源，同時可能增加每個已售客房晚數的清潔及入住手續工作。','Short stays may attract customers while increasing cleaning and check-in work per occupied room-night.'],q:['設計「演唱會後住一晚」套票，提出兩項服務並解釋。','Design a one-night concert package. Suggest and explain two services.'],ref:['提供預先登記及延遲入住以配合散場時間；提供翌日延遲退房或早餐讓住客休息。需協調房務排程並清楚列明適用條款。','Offer pre-registration and late arrival arrangements for the concert finish; provide late checkout or breakfast for rest. Coordinate housekeeping and state conditions clearly.'],mcq:['搜尋量增加能直接證明甚麼？','What does increased search volume directly establish?'],options:[['搜尋興趣增加','More search interest'],['酒店盈利增加','Higher hotel profits'],['實際入住增幅相同','An identical rise in actual stays']],correct:0,explain:['搜尋只是興趣訊號，不等於預訂或入住。','Searches signal interest, not completed bookings or stays.'],source:'https://www.expedia.co.uk/newsroom/unpack-27-expedia-and-hotels-com-unveil-the-trends-driving-travel-in-2027/',publisher:'Expedia',date:'2026-10-14'},
-{ id:'1019-2',week:'2026-10-19',topic:'demand',title:['香港九月增長與低基數','Hong Kong growth and the base effect'],news:['10 月 15 日發布的旅發局數據：2026 年 9 月約 403 萬訪港人次，按年增 22%；內地及長途市場分別增 29% 及 20%。去年同期惡劣天氣造成較低比較基數。','HKTB figures released 15 October recorded about 4.03 million September arrivals, up 22% year on year. Mainland and long-haul markets grew 29% and 20%. Adverse weather last year created a low comparison base.'],concept:['客源市場・節慶・數據分析','Source markets · Events · Data interpretation'],analysis:['增長可有多項因素，不能全部歸功於節慶宣傳。','Multiple factors can explain growth; it cannot all be attributed to event promotion.'],q:['「22% 增長全部由節慶活動帶動。」你同意嗎？還需甚麼證據？','“The entire 22% increase was caused by festive events.” Do you agree? What evidence is needed?'],ref:['不同意單憑總數作因果判斷。可調查旅客主要來訪原因及參與活動比例，並比較沒有天氣干擾的期間。','Do not infer causation from totals alone. Survey main travel motivations and event participation, and compare periods without weather disruption.'],mcq:['低基數效應指甚麼？','What is a low-base effect?'],options:[['今年必定衰退','This year must be declining'],['去年偏低令今年增長率較突出','A weak previous period makes growth look larger'],['所有市場增幅相同','All markets grow equally']],correct:1,explain:['增長率以去年數值作比較；偏低的基數會影響解讀。','Growth is measured against the earlier value; a low baseline affects interpretation.'],source:'https://www.chinadailyhk.com/hk/article/641143',publisher:'China Daily / HKTB data',date:'2026-10-15'},
-{ id:'1019-3',week:'2026-10-19',topic:'sustainability',title:['航空公司與綠色酒店採購','Airlines and sustainable hotel procurement'],news:['IATA 與世界可持續款待聯盟於 10 月 14 日宣布，將制定航空公司採購酒店住宿的可持續指引，包括投標評估及合約考慮。這是計劃，並非全球強制規定。','On 14 October, IATA and WSHA announced plans for sustainable hotel procurement guidance, including tender criteria and contracting considerations. This is planned guidance, not a global mandatory rule.'],concept:['可持續旅遊・業界相互依存','Sustainable tourism · Industry interdependence'],analysis:['酒店可透過可核實的環保表現爭取企業客戶，不能只靠宣傳口號。','Verified environmental performance may help hotels attract corporate clients; slogans alone are insufficient.'],q:['選擇機組人員酒店時，應要求哪兩項可核實的環保資料？','What two verifiable types of environmental data should an airline request from a crew hotel?'],ref:['要求每客房晚數的能源及用水數據並比較期間；查核獨立認證的有效期及涵蓋範圍。統一口徑才可公平比較。','Request energy and water use per room-night with comparison periods; verify independent certification and its scope and validity. Use consistent measures for comparison.'],mcq:['哪項是最有力的環保證據？','Which is the strongest environmental evidence?'],options:[['綠色標誌','A green logo'],['「我們愛地球」標語','A “we love Earth” slogan'],['有清楚口徑及核實的資源消耗數據','Verified resource-use data with a clear method']],correct:2,explain:['可核實及可比較的資料比宣傳聲稱有說服力。','Verifiable and comparable data is stronger than a promotional claim.'],source:'https://www.iata.org/en/pressroom/2026-releases/10-14-iata-and-world-sustainable-hospitality-alliance-to-collaborate-on-sustainable-hotel-procurement/',publisher:'IATA',date:'2026-10-14'},
-{ id:'1019-4',week:'2026-10-19',topic:'mice',title:['展覽場地：大是否代表有競爭力？','Exhibition venues: Is bigger better?'],news:['10 月 13 日發布的 UFI 報告：截至 2025-12-31，亞太區有 41 個室內展覽面積至少 10 萬平方米的場地，歐洲有 38 個。並非當周新增數。','UFI data reported on 13 October counts 41 Asia-Pacific venues with at least 100,000 square metres of indoor exhibition space, versus 38 in Europe, as of 31 December 2025. These are not newly opened venues that week.'],concept:['MICE・目的地競爭力','MICE · Destination competitiveness'],analysis:['場地大小只代表供應，交通、住宿及專業服務亦影響選址。','Size measures supply; transport, accommodation and professional services also affect selection.'],q:['香港爭取國際展覽，除面積外應強調哪兩項優勢？','What two strengths besides venue size should Hong Kong highlight when bidding for an international exhibition?'],ref:['可討論國際及跨境交通連接，便利參展者到達；酒店及專業會展服務支援住宿、物流和活動安排。每點須連結主辦機構需要。','Discuss international and cross-boundary connections for delegates, and hotel and professional event services supporting accommodation, logistics and operations. Link each to organiser needs.'],mcq:['場地面積數據能直接顯示甚麼？','What does venue floor area directly indicate?'],options:[['可供使用的場地規模','Physical venue capacity'],['全年盈利','Annual profit'],['實際入場人數','Actual attendance']],correct:0,explain:['容量不等於使用率或需求。','Capacity does not equal utilisation or demand.'],source:'https://exhibitionnews.uk/new-2026-edition-of-world-map-of-exhibition-venues-released/',publisher:'Exhibition News / UFI',date:'2026-10-13'},
-{ id:'1019-5',week:'2026-10-19',topic:'service',title:['酒店精簡服務的取捨','Trade-offs in reducing hotel services'],news:['10 月 13 日 Whitbread 重申轉型策略；截至 10 月 1 日的五周，英國住宿銷售按年增 4.5%。餐廳關閉及裁員計劃較早已公布。','On 13 October, Whitbread reaffirmed its strategy. UK accommodation sales rose 4.5% in the five weeks ending 1 October. Restaurant closures and job reductions were previously announced plans.'],concept:['成本・餐飲・人力資源','Costs · Food and beverage · Human resources'],analysis:['縮減服務可能減成本，也可能降低方便程度及滿意度。','Reducing services may save costs but reduce convenience and satisfaction.'],q:['假設酒店縮減餐飲服務，解釋一項好處、一項風險及改善措施。','If a hotel reduces food and beverage services, explain one benefit, one risk and a mitigation measure.'],ref:['可節省人手和食材成本；住客可能不滿用餐不便。可與附近餐廳合作並預先清楚說明服務安排，避免期望落差。','It may save labour and food costs, but guests may dislike reduced convenience. Partner with nearby restaurants and explain arrangements before booking to manage expectations.'],mcq:['哪項最能減少因服務縮減而出現的期望落差？','Which best reduces expectation gaps after service cuts?'],options:[['隱藏變更','Hide the change'],['預訂前準確說明可提供服務','Explain available services accurately before booking'],['刪除負評','Delete negative reviews']],correct:1,explain:['準確外部溝通可減少宣傳與實際服務的不一致。','Accurate communication reduces discrepancies between promises and delivery.'],source:'https://www.reuters.com/business/premier-inn-owner-whitbread-urges-shareholders-reject-corvexs-board-seat-demand-2026-10-13/',publisher:'Reuters',date:'2026-10-13'},
-{ id:'1026-1',week:'2026-10-26',topic:'culture',title:['香港電影旅遊：走進銀幕場景','Hong Kong film tourism: Step into the scene'],news:['旅發局於 10 月 21 日推出「香港 連場好戲」，整理 50 部電影、逾 100 個拍攝地點，串連文化、社區及餐飲體驗。','On 21 October HKTB launched Hong Kong Good Take, featuring over 100 locations from 50 films, linking cultural, neighbourhood and dining experiences.'],concept:['文化旅遊・旅遊動機・產品組合','Cultural tourism · Motivation · Product bundling'],analysis:['故事使街道成為吸引物，但行程設計需考慮居民日常生活。','Stories can turn streets into attractions, but itinerary design must respect residents.'],q:['為電影迷設計半日香港行程，加入文化、餐飲及減少滋擾措施。','Design a half-day Hong Kong film itinerary with culture, dining and a measure to reduce disturbance.'],ref:['例如以油麻地電影文化步行導賞配合本地茶餐廳午餐；採小組、日間活動並避免阻塞出入口。核實拍攝資料及開放安排。','For example, combine a Yau Ma Tei film-culture walking tour with a local café lunch; use small daytime groups and keep entrances clear. Verify filming details and access.'],mcq:['把電影地點與餐飲導賞結合主要示範甚麼？','Combining film locations with dining tours demonstrates what?'],options:[['產品組合','Product bundling'],['所有景點都是天然形成','All attractions are natural'],['需求不受媒體影響','Media never affects demand']],correct:0,explain:['把多種互補體驗組合為一項行程產品。','Complementary experiences are combined into a tour product.'],source:'https://markets.businessinsider.com/news/stocks/hktb-launches-hong-kong-good-take-an-all-new-movie-tourism-guide-featuring-more-than-100-filming-locations-inviting-visitors-to-explore-the-only-in-hong-kong-charm-1036650496',publisher:'HKTB press release / GlobeNewswire',date:'2026-10-21'},
-{ id:'1026-2',week:'2026-10-26',topic:'hotel',title:['IHG：房價與入住率共同影響 RevPAR','IHG: Rates and occupancy shape RevPAR'],news:['IHG 於 10 月 22 日公布，2026 第三季全球 RevPAR 按年增 5.3%、ADR 增 3.9%，入住率增 0.9 個百分點。','IHG reported on 22 October that Q3 2026 global RevPAR rose 5.3%, ADR rose 3.9%, and occupancy increased 0.9 percentage points year on year.'],concept:['營運指標・收益管理','Operating indicators · Revenue management'],analysis:['RevPAR = ADR × 入住率（小數）。百分比與百分點不同；不能把 ADR 增幅直接加上入住率百分點。','RevPAR = ADR × occupancy as a decimal. Percentages and percentage points differ; do not simply add ADR growth to occupancy-point changes.'],q:['假設 ADR 為 HK$1,000，入住率 80%。計算 RevPAR，並解釋加價為何未必增加 RevPAR。','With hypothetical ADR of HK$1,000 and occupancy of 80%, calculate RevPAR. Why might raising prices fail to increase it?'],ref:['RevPAR = 1,000 × 0.80 = HK$800。若加價令需求及入住率大幅下降，RevPAR 可能下降。用下方計算實驗室測試。','RevPAR = 1,000 × 0.80 = HK$800. A sufficiently large occupancy fall after a rate increase can reduce RevPAR. Test this in the calculation lab.'],mcq:['入住率由 80% 升至 81% 是？','An occupancy change from 80% to 81% is what?'],options:[['升 1%（相對增幅）','A 1% relative rise'],['升 1 個百分點','A 1 percentage-point rise'],['升 81 個百分點','An 81 percentage-point rise']],correct:1,explain:['百分點差為 81 − 80 = 1；相對增幅為 1 ÷ 80 = 1.25%。','The difference is 1 percentage point; relative growth is 1/80 = 1.25%.'],source:'https://www.ihgplc.com/en/news-and-media/news-releases/2026/third-quarter-trading-update-to-30-september-2026',publisher:'IHG',date:'2026-10-22'},
-{ id:'1026-3',week:'2026-10-26',topic:'demand',title:['日本：整體下跌不代表每個市場下跌','Japan: Total decline hides market differences'],news:['JNTO 於 10 月 21 日發布初步估算：2026 年 9 月訪日人次 3,103,700，按年跌 5.0%；南韓增 25.6%，香港跌 3.0%。並非只計休閒旅客。','JNTO preliminary estimates released 21 October recorded 3,103,700 September 2026 arrivals, down 5.0%. South Korea rose 25.6% and Hong Kong fell 3.0%. These are not exclusively leisure visitors.'],concept:['客源市場・需求・人手規劃','Source markets · Demand · Staffing'],analysis:['全國總量未能代表個別酒店的客源及預訂情況。','National totals do not describe an individual hotel’s guest mix or bookings.'],q:['「日本訪客減少，所有酒店都應減人手。」你同意嗎？還需哪兩項資料？','“Japan’s arrivals fell, so all hotels should cut staffing.” Do you agree? What two types of data are needed?'],ref:['不同意。應查看該酒店未來預訂及入住率，並分析客源及服務需求；面向增長市場的酒店可能仍需增加人手。','Disagree. Examine the hotel’s forward bookings and occupancy, plus guest mix and service needs. Hotels serving growing markets may still need more staff.'],mcq:['人手決策最應參考哪項？','Which is most relevant to staffing decisions?'],options:[['只看全國客量','National arrivals alone'],['其他國家的酒店數目','Hotel counts in another country'],['本酒店預訂與服務工作量','The hotel’s bookings and service workload']],correct:2,explain:['營運決策須配合實際服務需求。','Operational decisions should reflect actual service demand.'],source:'https://www.jnto.go.jp/en/news/20261021.pdf',publisher:'Japan National Tourism Organization',date:'2026-10-21'},
-{ id:'1026-4',week:'2026-10-26',topic:'events',title:['美食盛事延伸至全月體驗','Extending a culinary festival'],news:['10 月 23 日旅發局公告：美酒佳餚巡禮定於 10 月 29 日至 11 月 1 日舉行，並配合 11 月香港美食月及票尾優惠。發布時仍屬未來活動。','HKTB’s 23 October release scheduled Wine & Dine for 29 October–1 November, alongside November Gourmet Month and ticket-stub offers. These were future activities at publication.'],concept:['美食旅遊・盛事・業界合作','Culinary tourism · Events · Industry cooperation'],analysis:['延伸優惠可能把活動客流帶到酒店及餐廳；需要追蹤實際兌換及增量消費。','Extended offers may send visitors to hotels and restaurants; actual redemptions and additional spending need tracking.'],q:['建議一項酒店與餐廳套票，並提出一項成效指標。','Suggest a joint hotel–restaurant package and one measure of effectiveness.'],ref:['例如住宿加翌日指定餐廳餐券。可追蹤套票售出及餐券兌換率；若要判斷額外效益，需與沒有優惠的合理比較期比較。','For example, bundle a room with a next-day restaurant voucher. Track package sales or redemption rates; use an appropriate comparison period to assess additional benefits.'],mcq:['公告活動計劃可證明甚麼？','What does an event announcement establish?'],options:[['計劃安排，而非已達成的效益','Planned arrangements, not realised benefits'],['旅客必定延長住宿','Visitors will definitely stay longer'],['活動已錄得盈利','The event has already made a profit']],correct:0,explain:['計劃與實際成果需要分開。','Plans and observed outcomes must be distinguished.'],source:'https://www.globenewswire.com/news-release/2026/10/23/3387383/0/en/hong-kong-tourism-board-presents-hong-kong-wine-dine-festival-and-hong-kong-gourmet-month-under-the-theme-taste-the-world-s-best.html',publisher:'HKTB press release',date:'2026-10-23'},
-{ id:'1026-5',week:'2026-10-26',topic:'sustainability',title:['柏林歷史酒店的品牌轉型','A new chapter for a historic Berlin hotel'],news:['Four Seasons 於 10 月 20 日把 Hotel de Rome 轉型列入 2027 年及以後預期項目。建築原為 19 世紀銀行總部，2006 年已改為酒店。','Four Seasons’ 20 October announcement included Hotel de Rome’s transformation among anticipated projects for 2027 and beyond. The former 19th-century bank headquarters became a hotel in 2006.'],concept:['建築活化・保育・產品差異化','Adaptive reuse · Conservation · Differentiation'],analysis:['歷史特色形成獨特住宿體驗，但改善現代設施可能遇到保育限制。','Historic character differentiates a hotel, while modern upgrades may face conservation constraints.'],q:['改善無障礙設施及浴室時，提出一項可能的保育衝突及解決方法。','Identify a possible conservation conflict when improving accessibility or bathrooms, and suggest a solution.'],ref:['加建升降機或管道可能損害歷史牆身。先作專業評估，在較少歷史價值的位置設置設備，採可逆設計並取得所需批准。','Lifts or pipes may damage historic fabric. Seek specialist assessment, locate services in less significant areas, use reversible designs and obtain required approvals.'],mcq:['哪個說法符合報道？','Which statement matches the report?'],options:[['建築於本周首次改為酒店','The building first became a hotel this week'],['所有項目已完成','All projects are complete'],['2006 年已改為酒店，現公布未來轉型','It became a hotel in 2006; future transformation is announced']],correct:2,explain:['要分清歷史改建日期與最新品牌計劃。','Distinguish the earlier conversion date from the new brand plans.'],source:'https://press.fourseasons.com/news-releases/2026/where-to-travel-in-2027/',publisher:'Four Seasons',date:'2026-10-20'}
-];
-
-// Teaching supplement: no answer keys or grading fields.
-articles.unshift(...[
   {
     "id": "triangle-mcd",
     "week": "2026-10-29",
@@ -48,80 +32,101 @@ articles.unshift(...[
       "On 5 October 2026, McDonald’s announced its multiyear Make It Golden initiative, including tailored training and a Qualtrics-powered programme connecting customer feedback, employee feedback and operational performance. Franchisees were expected to receive the training and begin introducing it into restaurants by year end. These are announced measures and timelines, not proven outcomes."
     ],
     "concept": [
-      "服務金三角：公司、員工與顧客的相互關係；服務承諾、支援及實際體驗",
-      "Service Triangle: relationships between company, employees and customers; service promises, support and actual experiences"
+      "服務金三角（教育局圖 3.4）：公司—服務—顧客；員工支援、服務標準及顧客體驗。",
+      "Service Triangle (EDB Figure 3.4): Company–Service–Customer; staff support, service standards and customer experience."
     ],
     "analysis": [
-      "分析焦點：公司提出服務要求後，怎樣判斷員工是否具備實踐條件？請把公司提供的支援、前線行為與顧客感受串連，而不是只列出三方名稱。以下題目的餐廳情況均為教學假設，並非新聞對實際分店的指控。",
-      "Analytical focus: after a company sets service expectations, how can we judge whether employees have the conditions to deliver them? Connect organisational support, frontline behaviour and customer experience rather than merely naming the three parties. The restaurant situations below are hypothetical teaching extensions, not allegations about actual branches."
+      "以「公司—服務—顧客」分析公司安排如何轉化為實際服務，以及顧客如何感受。員工是落實服務的人，所需支援、技術及培訓須一併考慮。公告計劃與實際成效要分開；以下餐廳情境為教學假設。",
+      "Use Company–Service–Customer to analyse how company arrangements become delivered service and how customers experience it. Employees deliver the service, with support, technology and training to consider. Separate announced plans from outcomes; the restaurant situations below are teaching scenarios."
     ],
     "source": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/make-it-golden-founders-day-tiffanie-boyd-jill-mcdonald.html",
     "q": [
-      "你認為連鎖快餐店應優先投資服務培訓，還是增加繁忙時段人手？提出你的立場，運用服務金三角解釋對三方的影響，並說明在甚麼條件下你會改變決定。",
-      "Should a fast-food chain prioritise service training or additional peak-hour staffing? State your position, use the Service Triangle to explain the effects on all three parties, and identify conditions that would change your decision."
+      "若只能先投資一項，你會選擇服務培訓還是增加繁忙時段人手？表明立場，以「公司—服務—顧客」分析兩項可能影響，並指出一項會令你改變決定的證據。（6 分；重點是論證）",
+      "If only one can be funded first, would you prioritise service training or additional peak-hour staff? State your position, analyse two possible effects using Company–Service–Customer, and identify evidence that would change your decision. (6 marks; focus on justification)"
     ],
-    "hint": [
-      "先界定你重視的服務目標，再比較成本、員工工作條件與顧客體驗；指出你仍需要哪些資料。考慮你的方案能否同時適用於不同時段。",
-      "Define your service priorities, compare costs, working conditions and customer experiences, and identify missing evidence. Consider whether your proposal suits different trading periods."
-    ],
-    "judgements": [
+    "feedbackMode": "prompts",
+    "discussionMarks": 6,
+    "curriculum": {
+      "module": [
+        "IV 顧客關係及服務",
+        "IV · Customer Relations and Services"
+      ],
+      "manual": [
+        "顧客關係及服務手冊",
+        "Textbook 4_Customer_English"
+      ],
+      "section": [
+        "3.4.1 服務失誤：圖 3.4 服務金三角；3.2 服務標準；2.4.2 服務品質差距；3.3 服務文化",
+        "3.4.1 Service Failures — Figure 3.4 Service Triangle; 3.2 Service Standards; 2.4.2 Service Quality Gaps; 3.3 Service Culture"
+      ],
+      "skills": [
+        "運用公司—服務—顧客的關係評估營運選擇；比較投入、實際表現及顧客感受。",
+        "Apply Company–Service–Customer relationships to operational choices; distinguish inputs, delivered performance and customer perceptions."
+      ]
+    },
+    "questions": [
       {
         "q": [
-          "教學假設：一家分店完成培訓後，顧客仍反映點餐錯誤及輪候過久。經理發現員工知道標準，但繁忙時需同時處理多個渠道訂單。哪項措施最能處理服務金三角中各方的連繫？",
-          "Hypothetical extension: after training, customers still report order errors and long waits. Staff know the standards but handle several ordering channels simultaneously at peak times. Which action best addresses the connections within the Service Triangle?"
+          "教學假設：一家分店完成培訓後，顧客仍反映錯單及輪候過久。員工知道標準，但繁忙時要同時處理櫃枱、手機及外送訂單。按「公司—服務—顧客」的服務金三角，哪項決定最值得優先採取？",
+          "Teaching scenario: after training, a branch still receives reports of order errors and long waits. Staff know the standards but simultaneously handle counter, mobile and delivery orders at peak times. Using the Company–Service–Customer triangle, which decision most merits priority?"
         ],
         "options": [
           [
-            "A. 加強對外宣傳親切服務，以更清晰地提高顧客對品牌的期望。",
-            "A. Promote friendly service more strongly to clarify and raise customer expectations of the brand."
+            "加強親切服務宣傳，並重複培訓現行標準，使顧客及員工對服務有更清楚的期望。",
+            "Expand the friendly-service campaign and repeat training on existing standards, so customers and staff share clearer expectations."
           ],
           [
-            "B. 按個人出餐速度給獎勵，讓員工自行決定如何兼顧準確性與接待。",
-            "B. Reward individual serving speed and let staff decide how to balance accuracy with hospitality."
+            "按個人出餐速度給獎勵，同時保留準確度檢查，讓員工在每更自行協調不同渠道的優次。",
+            "Reward individual serving speed while retaining accuracy checks; let employees negotiate the competing channel priorities during each shift."
           ],
           [
-            "C. 維持服務承諾，結合前線意見與訂單數據調整工作分配，並檢視顧客體驗。",
-            "C. Retain the service promise, use staff feedback and order data to adjust work allocation, and review customer experiences."
+            "結合員工回饋與訂單資料調整工作分配，再追蹤實際服務及顧客體驗。",
+            "Use staff feedback and order data to revise work allocation, then monitor actual service and customer experience."
           ],
           [
-            "D. 先降低對外輪候時間承諾，待投訴減少後再決定是否檢討前線安排。",
-            "D. First relax advertised waiting-time commitments, then decide whether to review frontline arrangements after complaints decline."
+            "向投訴者提供優惠券並每月檢視評分，待取得完整一季結果後才改變現有渠道安排。",
+            "Offer complaint vouchers and review ratings monthly; retain current channel arrangements until a full quarter of results is available."
           ]
         ],
         "hint": [
-          "分別追蹤每個選項如何改變公司、員工與顧客之間的關係；區分改善服務能力與改變顧客期望，並評估短期及長期影響。",
-          "Trace how each option changes relationships among company, employees and customers. Distinguish service capability from customer expectations and assess short- and long-term effects."
+          "用同一標準逐項比較：公司改變了甚麼、服務過程會怎樣改變、哪些顧客可能受到甚麼影響？列出支持或反對每項選擇所需的證據。",
+          "Compare every option using the same questions: what does the company change, how might service delivery change, and which customers may be affected? Identify evidence needed for and against each choice."
         ]
       },
       {
         "q": [
-          "教學假設：新計劃後，顧客滿意度上升，但員工反映加班增加、沒有時間回報問題。管理層據此認為服務金三角已全面改善。哪項判斷最有理據？",
-          "Hypothetical extension: customer satisfaction rises after the initiative, but staff report more overtime and no time to raise problems. Management concludes that the entire Service Triangle has improved. Which judgement is best supported?"
+          "教學假設：試點分店的培訓完成率達 95%，平均出餐時間縮短，但顧客評分沒有明顯變化。經理要判斷計劃是否改善服務金三角的關係，哪種跟進最有說服力？",
+          "Teaching scenario: pilot branches reach 95% training completion and shorter average serving times, but customer ratings show no clear change. Which follow-up would best support a judgement about whether the initiative improved relationships in the Service Triangle?"
         ],
         "options": [
           [
-            "A. 滿意度上升已反映三方關係改善，員工加班屬於獨立的人事議題。",
-            "A. Higher satisfaction demonstrates improvement across all relationships; overtime is a separate personnel issue."
+            "主要以完成率及平均出餐時間衡量成效，因這些資料容易在全部試點分店之間比較。",
+            "Use completion rates and average serving time as principal measures, since they provide comparable data across every pilot branch."
           ],
           [
-            "B. 顧客體驗可能改善，但仍須檢視公司對員工的支援及服務能否持續。",
-            "B. Customer experience may have improved, but organisational support for staff and the sustainability of delivery still require review."
+            "向進步最大的分店收集詳細回饋，再以其經驗評估計劃推廣至其他分店的潛力。",
+            "Collect detailed feedback from the branches with the strongest improvements, then use their experiences to assess the programme’s wider potential."
           ],
           [
-            "C. 員工加班足以證明顧客滿意度數據不可靠，因此應以員工意見取代它。",
-            "C. Overtime proves the satisfaction data unreliable, so employee feedback should replace it."
+            "先擴大宣傳才收集更多顧客回饋，讓足夠顧客認識新的服務標準後再作評價。",
+            "Extend promotion before collecting further customer feedback, so enough customers recognise the new service standard to evaluate it."
           ],
           [
-            "D. 只要公司已安排培訓，便可把後續服務穩定性主要交由員工承擔。",
-            "D. Once training is provided, responsibility for stable delivery can mainly be left to employees."
+            "比較相近營業時段的前線員工支援、服務觀察及不同顧客回饋，並考慮其他營運變化。",
+            "Compare frontline staff support, observed service and varied customer feedback across comparable trading periods, allowing for other operational changes."
           ]
         ],
         "hint": [
-          "思考一項結果指標能證明多少事情。辨別某一方的感受、三方關係的整體狀況，以及判斷可持續性所需的證據。",
-          "Consider what a single outcome indicator can establish. Distinguish one party’s experience from the health of the whole triangle and identify evidence needed to judge sustainability."
+          "先界定你要量度的是投入、服務表現還是顧客感受。對每種資料，問它能支持甚麼結論、有甚麼限制，以及比較對象是否合適。",
+          "Define whether you are measuring inputs, service performance or customer perceptions. For each source, ask what it can establish, its limitations and whether the comparison is appropriate."
         ]
       }
-    ]
+    ],
+    "hint": [
+      "先界定情境、預算及優先目標，然後以同一準則比較兩個選擇。你的推論用了哪些已知事實、哪些假設？可用甚麼資料檢驗你的立場？只提供思考方向，不設答案或自動評分。",
+      "Define the situation, budget and priorities, then compare both choices using consistent criteria. Which parts of your reasoning are facts and which are assumptions? What evidence could test your position? Thinking prompts only; no answer key or automatic marking."
+    ],
+    "exerciseVersion": "dse-2026-10-31"
   },
   {
     "id": "triangle-starbucks",
@@ -138,82 +143,1918 @@ articles.unshift(...[
       "On 21 September 2026, Starbucks UK reported training developed with STAMMA to support customers who stammer. More than 10,000 baristas had completed it, over half of approximately 18,000 UK baristas. Guidance includes not rushing customers, not finishing their sentences, and allowing time to speak. Training participation does not itself measure improvement in customer experience."
     ],
     "concept": [
-      "服務金三角：公司支援、員工判斷與顧客需要；包容服務及關鍵時刻",
-      "Service Triangle: organisational support, employee judgement and customer needs; inclusive service and moments of truth"
+      "服務金三角（教育局圖 3.4）：公司—服務—顧客；員工支援、服務標準及顧客體驗。",
+      "Service Triangle (EDB Figure 3.4): Company–Service–Customer; staff support, service standards and customer experience."
     ],
     "analysis": [
-      "分析焦點：個人化的接待方式，怎樣配合公司制度與不同顧客的需要？把「受訓」與「實際做到」分開判斷。以下情境為教學假設，並非新聞報道的事件。",
-      "Analytical focus: how can personalised interactions align with company systems and different customers’ needs? Distinguish being trained from delivering the intended experience. The situations below are hypothetical, not reported incidents."
+      "以「公司—服務—顧客」檢視包容目標、公司制度及個別服務體驗的連繫。培訓人數屬投入資料，不能單憑它判斷所有顧客的感受。以下情境為教學假設。",
+      "Use Company–Service–Customer to examine links between inclusion goals, company systems and individual service experiences. Training participation is input data and alone cannot establish every customer’s experience. The situations below are teaching scenarios."
     ],
     "source": "https://stories.starbucks.com/emea/stories/2026/space-for-every-voice-making-ordering-feel-easier-for-people-who-stammer/",
     "q": [
-      "如果你是分店經理，你會否容許員工為照顧個別顧客而超出一般點餐時間目標？提出你的立場及界線，運用服務金三角分析，並回應一項反對意見。",
-      "As a store manager, would you allow staff to exceed normal ordering-time targets to accommodate individual customers? State your position and limits, analyse them using the Service Triangle, and respond to one opposing view."
+      "如果你是分店經理，會否容許員工因應個別顧客需要超出一般點餐時間目標？表明立場及界線，以「公司—服務—顧客」分析兩項影響，並回應一項合理反對意見。（6 分；重點是論證）",
+      "As store manager, would you allow staff to exceed normal ordering-time targets for individual customer needs? State your position and limits, analyse two effects using Company–Service–Customer, and respond to one reasonable opposing view. (6 marks; focus on justification)"
     ],
-    "hint": [
-      "考慮公平是否等於每位顧客獲得完全相同的安排。比較個別需要、其他顧客的體驗、員工承受的壓力及公司的資源限制，並提出評估你方案的方法。",
-      "Consider whether fairness requires identical treatment. Weigh individual needs, other customers’ experiences, employee pressures and organisational resource limits, and propose how your approach could be evaluated."
-    ],
-    "judgements": [
+    "feedbackMode": "prompts",
+    "discussionMarks": 6,
+    "curriculum": {
+      "module": [
+        "IV 顧客關係及服務",
+        "IV · Customer Relations and Services"
+      ],
+      "manual": [
+        "顧客關係及服務手冊",
+        "Textbook 4_Customer_English"
+      ],
+      "section": [
+        "3.4.1 服務失誤：圖 3.4 服務金三角；1.3 RATER；2.1 需要與感受；3.2 服務標準；5.3–5.7 溝通",
+        "3.4.1 Service Failures — Figure 3.4 Service Triangle; 1.3 RATER; 2.1 Needs and Perceptions; 3.2 Service Standards; 5.3–5.7 Communication"
+      ],
+      "skills": [
+        "按個別需要判斷服務安排；評估效率、服務一致性及顧客感受之間的取捨。",
+        "Judge service arrangements against individual needs; evaluate trade-offs among efficiency, consistency and customer perceptions."
+      ]
+    },
+    "questions": [
       {
         "q": [
-          "教學假設：一位口吃顧客正在點餐，後方隊伍變長，而公司同時要求親切接待及控制平均點餐時間。經理應如何最有系統地支援員工作判斷？",
-          "Hypothetical extension: a customer who stammers is ordering, the queue is growing, and the company expects both welcoming service and controlled average ordering times. How should the manager most systematically support staff judgement?"
+          "教學假設：公司已培訓員工照顧口吃顧客，但分店仍按每宗點餐時間評核員工。員工因怕超時而感到兩難。按「公司—服務—顧客」的服務金三角，哪項經理決定最值得採用？",
+          "Teaching scenario: staff have been trained to support customers who stammer, but a store still evaluates staff by time per order. Employees feel conflicted about exceeding the target. Using Company–Service–Customer, which management decision most merits adoption?"
         ],
         "options": [
           [
-            "A. 給予顧客表達時間，同時安排隊伍支援並容許有理由的時間彈性，再檢視整體體驗。",
-            "A. Allow the customer time, arrange queue support and permit justified timing flexibility, then review the overall experience."
+            "保留原有時間目標但容許非正式例外，要求主管嘉許能兼顧兩種要求的員工。",
+            "Keep the time target unchanged but permit informal exceptions; ask supervisors to recognise staff who balance both demands."
           ],
           [
-            "B. 由員工一律改用書寫點餐，以統一程序並減少口頭溝通需要。",
-            "B. Require written ordering in every such case to standardise the process and reduce spoken communication."
+            "與員工檢討服務目標及工作安排，界定可行服務彈性，並評估不同顧客的體驗。",
+            "Review service targets and work arrangements with staff, define practical service flexibility, and assess experiences across different customers."
           ],
           [
-            "C. 讓員工自行在時間與包容目標之間選擇，但保留原有個人速度評核。",
-            "C. Let staff choose between timing and inclusion goals while retaining existing individual speed assessments."
+            "保留相同員工目標，但更明確宣傳包容承諾，使顧客更清楚公司希望提供的服務。",
+            "Keep the same staff targets but communicate the inclusion commitment more prominently, so customers better understand the intended service."
           ],
           [
-            "D. 向輪候顧客解釋包容政策，先維持人手與評核安排，以觀察宣傳的效果。",
-            "D. Explain the inclusion policy to waiting customers and retain staffing and assessment arrangements to observe the effect of communication first."
+            "取消正式時間目標，讓員工自行決定每次接待長度，並依靠顧客投訴找出服務不一致的地方。",
+            "Remove formal time targets and let staff determine each encounter’s length, relying on customer complaints to identify inconsistent service."
           ]
         ],
         "hint": [
-          "檢視公司要求是否彼此配合，以及誰承擔取捨的壓力。比較標準化與個人選擇，並思考對其他顧客及前線員工的影響。",
-          "Examine whether organisational expectations align and who bears the trade-off. Compare standardisation with individual choice and consider effects on other customers and frontline staff."
+          "逐項追蹤公司制度、實際服務與顧客感受的關係。每個選項可能解決甚麼問題，又可能產生甚麼新問題？不要假設所有顧客的需要相同。",
+          "Trace company systems, delivered service and customer perceptions for every option. What problem might each solve and what new problem might arise? Do not assume identical needs for all customers."
         ]
       },
       {
         "q": [
-          "教學假設：公司宣稱歡迎所有顧客，並錄得很高的培訓完成率；觀察卻發現員工仍常打斷口吃顧客，員工則表示擔心被扣減速度評分。哪項後續調查最能評估服務金三角是否協調？",
-          "Hypothetical extension: the company promotes a welcome for everyone and reports high training completion, yet observations show frequent interruptions of customers who stammer. Staff fear losing speed scores. Which follow-up investigation best evaluates alignment within the Service Triangle?"
+          "教學假設：一名顧客表示需要較多時間說出訂單，另一名輪候顧客投訴等候。分店經理要建立可持續使用的處理安排。哪項方案最值得進一步評估？",
+          "Teaching scenario: one customer asks for more time to say an order, while another complains about waiting. A manager wants a workable ongoing arrangement. Which proposal most merits further evaluation?"
         ],
         "options": [
           [
-            "A. 比較不同分店的培訓完成率，以判斷服務質素差異是否源於知識不足。",
-            "A. Compare training completion rates across stores to judge whether service differences arise from insufficient knowledge."
+            "按輪候者投訴決定是否容許例外，每月檢討政策，讓個別照顧反映其他顧客承受的輪候壓力。",
+            "Make exceptions depend on queue complaints, reviewing the policy monthly so individual accommodation reflects the pressures on other customers."
           ],
           [
-            "B. 調查顧客是否記得包容宣傳，以判斷公司是否清楚表達承諾。",
-            "B. Survey customers’ recall of the inclusion campaign to judge how clearly the promise was communicated."
+            "引導需要較多時間的顧客使用手機點餐，作簡短示範，使櫃枱服務可以維持正常速度。",
+            "Direct customers needing extra time to mobile ordering, giving a short demonstration so counter service can maintain its normal pace."
           ],
           [
-            "C. 比較員工的點餐速度排名，以找出最能兼顧服務要求的員工。",
-            "C. Compare staff ordering-speed rankings to identify employees best able to balance service requirements."
+            "讓員工全權處理每次接待並監察平均出餐時間，只有當整體數字超標時才介入。",
+            "Give employees discretion over every encounter and monitor average serving time, intervening only when the overall figure exceeds its target."
           ],
           [
-            "D. 結合顧客敘述、實際互動觀察、員工意見與評核制度，檢視承諾能否落實。",
-            "D. Combine customer accounts, observed interactions, staff feedback and assessment rules to examine whether the promise can be delivered."
+            "檢視分店人手、輪候溝通及可選點餐渠道，再比較不同顧客的服務體驗，並保留其表達方式選擇。",
+            "Review store staffing, queue communication and optional ordering channels; compare different customers’ service experiences while retaining their communication choices."
           ]
         ],
         "hint": [
-          "為每種資料來源列出它能回答與不能回答的問題。思考「完成活動」與「產生效果」的分別，並檢查是否涵蓋三方關係。",
-          "List what each evidence source can and cannot answer. Distinguish completing an activity from achieving an outcome and check coverage of the three relationships."
+          "界定每個選項如何分配時間及選擇權，並從不同顧客與員工角度檢查可行性。你還缺少哪些資料，才能判斷公平與成效？",
+          "Identify how each option allocates time and choice, and examine feasibility from different customers’ and employees’ perspectives. What information is missing before you can judge fairness and effectiveness?"
         ]
       }
-    ]
+    ],
+    "hint": [
+      "說明你對「有效率」與「公平」的理解，再檢查立場能否適用於不同顧客及繁忙程度。列明你的假設與可能推翻立場的證據。只提供思考方向，不設答案或自動評分。",
+      "Explain what you mean by efficiency and fairness, then test your position across customers and levels of demand. State your assumptions and evidence that could challenge your view. Thinking prompts only; no answer key or automatic marking."
+    ],
+    "exerciseVersion": "dse-2026-10-31"
+  },
+  {
+    "id": "1012-1",
+    "week": "2026-10-12",
+    "topic": "hotel",
+    "title": [
+      "香港黃金周：入住率與盈利",
+      "Golden Week: Occupancy and profit"
+    ],
+    "news": [
+      "10 月 8 日公布：10 月 1–7 日香港錄得約 160 萬訪客人次，酒店整體入住率達 90%。",
+      "Announced on 8 October: Hong Kong recorded about 1.6 million visitor arrivals during 1–7 October, with overall hotel occupancy reaching 90%."
+    ],
+    "concept": [
+      "住宿業・季節性・房價策略",
+      "Accommodation · Seasonality · Pricing"
+    ],
+    "analysis": [
+      "高入住率代表房間使用情況良好，但盈利仍取決於房價及成本。",
+      "High occupancy indicates strong room use, but profit also depends on rates and costs."
+    ],
+    "q": [
+      "『入住率達 90%，酒店盈利必定理想。』評析此說法：指出並解釋兩項仍需收集的酒店資料（4 分），再建議一項旺季營運安排，解釋它如何維持服務質素（2 分）。共 6 分。",
+      "Evaluate the claim: 'At 90% occupancy, hotel profitability must be strong.' Identify and explain two additional types of hotel data needed (4 marks), then recommend one peak-season operational arrangement and explain how it maintains service quality (2 marks). Total: 6 marks."
+    ],
+    "source": "https://www.info.gov.hk/gia/general/202610/08/P2026100800615.htm",
+    "publisher": "Hong Kong Government",
+    "date": "2026-10-08",
+    "questions": [
+      {
+        "q": [
+          "教學假設：同一家酒店兩日均有 200 間可用客房。甲日售出 180 間，ADR 為 HK$1,000；乙日售出 190 間，ADR 為 HK$900。哪項對乙日表現的判斷最準確？",
+          "Hypothetical extension: a hotel has 200 available rooms on each of two days. On Day A it sells 180 rooms at an ADR of HK$1,000; on Day B it sells 190 at HK$900. Which judgement about Day B is most accurate?"
+        ],
+        "options": [
+          [
+            "入住率由 90% 升至 95%，因此增加 5 個百分點亦代表客房收入增加 5%。",
+            "Occupancy rises from 90% to 95%, so the 5-percentage-point gain also raises room revenue by 5%."
+          ],
+          [
+            "入住率由 90% 升至 95%，但 RevPAR 由 HK$900 降至 HK$855；仍需成本資料判斷盈利變化。",
+            "Occupancy rises from 90% to 95%, but RevPAR falls from HK$900 to HK$855; the profit effect still requires cost data."
+          ],
+          [
+            "ADR 下跌 10%，故 RevPAR 由 HK$900 跌至 HK$810；較高入住率只會影響客房成本。",
+            "ADR falls 10%, so RevPAR falls from HK$900 to HK$810; higher occupancy only affects room costs."
+          ],
+          [
+            "客房收入降至 HK$171,000，毋須其他成本資料便可確定酒店盈利減少 HK$9,000。",
+            "Room revenue falls to HK$171,000, establishing a HK$9,000 fall in hotel profit without further cost data."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "甲日入住率 90%、RevPAR = 180 × 1,000 ÷ 200 = HK$900；乙日入住率 95%、RevPAR = 190 × 900 ÷ 200 = HK$855，下降 5%。入住率、ADR 及 RevPAR 均未扣除成本。",
+          "Day A occupancy is 90% and RevPAR is 180 × 1,000 ÷ 200 = HK$900. Day B occupancy is 95% and RevPAR is 190 × 900 ÷ 200 = HK$855, a 5% fall. Occupancy, ADR and RevPAR do not deduct costs."
+        ],
+        "hint": [
+          "先分別計算已售客房比例及每間可用客房的收入，再檢查選項有否把收入當成盈利。",
+          "Calculate the proportion of rooms sold and revenue per available room separately, then check whether any option confuses revenue with profit."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：經理看見全港黃金周入住率為 90%，便建議酒店接受比房間數多 10% 的預訂，理由是『有 10% 空間可補回』。運用前堂預訂管理知識，哪項回應最有理據？",
+          "Hypothetical extension: a manager uses Hong Kong's 90% Golden Week occupancy to justify accepting reservations 10% above the hotel's room capacity, saying there is '10% to make up'. Applying front-office reservation management, which response is best justified?"
+        ],
+        "options": [
+          [
+            "以全港 10% 空置率作本酒店沒有如期入住的預測，多接 10% 預訂，並安排前堂候命。",
+            "Use the citywide 10% vacancy rate as the hotel's no-show forecast; take 10% extra bookings and keep reception on standby."
+          ],
+          [
+            "以昨天未售房間數目制定下周超額預訂限額，待當日住客開始抵達才按實際情況調整。",
+            "Use yesterday's unsold rooms to set next week's overbooking allowance, adjusting it only after guests begin arriving."
+          ],
+          [
+            "分析本酒店各日預訂、取消及沒有如期入住紀錄，並評估需另作住宿安排的風險。",
+            "Use the hotel's date-specific bookings, cancellation and no-show history, and assess possible guest relocation."
+          ],
+          [
+            "以保證預訂比例制定超額預訂限額，因為已收取的預付款項能保障服務交付。",
+            "Set the allowance from the proportion of guaranteed reservations, since prepaid income protects service delivery."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "超額預訂是因應取消及沒有如期入住而接受超過房間容量的預訂。全港過去的平均入住率並非個別酒店未來的空房或沒有如期入住比例；超額接單亦可能令已到達的住客沒有房間。",
+          "Overbooking accepts reservations beyond room capacity to allow for cancellations and no-shows. Past citywide occupancy is not the hotel's future vacancy or no-show rate, and excessive bookings can leave arriving guests without rooms."
+        ],
+        "hint": [
+          "區分城市實際入住率、酒店未來預訂及沒有如期入住的比率；再考慮無房可交付時的服務後果。",
+          "Distinguish citywide realised occupancy from hotel-specific forward bookings and no-show rates, then consider the service consequences of having no room to deliver."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：資料可包括 ADR／客房收入及營運成本，須解釋各自如何影響盈利判斷，每項連解釋 2 分。營運安排可包括前堂與房務共享抵達、離店及房態資料，以安排足夠清潔人手並準時交房，措施連解釋 2 分。可接受其他有個案支持的答案；不能只由全港訪客人數推算酒店盈利。",
+      "Suggested marking points, not an official marking scheme: data may include ADR/room revenue and operating costs, with an explanation of how each affects the profit judgement (2 marks each). An operational measure could share arrival, departure and room-status information between front office and housekeeping to plan cleaning staff and release rooms on time (2 marks with explanation). Accept other case-supported responses; citywide arrivals alone cannot establish hotel profit."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待",
+        "Module II: Hospitality"
+      ],
+      "manual": [
+        "教育局《款待》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality teaching manual (fine-tuned July 2024)"
+      ],
+      "section": [
+        "2.2.5 前堂部：預訂、部門協作及客房銷售指標；2.2.6 房務部",
+        "2.2.5 Front Office Department: reservations, interdepartmental relationships and room-sales indicators; 2.2.6 Housekeeping Department"
+      ],
+      "skills": [
+        "應用入住率、ADR 及 RevPAR；辨別收入與盈利；評析超額預訂及部門協作。",
+        "Apply occupancy, ADR and RevPAR; distinguish revenue from profit; evaluate overbooking and interdepartmental coordination."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1012-2",
+    "week": "2026-10-12",
+    "topic": "demand",
+    "title": [
+      "出遊熱度與消費可以走不同方向",
+      "Travel demand and spending can diverge"
+    ],
+    "news": [
+      "10 月 9 日路透社按政府數據計算：10 月 1–7 日內地國內旅遊平均每人次消費為人民幣 893.92 元，按年跌 1.9%。Trip.com 海外酒店七晚或以上預訂按年增 123%，僅代表該平台。",
+      "Reuters reported on 9 October that domestic spending per trip during 1–7 October was RMB893.92, down 1.9% year on year. Trip.com reported 123% growth in overseas hotel bookings of at least seven nights; this is platform-specific."
+    ],
+    "concept": [
+      "旅遊需求・市場細分",
+      "Tourism demand · Segmentation"
+    ],
+    "analysis": [
+      "旅客仍想旅行，但可能選擇較便宜住宿以延長旅程。平台增長不能直接等同整體市場增長。",
+      "Travellers may choose cheaper accommodation to extend a trip. Platform growth is not the same as total market growth."
+    ],
+    "q": [
+      "你會否建議旅行社為「預算有限但希望長住」的客群推出新產品？提出立場，並解釋兩項切合其需要的產品安排。（建議 6 分）",
+      "Would you recommend a new product for visitors who want longer stays on a limited budget? State your position and explain two product arrangements that meet their needs. (Suggested: 6 marks)"
+    ],
+    "source": "https://www.reuters.com/business/retail-consumer/chinas-domestic-travel-spend-during-golden-week-hits-110-billion-2026-10-09/",
+    "publisher": "Reuters",
+    "date": "2026-10-09",
+    "questions": [
+      {
+        "q": [
+          "教學假設：一個客群想用固定預算旅遊八晚，並認識當地生活。旅行社根據旅客的社會經濟特徵設計產品，哪個方案最切合需要？",
+          "Hypothetical extension: a segment wants an eight-night trip on a fixed budget and opportunities to experience local life. Which product best responds to these visitors’ socio-economic characteristics?"
+        ],
+        "options": [
+          [
+            "按最低每晚房價挑選住宿，以節省房費為主要賣點，交通及活動由旅客另行安排。",
+            "Select lodging by the lowest nightly rate, promote room savings, and let visitors arrange transport and activities separately."
+          ],
+          [
+            "訂明住宿、交通及活動的總費用，組合八晚基本住宿與社區文化體驗。",
+            "Combine basic lodging, transport and community cultural experiences within the total budget for an eight-night trip."
+          ],
+          [
+            "提供八晚長住折扣，把活動集中於酒店內，透過使用免費酒店設施減少外出開支。",
+            "Offer an eight-night discount and concentrate activities in the hotel, using its free facilities to reduce spending outside."
+          ],
+          [
+            "設計八晚多地精華團，著重同一價錢可遊覽的景點數目，藉此突顯產品價值。",
+            "Design an eight-night multi-stop highlights tour, emphasising the number of sights included at one price to demonstrate value."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "B 同時處理整體可負擔能力、八晚住宿及認識當地生活的需要。最低房價、酒店優惠或較多景點各有吸引力，但未必同時符合該客群的限制及動機。",
+          "B addresses whole-trip affordability, eight-night duration and interest in local life. Low room rates, hotel benefits or more sights can each appeal, but may not jointly match this segment’s constraints and motivations."
+        ],
+        "hint": [
+          "把「希望得到的體驗」與「限制選擇的條件」分開，再比較整個行程的費用。",
+          "Separate the desired experience from the constraints on choice, then compare the cost of the whole trip."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：旅客仍想離開日常生活並探索文化，但因住宿太貴而放棄某目的地。運用旅遊動機理論，哪個解釋最恰當？",
+          "Hypothetical extension: visitors still want to escape routine and explore culture, but reject a destination because accommodation is too expensive. Which explanation best applies travel motivation theory?"
+        ],
+        "options": [
+          [
+            "住宿價格是旅客的內在推動因素，而逃離日常生活是目的地吸引旅客的拉動因素。",
+            "Accommodation prices are an internal push factor; escaping routine is a pull factor attracting these visitors to the destination."
+          ],
+          [
+            "文化好奇心決定旅客的經濟限制，而目的地費用決定他們是否產生旅遊意欲。",
+            "Cultural curiosity sets visitors’ financial limits, while destination charges determine whether they develop the desire to travel."
+          ],
+          [
+            "逃離日常生活是推動因素，但目的地費用及旅客收入仍可限制實際的旅遊選擇。",
+            "Escaping routine is a push factor, while destination charges and visitors’ income can still constrain their actual travel choice."
+          ],
+          [
+            "旅客收入是目的地的拉動因素，而目的地文化資源反映旅客內在的推動因素。",
+            "Income is a destination pull factor, while the available cultural resources reflect these visitors’ internal push factors."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "旅遊意欲與實際旅遊選擇不同。推動因素源自旅客內在需要；目的地費用屬拉動條件之一，收入則影響可負擔能力。",
+          "The desire to travel differs from the eventual choice. Push factors arise from internal needs; destination charges are among pull conditions, while income affects affordability."
+        ],
+        "hint": [
+          "先判斷因素來自旅客內在還是目的地，再考慮有意欲是否等於有能力購買。",
+          "Identify whether each factor comes from the visitor or destination, then consider whether desire necessarily means ability to purchase."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：立場及合理條件 2 分；兩項安排各 2 分（安排 1 分、與客群需要的連結 1 分）。例如鄰近公共交通的基本住宿可控制整體交通及住宿費；自選社區文化活動可保留文化體驗並控制總預算。可接受有理據的其他方案；不可單憑某平台的增長推論所有客群。",
+      "Suggested marking: position with a reasonable condition, 2 marks; two arrangements, 2 marks each (arrangement, 1; link to visitor needs, 1). For example, basic lodging near public transport can control accommodation and transport costs; optional community cultural activities can retain cultural experiences within the total budget. Accept other justified proposals; platform growth alone does not represent every segment."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論",
+        "Introduction to Tourism"
+      ],
+      "manual": [
+        "教材 1.1：旅遊導論",
+        "Textbook 1.1 — Introduction to Tourism"
+      ],
+      "section": [
+        "3.1 旅遊動機（第54–57頁）；3.2 旅遊動機理論：推拉理論（第63–64頁）；6.2 旅客特徵（第159–164頁）",
+        "3.1 Travel Motivations (pp.54–57); 3.2 Theories of Travel Motivations — Push-and Pull Theory (pp.63–64); 6.2 Visitor Profile (pp.159–164)"
+      ],
+      "skills": [
+        "把旅遊動機、收入限制及旅客特徵應用於產品建議；作有條件判斷",
+        "Apply motivations, income constraints and visitor characteristics to product recommendations; make conditional judgements"
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1012-3",
+    "week": "2026-10-12",
+    "topic": "service",
+    "title": [
+      "颶風撤離與酒店危機管理",
+      "Hurricane evacuation and hotel response"
+    ],
+    "news": [
+      "阿拉巴馬州政府於 2026 年 10 月 8 日公布，因應颶風 Isaias，要求海岸指定地區的非居民、旅客及訪客立即撤離，包括 Gulf Shores、Orange Beach 及 Dauphin Island。",
+      "On 8 October 2026, Alabama’s governor announced mandatory evacuation for non-residents, tourists and visitors in designated coastal areas, including Gulf Shores, Orange Beach and Dauphin Island, ahead of Hurricane Isaias."
+    ],
+    "concept": [
+      "危機管理・跨部門協作・顧客服務",
+      "Crisis management · Coordination · Customer service"
+    ],
+    "analysis": [
+      "前堂須傳達準確訊息，與房務及交通服務協調，特別照顧有額外需要的住客。",
+      "The front office must communicate accurately and coordinate housekeeping and transport, including help for guests with additional needs."
+    ],
+    "q": [
+      "教學假設：你是收到已核實撤離通知的酒店前堂主管。提出三項需要與其他部門協調的行動，逐項解釋如何回應住客需要，並交代先後次序。（6 分）",
+      "Teaching scenario: as front-office supervisor, you receive a verified evacuation order. Propose three actions requiring coordination with other departments. Explain how each addresses guest needs and justify their order. (6 marks)"
+    ],
+    "source": "https://governor.alabama.gov/newsroom/2026/10/governor-ivey-urges-alabamians-to-prepare-for-hurricane-isaias-provides-update/",
+    "publisher": "Office of the Governor of Alabama",
+    "date": "2026-10-08",
+    "feedbackMode": "answers",
+    "discussionMarks": 6,
+    "curriculum": {
+      "module": [
+        "IV 顧客關係及服務；V 旅遊與款待業的趨勢及議題",
+        "IV · Customer Relations and Services; V · Trends and Issues"
+      ],
+      "manual": [
+        "顧客關係及服務手冊；旅遊與款待業趨勢及議題手冊",
+        "Textbook 4_Customer_English; Textbook 5_Trend_and_Issue_English"
+      ],
+      "section": [
+        "IV 1.3 RATER；3.2 服務標準及承諾；3.4 服務補救；5.2–5.6 溝通；V 6.1 環境趨勢：旅遊業",
+        "IV 1.3 RATER; 3.2 Service Standards and Commitment; 3.4 Service Recovery; 5.2–5.6 Communication; V 6.1 Environmental Aspect — Tourism Sector"
+      ],
+      "skills": [
+        "把顧客需要、服務標準與跨部門行動連結；按情境安排先後次序。",
+        "Apply customer needs and service standards to coordinated action; justify priorities in a given situation."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "教學假設：官方已要求酒店撤離。部分住客不懂公告所用語言，另有住客表示需要行動協助。哪項做法最能同時體現 RATER 的保證性及關懷性？",
+          "Teaching scenario: an official evacuation order is in force. Some guests do not understand the announcement language; others request mobility assistance. Which approach best combines assurance and empathy in RATER?"
+        ],
+        "options": [
+          [
+            "以電郵發出已翻譯指示及交通聯絡資料，讓所有住客自行安排協助，以保留選擇權。",
+            "Email translated instructions and transport contacts; ask all guests to arrange assistance independently to preserve their choice."
+          ],
+          [
+            "解釋已核實指示，逐一確認住客理解及所需協助，並透過相關酒店部門協調適當的撤離支援。",
+            "Explain verified instructions, confirm individual understanding and requested assistance, and coordinate evacuation support through the relevant hotel departments."
+          ],
+          [
+            "按員工熟悉的路線把住客分組，讓最早準備好的組別先走，以縮短整體撤離時間。",
+            "Group guests by routes familiar to staff and dispatch the first group ready, aiming to shorten total evacuation time."
+          ],
+          [
+            "以統一英語講解最新安排，再提供詳盡書面資料，讓所有住客收到一致的撤離訊息。",
+            "Give one English briefing on current arrangements, followed by detailed written information so every guest receives consistent evacuation messages."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "保證性涉及員工的知識及能建立信心的準確安排；關懷性要求回應個別需要。核實訊息、確認理解及協調協助能同時做到兩者，並把安全放在商業安排之前。",
+          "Assurance involves knowledgeable staff and accurate arrangements that inspire confidence; empathy requires attention to individual needs. Verified information, checks of understanding and coordinated assistance address both, with safety before commercial matters."
+        ],
+        "hint": [
+          "分辨「向所有人發出訊息」與「住客已理解並獲得適當協助」。",
+          "Distinguish sending information to everyone from ensuring it is understood and appropriate assistance is available."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：撤離已安全完成。一名住客投訴接送安排曾多次改變，而且前堂提供的改期資料互相矛盾。哪項回應最能兼顧即時服務補救與減少重複失誤？",
+          "Teaching scenario: evacuation is safely completed. A guest complains that transfer arrangements changed repeatedly and front-office rebooking information was inconsistent. Which response best combines immediate service recovery with prevention of recurrence?"
+        ],
+        "options": [
+          [
+            "提供下次住宿優惠券，獲住客接受後結束投訴，並以接受率判斷現行流程是否有效。",
+            "Offer a future-stay voucher, close the complaint once accepted, and use voucher acceptance as evidence that the process works."
+          ],
+          [
+            "把投訴轉交交通公司處理，再向住客說明惡劣天氣的影響，以釐清酒店與承辦商的責任。",
+            "Refer the complaint to the transport provider and explain the weather disruption, aiming to clarify the hotel’s and contractor’s responsibilities."
+          ],
+          [
+            "核實住客的投訴經過，提供權限內的改期方案，記錄協調失誤，並與相關部門檢討流程。",
+            "Carefully verify the guest’s complaint, offer feasible authorised rebooking, record coordination failures, and review relevant procedures with all departments involved."
+          ],
+          [
+            "安排前堂重新學習標準說話，要求每次聯絡時重申政策，並以完成培訓記錄作為改善證據。",
+            "Retrain front-office staff on the standard script, require policy reminders during each contact, and use completed training records as improvement evidence."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "服務補救要回應個別投訴；品質改善則要利用投訴及紀錄查明原因、改變流程。天氣非酒店所致，不代表酒店可以忽略其溝通和協調的責任。優惠券本身也未必解決問題。",
+          "Recovery addresses the individual complaint; quality improvement uses complaints and records to identify causes and change procedures. An external weather event does not remove responsibility for hotel communication and coordination. A voucher alone may leave the problem unresolved."
+        ],
+        "hint": [
+          "分別檢查各方案如何處理這名住客的問題，以及之後同類事件的成因。",
+          "Check separately how each proposal addresses this guest’s problem and the causes of similar future failures."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：每項可行行動 1 分，具情境的原因／先後次序解釋 1 分，共 6 分。例如：與保安或指定負責人統一核實指示並以適當語言通知住客，減少錯誤及焦慮；與房務、保安及交通服務核對住客並安排所需協助，確保安全撤離；安全確認後，與訂房及財務部提供一致的改期／退款資料及跟進紀錄。接受其他合理安排；不可先處理促銷或款項而延誤安全行動。",
+      "Suggested marking: 1 mark for each feasible action and 1 for its contextual explanation or justified priority, up to 6. Examples: coordinate verified instructions with security or the designated lead and communicate in suitable languages to reduce errors and anxiety; coordinate guest checks and requested assistance with housekeeping, security and transport to support safe evacuation; once safety is confirmed, work with reservations and accounts on consistent rebooking/refund information and follow-up records. Accept other justified arrangements. Commercial processing must not delay safety action."
+    ],
+    "exerciseVersion": "dse-2026-10-31"
+  },
+  {
+    "id": "1012-4",
+    "week": "2026-10-12",
+    "topic": "transport",
+    "title": [
+      "鐵路與私家車出行的不同變化",
+      "Rail and private-car travel trends"
+    ],
+    "news": [
+      "10 月 9 日路透社引述交通數據：10 月 1–7 日平均每日鐵路客運人次按年增 13%，私家車出行人次跌 1.4%。這是跨區域出行，並非全屬旅遊。",
+      "Reuters reported on 9 October that average daily rail passenger trips during 1–7 October rose 13% year on year, while private-car passenger trips fell 1.4%. These are cross-regional journeys, not exclusively tourism."
+    ],
+    "concept": [
+      "交通・可達性・旅客需要",
+      "Transport · Accessibility · Traveller needs"
+    ],
+    "analysis": [
+      "交通選擇應兼顧成本、時間、行李及長者需要，不只是車票價格。",
+      "Transport decisions involve cost, time, luggage and older travellers’ needs, not only ticket prices."
+    ],
+    "q": [
+      "就帶同行動不便長者及大型行李的家庭，比較鐵路與自駕的兩項相關差異，並提出有條件的建議。（建議 6 分）",
+      "For a family travelling with a visitor with limited mobility and large luggage, compare two relevant differences between rail and self-drive travel and make a conditional recommendation. (Suggested: 6 marks)"
+    ],
+    "source": "https://www.reuters.com/world/asia-pacific/fewer-cars-hit-road-during-chinas-golden-week-2026-10-09/",
+    "publisher": "Reuters",
+    "date": "2026-10-09",
+    "questions": [
+      {
+        "q": [
+          "教學假設：一家人帶同行動不便的長者及大型行李。高鐵需兩小時，車站有無障礙接駁車直達酒店；自駕需五小時且市區泊車不便。若首要目標是減少疲勞及搬運行李，哪項安排最合適？",
+          "Hypothetical extension: a family travels with a visitor with limited mobility and large luggage. Rail takes two hours, with a step-free station-to-hotel shuttle; driving takes five hours and city parking is difficult. Which arrangement best reduces fatigue and luggage handling?"
+        ],
+        "options": [
+          [
+            "乘高鐵後把大型行李存於車站，家人乘一般公共交通到酒店，稍後再取回行李。",
+            "Take rail, store large bags at the station, and use ordinary public transport to reach the hotel before collecting them."
+          ],
+          [
+            "選擇自駕並定時休息，在市區外較便宜的停車場泊車，再轉乘交通工具到酒店。",
+            "Drive with regular rest breaks, use cheaper parking outside the city, and transfer to the hotel by public transport."
+          ],
+          [
+            "乘高鐵並預訂無障礙酒店接駁車，事先確認行李協助及上落車的安排。",
+            "Take rail and reserve the step-free hotel shuttle, confirming luggage assistance and boarding arrangements before departure."
+          ],
+          [
+            "自駕先送家人及行李到酒店，然後由司機另找停車位，避免家人一起搬運行李。",
+            "Drive the family and luggage directly to the hotel, then let the driver find parking while the others check in."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "C 把鐵路較短的行程與合適的接駁服務組合，回應題設的疲勞、行動及行李需要。交通選擇應比較全程，而非只看主要交通工具。",
+          "C combines the shorter rail journey with a suitable transfer and addresses the stated fatigue, mobility and luggage needs. Compare the whole journey rather than the main mode alone."
+        ],
+        "hint": [
+          "逐段比較起點至酒店的行程，並以題目指定的優先需要衡量各選項。",
+          "Compare each stage from origin to hotel, using the priorities stated in the question."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：假日大量鐵路旅客同時到站，接駁車站的空間不足，排隊人群阻塞居民通道。哪項措施最直接管理實質承載力，並兼顧居民需要？",
+          "Hypothetical extension: many holiday rail passengers arrive together. The shuttle interchange has insufficient space, and queues block residents’ access. Which measure most directly manages physical carrying capacity while considering residents?"
+        ],
+        "options": [
+          [
+            "重整現有候車位置的排隊路線，增加工作人員指示旅客，讓每批旅客較快上車。",
+            "Reorganise queues within the existing interchange and add staff to direct visitors, helping each group board more quickly."
+          ],
+          [
+            "加密每班列車抵達後的接駁班次，並繼續使用現有候車位置集中安排旅客上車。",
+            "Increase shuttle frequency after each train arrives, continuing to concentrate boarding and waiting within the existing interchange."
+          ],
+          [
+            "限制每個旅行團的人數，但讓自由行旅客維持原有到達時間及候車安排。",
+            "Limit each organised group’s size, while allowing independent visitors to retain their existing arrival times and waiting arrangements."
+          ],
+          [
+            "分時安排旅客到達及接駁，劃設合適候車區，並保留居民使用的通道。",
+            "Time visitor arrivals and shuttles, allocate suitable waiting space, and keep residents’ access routes clear."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "實質承載力關乎空間及設施可容納的人數。D 同時減少短時間的集中需求和通道衝突；只增加車輛未必解決候車空間不足。",
+          "Physical carrying capacity concerns the number that space and facilities can accommodate. D reduces concentrated demand and access conflicts; more vehicles alone may not resolve inadequate waiting space."
+        ],
+        "hint": [
+          "找出瓶頸是車輛數目、到達時間還是可用空間，再檢查措施有否把問題轉移給居民。",
+          "Locate the bottleneck in vehicles, timing or space, then check whether the measure transfers the problem to residents."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：兩項有效比較各 2 分（雙方差異 1 分、配合家庭需要的解釋 1 分）；建議及適用條件 2 分。例如鐵路可減少長途駕駛疲勞，但接駁及行李搬運仍須處理；自駕可提供較靈活的休息及點到點服務，但須考慮擠塞、泊車與駕駛負擔。按無障礙接駁是否可靠等條件作判斷；年齡本身不代表每位長者都有相同需要。",
+      "Suggested marking: two valid comparisons, 2 marks each (difference between both modes, 1; explanation linked to the family, 1); recommendation with conditions, 2. Rail can reduce long-distance driving fatigue, but transfers and luggage handling need attention. Driving allows flexible breaks and door-to-door travel, but congestion, parking and driving demands matter. Judge against conditions such as reliable accessible transfers; age alone does not imply identical needs."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論",
+        "Introduction to Tourism"
+      ],
+      "manual": [
+        "教材 1.1：旅遊導論",
+        "Textbook 1.1 — Introduction to Tourism"
+      ],
+      "section": [
+        "2.4 旅客行為守則及關注事項：有特殊需要的旅客（第48–52頁）；4.3 承載力（第93–96頁）；5.2 私營行業：交通（第101–106頁）",
+        "2.4 Tourist’s Codes of Behaviour and Concerned Issues — Tourists with Special Needs (pp.48–52); 4.3 Carrying Capacity (pp.93–96); 5.2 Private Sectors — Transportation (pp.101–106)"
+      ],
+      "skills": [
+        "比較交通方式並回應個別旅客需要；以承載力概念處理接駁瓶頸",
+        "Compare transport modes against individual visitor needs; apply carrying capacity to transfer bottlenecks"
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1012-5",
+    "week": "2026-10-12",
+    "topic": "demand",
+    "title": [
+      "敘利亞：客量不等於酒店需求",
+      "Syria: Arrivals are not hotel demand"
+    ],
+    "news": [
+      "10 月 8 日報道：多家酒店集團研究敘利亞市場。報道引述官方數據，2026 上半年旅客約 352 萬，其中約 213 萬為海外居住的敘利亞人。",
+      "An 8 October report described hotel groups exploring Syria. It cited official figures of about 3.52 million visitors in H1 2026, including 2.13 million Syrians living abroad."
+    ],
+    "concept": [
+      "探親訪友 VFR・住宿需求",
+      "Visiting friends and relatives (VFR) · Lodging demand"
+    ],
+    "analysis": [
+      "海外居民不一定全部是探親旅客，也不一定住酒店；應調查目的、住宿選擇及逗留日數。",
+      "Overseas residents are not necessarily all VFR travellers or hotel users. Purpose, accommodation choice and length of stay need investigation."
+    ],
+    "q": [
+      "有投資者認為「352 萬訪客已足以證明豪華酒店的需求龐大」。你是否同意？運用兩項旅客特徵或旅遊統計，解釋你的判斷。（建議 4 分）",
+      "An investor argues: “3.52 million visitors already prove strong demand for luxury hotels.” Do you agree? Explain your judgement using two visitor characteristics or tourism statistics. (Suggested: 4 marks)"
+    ],
+    "source": "https://www.reuters.com/world/europe/hotel-groups-target-syria-tourism-it-rebuilds-rubble-civil-war-2026-10-08/",
+    "publisher": "Reuters",
+    "date": "2026-10-08",
+    "questions": [
+      {
+        "q": [
+          "教學假設：一名慣常居於海外的敘利亞人，主要為探親而回國一周，全程住親友家，但在餐廳用餐並參加導賞。酒店投資者應如何理解這個例子？",
+          "Hypothetical extension: a Syrian resident abroad returns for a week mainly to visit relatives, stays with them, and buys restaurant meals and guided tours. How should a hotel investor interpret this example?"
+        ],
+        "options": [
+          [
+            "他屬過夜的探親訪友旅客，雖有餐飲及導賞消費，但這次沒有酒店住宿需求。",
+            "An overnight VFR visitor generates dining and tour revenue, but creates no hotel lodging demand on this trip."
+          ],
+          [
+            "他應列為即日旅客，因為旅遊統計中的過夜住宿不包括沒有付款的親友家。",
+            "A same-day visitor for tourism statistics, because overnight stays in unpaid private homes are excluded from the tourist category."
+          ],
+          [
+            "他應列為本地休閒旅客，因為國籍及觀光活動比海外居住地更能決定旅客分類。",
+            "A domestic leisure tourist, because citizenship and sightseeing outweigh overseas residence when classifying the type of visit."
+          ],
+          [
+            "他應列為酒店的文化旅遊客源，因為付費導賞比親友住宿更能顯示主要旅遊目的。",
+            "A cultural tourist for hotel planning, because purchasing guided tours indicates a stronger main motive than staying with relatives."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "旅客身分須考慮慣常居住地、到訪目的及是否過夜，而非單看國籍或酒店付款。這名旅客的主要目的為 VFR；餐飲及導賞消費不代表他使用酒店。",
+          "Usual residence, main purpose and overnight stay matter, rather than citizenship or hotel payment alone. The main purpose is VFR; restaurant and tour spending do not establish hotel use."
+        ],
+        "hint": [
+          "分別判斷慣常居住地、主要到訪目的、是否過夜及住宿方式，勿把四者混為一談。",
+          "Consider usual residence, main purpose, overnight stay and lodging choice separately."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：新酒店希望把旅客消費的經濟效益更多留在當地。若成本及品質相若，哪項安排最有利於加強本地聯繫效應及減少流失？",
+          "Hypothetical extension: a new hotel wants more of visitors’ economic benefits to remain locally. With comparable costs and quality, which arrangement best strengthens local linkages and reduces leakage?"
+        ],
+        "options": [
+          [
+            "透過海外總部採購國際產品，利用統一供應及設備維持酒店品牌的一致性。",
+            "Buy international products through overseas headquarters, using centralised supply and equipment to maintain consistent standards across the hotel brand."
+          ],
+          [
+            "提供全包餐飲及進口娛樂節目，把旅客開支集中於酒店，以增加目的地保留的收益。",
+            "Offer all-inclusive dining and imported entertainment, keeping visitor spending within the hotel to increase the benefits retained locally."
+          ],
+          [
+            "與本地食材供應商合作，培訓本地僱員，並轉介住客使用合適的社區服務。",
+            "Use local food suppliers, train local employees, and refer guests to suitable community services supporting their stay at the destination."
+          ],
+          [
+            "聘用海外專才並採用進口名牌設備，利用國際品牌知名度增加目的地保留的收益。",
+            "Recruit overseas specialists and import branded equipment, expecting international brand recognition to increase the economic benefits retained by the destination."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "本地採購、就業及跨行業消費可讓收入在當地再流通，增加聯繫及乘數效應。進口開支及匯出利潤則可能形成流失；這不表示所有外資均沒有好處。",
+          "Local procurement, employment and spending across sectors allow income to recirculate and strengthen linkage and multiplier effects. Imports and remitted profits can create leakage; this does not mean foreign investment has no benefits."
+        ],
+        "hint": [
+          "追蹤住客付款之後，款項由誰收取、向誰採購，以及是否會在目的地再次消費。",
+          "Trace who receives visitors’ spending, whom they purchase from and whether the money is spent again within the destination."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：兩項有效資料及解釋各 2 分。例一：住宿方式及使用付費住宿的比例，因探親旅客可能住親友家，訪客總數並非酒店客數。例二：收入／消費能力及住宿開支，因使用付費住宿亦不代表選擇豪華酒店。平均逗留日數及過夜比例也可接受，但須解釋與需求的關係。海外居住的敘利亞人不能僅憑國籍一律歸類為 VFR。",
+      "Suggested marking: two relevant characteristics/statistics with explanation, 2 marks each. For example, lodging choice and the share using paid accommodation matter because VFR visitors may stay with relatives. Income/spending power and accommodation spending matter because paid lodging does not necessarily mean luxury hotels. Length of stay or overnight share are also acceptable if linked to demand. Do not classify every Syrian resident abroad as VFR solely by nationality."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論",
+        "Introduction to Tourism"
+      ],
+      "manual": [
+        "教材 1.1：旅遊導論",
+        "Textbook 1.1 — Introduction to Tourism"
+      ],
+      "section": [
+        "2.1 旅行、旅遊及旅客的概念與定義（第24–31頁）；2.2 旅遊形式：探親訪友（第35頁）；6.2 旅客特徵（第159–164頁）；7.2 旅遊的經濟影響（第180–191頁）",
+        "2.1 Concepts and Definitions of Travel, Tourism and Tourist (pp.24–31); 2.2 Forms of Travel — Visiting Friends and Relatives (p.35); 6.2 Visitor Profile (pp.159–164); 7.2 The Economic Impacts of Tourism (pp.180–191)"
+      ],
+      "skills": [
+        "以居住地、主要目的及住宿選擇分析客源；解釋聯繫效應與流失",
+        "Analyse visitors by residence, main purpose and lodging choice; explain linkage effects and leakage"
+      ]
+    },
+    "discussionMarks": 4,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1019-1",
+    "week": "2026-10-19",
+    "topic": "hotel",
+    "title": [
+      "一晚短假：短住宿的新需要",
+      "One-night breaks: New guest needs"
+    ],
+    "news": [
+      "Expedia 於 10 月 14 日發布 Unpack ’27：Hotels.com 一晚住宿搜尋按年增近 10%。涵蓋 2025-09-01 至 2026-08-25、星期四至日入住的搜尋，並非實際入住。",
+      "Expedia’s Unpack ’27, released 14 October, reported nearly 10% growth in Hotels.com searches for one-night stays. Data covers 1 September 2025–25 August 2026, for Thursday–Sunday check-ins, not actual stays."
+    ],
+    "concept": [
+      "市場細分・前堂與房務",
+      "Segmentation · Front office and housekeeping"
+    ],
+    "analysis": [
+      "短住增加客源，同時可能增加每個已售客房晚數的清潔及入住手續工作。",
+      "Short stays may attract customers while increasing cleaning and check-in work per occupied room-night."
+    ],
+    "q": [
+      "為「演唱會後住一晚」套票建議一項服務，並解釋如何配合住客需要（2 分）；解釋一項所需的前堂與房務協作（2 分），再評析一項限制或取捨及處理方法（2 分）。共 6 分。",
+      "Recommend one service for a one-night concert package and explain how it meets guest needs (2 marks). Explain one required front-office–housekeeping coordination measure (2 marks), then evaluate one limitation or trade-off and how to manage it (2 marks). Total: 6 marks."
+    ],
+    "source": "https://www.expedia.co.uk/newsroom/unpack-27-expedia-and-hotels-com-unveil-the-trends-driving-travel-in-2027/",
+    "publisher": "Expedia",
+    "date": "2026-10-14",
+    "questions": [
+      {
+        "q": [
+          "教學假設：兩天早上各有 80 間房需清潔。甲日有 20 間離店房、60 間續住房；乙日有 60 間離店房、20 間續住房。假設每間離店房需 30 分鐘、續住房需 15 分鐘。哪項房務安排判斷正確？",
+          "Hypothetical extension: 80 rooms require cleaning on each of two mornings. Day A has 20 checkout rooms and 60 stayover rooms; Day B has 60 checkout rooms and 20 stayover rooms. Assume 30 minutes per checkout room and 15 per stayover room. Which housekeeping judgement is correct?"
+        ],
+        "options": [
+          [
+            "兩天均需清潔 80 間房，因此工作時間同為 1,500 分鐘，可以維持原有人手安排。",
+            "Cleaning time is unchanged at 1,500 minutes; with 80 occupied rooms, the current roster can be retained."
+          ],
+          [
+            "乙日少了 40 間續住房，故清潔工作減少 600 分鐘，可把人手調往其他樓層。",
+            "Cleaning time falls by 600 minutes; 40 fewer stayover rooms allow staff to be reassigned to other floors."
+          ],
+          [
+            "乙日需多 600 分鐘清潔工作；排班須考慮離店房比例及下一批住客的抵達時間。",
+            "Day B requires 600 extra cleaning minutes; consider its checkout mix and incoming arrival times when planning the roster."
+          ],
+          [
+            "乙日多了 40 間離店房，故增加 1,200 分鐘工作，應以此決定全部額外人手。",
+            "Cleaning time increases by 1,200 minutes; the 40 extra checkout rooms determine the entire staffing change."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "甲日為 20 × 30 + 60 × 15 = 1,500 分鐘；乙日為 60 × 30 + 20 × 15 = 2,100 分鐘，相差 600 分鐘。客房數或入住率相同，也可能因住宿周轉不同而有不同工作量；上述時間均為題設假設。",
+          "Day A requires 20 × 30 + 60 × 15 = 1,500 minutes; Day B requires 60 × 30 + 20 × 15 = 2,100, a difference of 600. Equal room counts or occupancy can produce different workloads because of turnover. The times are assumptions for this question."
+        ],
+        "hint": [
+          "分別計算離店房與續住房的總時間；留意增加的一類工作是否取代了另一類工作。",
+          "Calculate total time for checkout and stayover rooms separately, allowing for one type of work replacing another."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：酒店推出『演唱會後住一晚』套票，預料住客深夜抵達，翌日下午又有一批新住客。哪項安排最能同時配合短住客需要及客房運作？",
+          "Hypothetical extension: a hotel offers a one-night concert package. Guests are expected to arrive late at night, and another group arrives the next afternoon. Which arrangement best matches short-stay needs and room operations?"
+        ],
+        "options": [
+          [
+            "確認深夜抵達並保證所有套票住客下午 4 時退房，要求房務優先處理翌日團體入住。",
+            "Confirm late arrival and guarantee 4 p.m. checkout to all package guests; ask housekeeping to prioritise incoming groups."
+          ],
+          [
+            "維持一般非保證預訂的客房釋放時間，提供快捷登記，並在演唱會散場時增加前堂人手。",
+            "Keep the normal non-guaranteed release time and offer express check-in; add reception staff for the concert finish."
+          ],
+          [
+            "保留深夜抵達客房並優先提供延遲退房；依平均入住率而非離店時間安排清潔人手。",
+            "Hold rooms for late arrival and prioritise late checkout; allocate cleaners from average occupancy rather than departure times."
+          ],
+          [
+            "確認深夜抵達及保證預訂，與房務協調房態，延遲退房則視供應情況提供並預先說明。",
+            "Confirm late arrival and guaranteed bookings; coordinate room status and state that late checkout depends on availability."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "預訂安排須配合深夜抵達，以免客房被釋放。延遲退房影響離店房清潔和下一批住客入住，須由前堂與房務按房態協調，不能只增加推廣承諾。",
+          "Reservation arrangements must accommodate late arrival so rooms are not released. Late checkout affects cleaning and the next arrivals, requiring front-office and housekeeping coordination rather than additional promotional promises alone."
+        ],
+        "hint": [
+          "沿住客周期檢查預抵、抵達及離店三個階段，並思考同一間房下一位住客何時需要使用。",
+          "Trace pre-arrival, arrival and departure in the guest cycle, then consider when the next guest needs the same room."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：可建議確認深夜入住、簡便登記、合適早餐時段或按房態延遲退房，須連結演唱會散場或休息需要（2 分）。前堂可共享抵達、離店及特別要求，房務確認已清潔可交付房態（2 分）。可評析延遲退房與下一批入住衝突，提出限額、清楚截止時間或按房態安排（2 分）。接受其他有理據設計；搜尋增長並非已確認需求。",
+      "Suggested marking points, not an official marking scheme: recommend confirmed late arrival, efficient registration, suitable breakfast timing or availability-based late checkout, linked to concert timing or rest needs (2 marks). Front office can share arrivals, departures and requests while housekeeping confirms ready rooms (2 marks). Evaluate a conflict such as late checkout versus incoming arrivals and propose quotas, clear deadlines or availability controls (2 marks). Accept other justified designs; search growth is not confirmed demand."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待",
+        "Module II: Hospitality"
+      ],
+      "manual": [
+        "教育局《款待》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality teaching manual (fine-tuned July 2024)"
+      ],
+      "section": [
+        "2.1.7 住宿產品及套票房價；2.2.5 前堂部、住客周期及部門協作；2.2.6 房務部的工作分配",
+        "2.1.7 Accommodation product and package rates; 2.2.5 Front Office Department, guest cycle and interdepartmental relationships; 2.2.6 Housekeeping room assignment"
+      ],
+      "skills": [
+        "按旅客需要設計服務；計算及解釋房務工作量；評析前堂與房務協作及資源取捨。",
+        "Design services for guest needs; calculate and interpret housekeeping workload; evaluate front-office–housekeeping coordination and resource trade-offs."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1019-2",
+    "week": "2026-10-19",
+    "topic": "demand",
+    "title": [
+      "香港九月增長與低基數",
+      "Hong Kong growth and the base effect"
+    ],
+    "news": [
+      "10 月 15 日發布的旅發局數據：2026 年 9 月約 403 萬訪港人次，按年增 22%；內地及長途市場分別增 29% 及 20%。去年同期惡劣天氣造成較低比較基數。",
+      "HKTB figures released 15 October recorded about 4.03 million September arrivals, up 22% year on year. Mainland and long-haul markets grew 29% and 20%. Adverse weather last year created a low comparison base."
+    ],
+    "concept": [
+      "客源市場・節慶・數據分析",
+      "Source markets · Events · Data interpretation"
+    ],
+    "analysis": [
+      "增長可有多項因素，不能全部歸功於節慶宣傳。",
+      "Multiple factors can explain growth; it cannot all be attributed to event promotion."
+    ],
+    "q": [
+      "某酒店打算因九月訪港人次按年增 22%，便把未來每月的前堂人手同樣增加 22%。解釋這個決定的兩項局限，並提出一項較合適的需求指標，說明如何用它編排人手。（6 分）",
+      "A hotel plans to increase front-office staffing by 22% in every coming month because September visitor arrivals rose 22% year on year. Explain two limitations of this decision. Propose one more suitable demand indicator and explain how it would inform staffing. (6 marks)"
+    ],
+    "source": "https://www.chinadailyhk.com/hk/article/641143",
+    "publisher": "China Daily / HKTB data",
+    "date": "2026-10-15",
+    "feedbackMode": "answers",
+    "discussionMarks": 6,
+    "curriculum": {
+      "module": [
+        "V 旅遊與款待業的趨勢及議題",
+        "V · Trends and Issues in the Tourism and Hospitality Industry"
+      ],
+      "manual": [
+        "旅遊與款待業趨勢及議題手冊",
+        "Textbook 5_Trend_and_Issue_English"
+      ],
+      "section": [
+        "4.1.1 可支配收入；4.1.2 旅遊模式；4.1.3 旅遊目的地競爭；4.2.1 住宿需求",
+        "4.1.1 Disposable Income; 4.1.2 Travel Patterns; 4.1.3 Competition among Tourism Receiving Countries; 4.2.1 Accommodation Demand"
+      ],
+      "skills": [
+        "解讀不同期間及市場的旅遊數據；區分旅客人次、住宿需求與因果推論。",
+        "Interpret tourism statistics across periods and source markets; distinguish arrivals, accommodation demand and causal claims."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "九月訪港人次按年增 22%，而去年同期受惡劣天氣影響。一家酒店假設升勢會持續，擬擴展節慶套票宣傳。哪項檢視最能支持其來源市場需求預測？",
+          "September arrivals rose 22% after adverse weather affected the previous September. A hotel assumes growth will continue and proposes expanding festival-package promotion. Which review best supports its source-market demand forecast?"
+        ],
+        "options": [
+          [
+            "比較多個時期的來源市場客量，考慮天氣及交通供應變化，並調查旅客選擇香港的原因。",
+            "Compare actual source-market arrivals across several comparable periods, allowing for weather and transport changes; investigate visitors’ reasons for choosing Hong Kong."
+          ],
+          [
+            "以九月的 22% 增幅預測各來源市場，再按預期增加的節慶需求調整套票房價。",
+            "Use September’s 22% growth for each source market’s forecast, then adjust package room prices for the expected additional festival demand."
+          ],
+          [
+            "把內地市場 29% 增幅視為節慶宣傳的成效，並優先推廣該市場的節慶套票而非其他旅遊產品。",
+            "Treat mainland growth of 29% as the effect of festival promotion, prioritising that market’s festival packages over its other travel products."
+          ],
+          [
+            "因去年天氣壓低基數，把九月全部增長剔出預測，並維持較早時期的市場優次。",
+            "Remove all September growth from the forecast because last year’s weather depressed the base, keeping the earlier source-market priorities unchanged."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "來源市場需求預測要比較不同期間的實際客量及影響出遊的因素。低基數、交通供應及出遊動機可能同時影響升幅，不能把整體增長套用至每個市場，或直接視為節慶套票帶來的持續需求。",
+          "A source-market forecast needs arrivals across periods and factors affecting travel. The low base, transport supply and travel motives may contribute together. Aggregate growth cannot simply be assigned to every market or treated as continuing demand caused by festival packages."
+        ],
+        "hint": [
+          "列出兩個年份除宣傳外可能不同的條件，再想想哪些證據能分辨各因素。",
+          "Identify conditions other than promotion that may differ between the two years, then consider evidence that could separate their effects."
+        ]
+      },
+      {
+        "q": [
+          "一家酒店希望在內地與長途市場之間分配銷售資源。新聞只提供兩者訪港人次增幅 29% 及 20%。哪個決策方法最合理？",
+          "A hotel must allocate sales resources between mainland and long-haul markets. The report gives arrival growth of 29% and 20% respectively. Which decision method is most reasonable?"
+        ],
+        "options": [
+          [
+            "按訪客增幅分配銷售資源，偏重內地市場，因較高增長代表該市場有較大的酒店客房需求潛力。",
+            "Allocate sales resources by arrival growth, favouring mainland markets because faster growth indicates greater potential demand for hotel rooms."
+          ],
+          [
+            "以出發地距離作為酒店消費的指標，優先選長途市場，因較長旅程通常涉及較多旅遊安排。",
+            "Prioritise long-haul markets using distance as a proxy for hotel spending, since longer journeys typically require a more substantial trip."
+          ],
+          [
+            "按 29 比 20 分配銷售資源，把已公布的增長率視為兩個目標市場的相對規模。",
+            "Allocate resources in a 29:20 ratio, treating the published growth rates as the relative sizes of the two target markets."
+          ],
+          [
+            "比較來源市場規模、酒店使用率、逗留時間及可達房價，以估計該酒店可爭取的潛在客房收入。",
+            "Compare source-market size, hotel use, stay length and achievable room rates to estimate the hotel’s potential accommodation revenue."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "增長率未交代市場原有規模，訪港人次也包括未必使用酒店的旅客。估計某酒店可爭取的需求及收入，須把實際住宿行為與價格資料連結，不能把百分比當市場份額。",
+          "Growth rates do not show the initial market sizes, and not every arrival uses a hotel. Estimating demand and revenue available to a hotel requires accommodation behaviour and rate information; growth percentages are not market shares."
+        ],
+        "hint": [
+          "先分清「市場增長率」、「市場規模」及「可售出的酒店房晚」。",
+          "Distinguish market growth, market size and the hotel room-nights that might actually be sold."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：兩項局限，各 1 分指出及 1 分解釋；指標 1 分、用途 1 分，共 6 分。例一：去年惡劣天氣造成低基數，單月按年增幅不等於未來每月持續增長。例二：全港訪客未必入住該酒店，市場、過夜比例及逗留時間不同，也不等於前堂工作量同比例上升。較合適指標如該酒店按日期及時段預計的入住／退房宗數，利用已訂房及歷史到達模式安排繁忙時段人手。接受其他具理由的酒店層面需求指標。",
+      "Suggested marking: each of two limitations earns 1 mark for identification and 1 for explanation; 1 mark for a suitable indicator and 1 for its staffing use, up to 6. For example, last year’s weather depressed the base, so one monthly annual increase is not a forecast of persistent growth. Also, destination arrivals do not equal this hotel’s guests or workload: market mix, overnight share and stay length differ. An appropriate indicator is the hotel’s forecast check-ins/check-outs by date and time, using bookings and past arrival patterns to roster peak periods. Accept other justified hotel-level demand measures."
+    ],
+    "exerciseVersion": "dse-2026-10-31"
+  },
+  {
+    "id": "1019-3",
+    "week": "2026-10-19",
+    "topic": "sustainability",
+    "title": [
+      "航空公司與綠色酒店採購",
+      "Airlines and sustainable hotel procurement"
+    ],
+    "news": [
+      "IATA 與世界可持續款待聯盟於 10 月 14 日宣布，將制定航空公司採購酒店住宿的可持續指引，包括投標評估及合約考慮。這是計劃，並非全球強制規定。",
+      "On 14 October, IATA and WSHA announced plans for sustainable hotel procurement guidance, including tender criteria and contracting considerations. This is planned guidance, not a global mandatory rule."
+    ],
+    "concept": [
+      "可持續旅遊・業界相互依存",
+      "Sustainable tourism · Industry interdependence"
+    ],
+    "analysis": [
+      "酒店可透過可核實的環保表現爭取企業客戶，不能只靠宣傳口號。",
+      "Verified environmental performance may help hotels attract corporate clients; slogans alone are insufficient."
+    ],
+    "q": [
+      "為航空公司設計兩項可核實的酒店環保評分準則，逐項說明需要甚麼證據。再解釋只以最低房價選擇酒店的一項局限。（6 分）",
+      "Design two verifiable environmental criteria for an airline’s hotel tender and state the evidence required for each. Then explain one limitation of choosing hotels solely by the lowest room rate. (6 marks)"
+    ],
+    "source": "https://www.iata.org/en/pressroom/2026-releases/10-14-iata-and-world-sustainable-hospitality-alliance-to-collaborate-on-sustainable-hotel-procurement/",
+    "publisher": "IATA",
+    "date": "2026-10-14",
+    "feedbackMode": "answers",
+    "discussionMarks": 6,
+    "curriculum": {
+      "module": [
+        "V 旅遊與款待業的趨勢及議題",
+        "V · Trends and Issues in the Tourism and Hospitality Industry"
+      ],
+      "manual": [
+        "旅遊與款待業趨勢及議題手冊",
+        "Textbook 5_Trend_and_Issue_English"
+      ],
+      "section": [
+        "2.4 可持續旅遊目標；6.2 綠色酒店；6.3.1 可持續採購及資源消耗",
+        "2.4 Sustainable Tourism Aims; 6.2 Green Hotels; 6.3.1 Sustainable Purchasing and Resource Consumption"
+      ],
+      "skills": [
+        "以可核實證據評估綠色酒店及採購方案；比較總量與單位資源消耗。",
+        "Evaluate green hotels and purchasing proposals with verifiable evidence; compare total and unit resource consumption."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "教學假設：航空公司要為機組人員選擇酒店。哪種投標評估方法最符合可持續採購概念？",
+          "Teaching scenario: an airline is selecting hotels for its crews. Which tender assessment best applies sustainable purchasing?"
+        ],
+        "options": [
+          [
+            "先按房價篩選酒店，再以各酒店投標時提交的相同類型環保聲明及宣傳資料評分。",
+            "Shortlist by room rate, then score each hotel’s environmental credentials using the same claims and promotional materials supplied with its bid."
+          ],
+          [
+            "比較獨立環保獎項及服務品質；當價格與服務各有優劣時，以最高獎項級別作決定。",
+            "Compare independent environmental awards and service quality; use the highest award level as the deciding factor when price and service offers differ."
+          ],
+          [
+            "綜合住宿服務適合程度、具競爭力價格、可核實環保表現及社會責任，並把持續報告要求寫入合約。",
+            "Assess accommodation service suitability, competitive price, verified environmental performance and social responsibility, with continuing reporting requirements included in the contract."
+          ],
+          [
+            "優先比較接送距離及房價，假定縮短機組人員車程的好處可抵銷酒店水電與廢物管理的差異。",
+            "Prioritise transfer distance and quoted price, assuming shorter crew journeys outweigh differences in hotel water, energy and waste management."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "手冊把可持續採購界定為除成本及品質外，同時考慮環境及社會因素。單一標語、獎項或距離不足以代表整體表現；服務需要和可核實、持續的證據也要納入。",
+          "The manual treats sustainable purchasing as considering environmental and social factors as well as cost and quality. A slogan, award or distance alone does not establish overall performance; service needs and verifiable continuing evidence also matter."
+        ],
+        "hint": [
+          "把每個選項的評估範圍列出，看看它考慮了哪些成本、品質、環境及社會因素。",
+          "List the scope of each option: which cost, quality, environmental and social factors does it consider?"
+        ]
+      },
+      {
+        "q": [
+          "教學假設：一間投標酒店的年度用水量由 100,000 降至 90,000 立方米，同期已售客房房晚由 50,000 降至 40,000。只按這些資料，哪項結論最恰當？",
+          "Teaching scenario: a bidding hotel’s annual water use fell from 100,000 to 90,000 m³, while occupied room-nights fell from 50,000 to 40,000. Based only on these figures, which conclusion is most appropriate?"
+        ],
+        "options": [
+          [
+            "總用水量跌 10%，酒店可直接聲稱每個已售房晚同樣改善 10%，毋須再調整入住量的差異。",
+            "Water use fell 10% overall, so the hotel can claim equal improvement per occupied room-night without adjusting for occupancy differences."
+          ],
+          [
+            "每個已售房晚用水增 12.5%；總用水量下降不足以證明酒店的單位用水效率已改善。",
+            "Water per occupied room-night rose 12.5%; the lower total water use therefore does not establish an improvement in unit water efficiency."
+          ],
+          [
+            "房晚與用水量同時下降，顯示節水措施降低住宿需求，酒店應重新考慮是否在投標中採用。",
+            "Falling room-nights alongside reduced water use indicate that water-saving measures reduced accommodation demand and should be reconsidered for this bid."
+          ],
+          [
+            "總用水較低支持更佳的整體環保評分，因酒店能源消耗及廢物量一般也隨入住量下降。",
+            "The lower water total supports a better overall environmental score because energy use and waste generally decline with a hotel’s occupancy."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "100,000 ÷ 50,000 = 2；90,000 ÷ 40,000 = 2.25，單位用水反而上升 12.5%。這不證明某措施造成變化，仍需調查其他用水活動等因素；亦不能用水數據推斷能源或廢物表現。",
+          "100,000 ÷ 50,000 = 2 and 90,000 ÷ 40,000 = 2.25: unit water use rose 12.5%. This does not prove what caused the change; other water-using activities need investigation. Water figures also do not establish energy or waste performance."
+        ],
+        "hint": [
+          "用同一分母比較兩期用水量，並把「觀察到變化」與「已證明原因」分開。",
+          "Compare both periods using the same denominator, and separate an observed change from a proven cause."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：每項準則 1 分、相配證據 1 分；最低價限制及解釋各 1 分，共 6 分。例：每個已售房晚的用水或能源消耗，以同期帳單、儀表紀錄及房晚資料核實；廢物減量或分流表現，以稱重、收集及處理紀錄核實。只看低價可能忽略服務品質、資源浪費或僱員工作條件等環境／社會成本。接受其他合理、可驗證且不重複的準則。所有比較須交代期間及範圍；指引尚在制定，不可當作已生效的強制規例。",
+      "Suggested marking: 1 mark per criterion and 1 for matching evidence; 1 for a limitation of lowest-price selection and 1 for its explanation, up to 6. Examples: water or energy per occupied room-night, supported by bills, meter records and room-night data for the same period; waste reduction or diversion supported by weight, collection and treatment records. Lowest price alone may overlook service quality, resource waste or environmental/social costs such as working conditions. Accept other distinct verifiable criteria. Comparisons must state period and scope; planned guidance is not an enacted mandatory rule."
+    ],
+    "exerciseVersion": "dse-2026-10-31"
+  },
+  {
+    "id": "1019-4",
+    "week": "2026-10-19",
+    "topic": "mice",
+    "title": [
+      "展覽場地：大是否代表有競爭力？",
+      "Exhibition venues: Is bigger better?"
+    ],
+    "news": [
+      "10 月 13 日發布的 UFI 報告：截至 2025-12-31，亞太區有 41 個室內展覽面積至少 10 萬平方米的場地，歐洲有 38 個。並非當周新增數。",
+      "UFI data reported on 13 October counts 41 Asia-Pacific venues with at least 100,000 square metres of indoor exhibition space, versus 38 in Europe, as of 31 December 2025. These are not newly opened venues that week."
+    ],
+    "concept": [
+      "MICE・目的地競爭力",
+      "MICE · Destination competitiveness"
+    ],
+    "analysis": [
+      "場地大小只代表供應，交通、住宿及專業服務亦影響選址。",
+      "Size measures supply; transport, accommodation and professional services also affect selection."
+    ],
+    "q": [
+      "「香港只需擴大展覽面積，便能提升國際會展競爭力。」你是否同意？解釋另外兩項重要條件，並作有理據的判斷。（建議 6 分）",
+      "“Hong Kong only needs more exhibition space to improve its international MICE competitiveness.” Do you agree? Explain two other important conditions and give a justified judgement. (Suggested: 6 marks)"
+    ],
+    "source": "https://exhibitionnews.uk/new-2026-edition-of-world-map-of-exhibition-venues-released/",
+    "publisher": "Exhibition News / UFI",
+    "date": "2026-10-13",
+    "questions": [
+      {
+        "q": [
+          "教學假設：國際展覽需要 15,000 平方米及大量海外參展者。甲場地有 30,000 平方米，但交通接駁及鄰近住宿不足；乙場地有 20,000 平方米，交通及住宿配套合適。其他條件相若，哪項建議最有理據？",
+          "Hypothetical extension: an international exhibition needs 15,000 m² and many overseas exhibitors. Venue A offers 30,000 m² but weak transfers and nearby lodging; B offers 20,000 m² with suitable transport and hotels. Other conditions being similar, which recommendation is best justified?"
+        ],
+        "options": [
+          [
+            "選甲，利用多出的面積增設交流區，並在參展者完成報名後再安排接駁及住宿。",
+            "Choose A, use its extra space for networking areas, and arrange transfers and hotels after exhibitors register."
+          ],
+          [
+            "選乙，確認展覽及運作空間足夠，並利用交通與酒店配套協調參展者行程。",
+            "Choose B, confirm adequate event space, and coordinate exhibitors’ trips using its suitable transport and hotel support."
+          ],
+          [
+            "選甲，把附帶活動也放在同一場地，透過減少場地之間的移動來吸引海外參展者。",
+            "Choose A and put supporting activities on site, attracting overseas exhibitors through less movement between event venues."
+          ],
+          [
+            "選乙，把推廣重點放在附近觀光及餐飲套票，讓參展者自行安排住宿及主要交通。",
+            "Choose B, focus promotion on nearby sightseeing and dining packages, and leave lodging and main transport to exhibitors."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "B 先確認活動容量，再處理海外參展者必要的交通及住宿。其他方案可提供附加價值，但額外面積、場內活動或觀光套票不能取代適合整段商務行程的配套。",
+          "B checks event capacity and then addresses overseas exhibitors’ essential transport and lodging. The other plans offer some added value, but extra area, on-site activities or sightseeing packages cannot replace support for the whole business trip."
+        ],
+        "hint": [
+          "先檢查最低活動要求是否達到，再比較海外參展者在場地以外需要的服務。",
+          "Check minimum event requirements first, then compare the services overseas exhibitors need beyond the venue."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：某酒店周中淡季有空置客房，希望爭取一個提前一年籌備的國際會議。哪項做法最能運用 MICE 的特點，並支援活動運作？",
+          "Hypothetical extension: a hotel has empty weekday rooms in its low season and wants an international convention being planned a year ahead. Which action best uses MICE characteristics while supporting operations?"
+        ],
+        "options": [
+          [
+            "推出淡季散客優惠，以逐晚銷售為主，讓會議代表在公開網站自行預訂剩餘客房。",
+            "Promote low-season individual rates, sell mainly night by night, and let delegates book remaining rooms on public websites."
+          ],
+          [
+            "向主辦方提供客房折扣，優先推銷酒店品牌特色，餐飲及接駁由各代表自行安排。",
+            "Offer the organiser a room discount and emphasise the hotel brand, leaving dining and transfers to individual delegates."
+          ],
+          [
+            "保留會議所需房間，但主推酒店最熱門月份，以提高每間已售客房的房價。",
+            "Reserve the required rooms but promote the hotel’s most popular month to raise the rate per room sold."
+          ],
+          [
+            "提早協議淡季房間配額及餐飲，並與主辦方和會場協調酒店與會場之間的接駁。",
+            "Agree low-season room allocations and dining early, coordinating transfers between the hotel and the convention venue."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "MICE 通常提前安排，可幫助酒店預測預訂及填補淡季需求；住宿、餐飲及交通亦須協調。會議客並非完全不受價格或日期限制。",
+          "MICE is usually arranged ahead, helping hotels forecast bookings and fill low-season demand. Lodging, dining and transport require coordination; delegates are not immune to price or date constraints."
+        ],
+        "hint": [
+          "把「提前籌備」及「淡季需求」連到酒店與主辦機構各自的需要。",
+          "Connect advance planning and low-season demand to the needs of both hotel and organiser."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：兩項條件各 2 分（條件 1 分、連結主辦方／參加者需要的解釋 1 分）；綜合判斷 2 分。可論國際及本地交通可達性、足夠並合適的酒店與餐飲、資訊科技及專業活動服務。面積增加可解決已知容量不足，卻不自動創造需求；須按活動規模及配套作判斷。這些是判斷框架，不是對香港現時配套的未經核實排名。",
+      "Suggested marking: two conditions, 2 marks each (condition, 1; link to organiser/attendee needs, 1); overall judgement, 2. Accept international/local accessibility, suitable hotels and dining, IT, or professional event services. Expansion can address demonstrated space shortages but does not automatically create demand; assess event scale and supporting services together. These are evaluation criteria, not an unverified ranking of Hong Kong’s present facilities."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論 — 會議展覽及獎勵旅遊",
+        "Introduction to Tourism — MICE"
+      ],
+      "manual": [
+        "教材 1.2：會議展覽及獎勵旅遊（MICE）",
+        "Textbook 1.2 — Meetings, Incentives, Conventions and Exhibitions (MICE)"
+      ],
+      "section": [
+        "1.4 展覽（第8–10頁）；1.5 會議展覽及獎勵旅遊的價值（第11–15頁）；2.1 酒店（第17–26頁）；2.2 交通（第27–29頁）；3.1 策劃過程的要素（第32–34頁）",
+        "1.4 Exhibitions (pp.8–10); 1.5 The Value of MICE (pp.11–15); 2.1 Sector Involved — Hotel (pp.17–26); 2.2 Sector Involved — Transportation (pp.27–29); 3.1 The Planning Process Components (pp.32–34)"
+      ],
+      "skills": [
+        "按活動要求比較選址；綜合會展效益、酒店及交通支援作判斷",
+        "Compare sites against event requirements; evaluate MICE benefits together with hotel and transport support"
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1019-5",
+    "week": "2026-10-19",
+    "topic": "service",
+    "title": [
+      "酒店精簡服務的取捨",
+      "Trade-offs in reducing hotel services"
+    ],
+    "news": [
+      "10 月 13 日 Whitbread 重申轉型策略；截至 10 月 1 日的五周，英國住宿銷售按年增 4.5%。餐廳關閉及裁員計劃較早已公布。",
+      "On 13 October, Whitbread reaffirmed its strategy. UK accommodation sales rose 4.5% in the five weeks ending 1 October. Restaurant closures and job reductions were previously announced plans."
+    ],
+    "concept": [
+      "成本・餐飲・人力資源",
+      "Costs · Food and beverage · Human resources"
+    ],
+    "analysis": [
+      "縮減服務可能減成本，也可能降低方便程度及滿意度。",
+      "Reducing services may save costs but reduce convenience and satisfaction."
+    ],
+    "q": [
+      "假設酒店縮減晚餐服務但保留早餐：解釋一項營運好處（2 分）及一項對住客的風險（2 分），再提出一項具體改善安排並解釋所需部門協作（2 分）。共 6 分。",
+      "Suppose a hotel reduces dinner service but retains breakfast. Explain one operational benefit (2 marks) and one risk for guests (2 marks), then propose one specific mitigation measure and explain the departmental coordination required (2 marks). Total: 6 marks."
+    ],
+    "source": "https://www.reuters.com/business/premier-inn-owner-whitbread-urges-shareholders-reject-corvexs-board-seat-demand-2026-10-13/",
+    "publisher": "Reuters",
+    "date": "2026-10-13",
+    "questions": [
+      {
+        "q": [
+          "教學假設：酒店擬關閉餐廳，經理認為『餐廳只是成本中心，關閉後客房銷售仍增長，故整體盈利必定改善』。運用酒店部門職能及收入來源知識，哪項評析最恰當？",
+          "Hypothetical extension: a hotel plans to close its restaurant. A manager argues, 'The restaurant is only a cost centre; room sales are still growing, so total profitability must improve.' Applying hotel departmental functions and revenue sources, which evaluation is most appropriate?"
+        ],
+        "options": [
+          [
+            "餐廳是收入中心，須比較失去的餐飲收入、省下的成本及住宿需求變化。",
+            "Restaurants are revenue centres; assess lost F&B income, costs saved and changes in accommodation demand."
+          ],
+          [
+            "餐廳是酒店的成本中心，應把食材與人手節省金額，跟最新住宿銷售增長率比較。",
+            "Restaurants are hotel cost centres; compare food and labour savings with the latest room-sales growth rate."
+          ],
+          [
+            "應以住宿增長為準：住宿銷售增 4.5%，便能抵銷餐飲收入跌 4.5%，毋須比較兩者金額。",
+            "Accommodation growth is the test: a 4.5% room-sales rise offsets a 4.5% F&B decline without comparing their totals."
+          ],
+          [
+            "餐廳銷售主要是住客在酒店內的開支轉移，估算關閉後失去的總收入時應把它剔除。",
+            "Restaurant sales are mainly transfers from resident guests; exclude them when estimating total income lost after closure."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "餐廳在手冊中屬能直接創造收入的收入中心，與人力資源或工程等支援中心不同。省下開支不等於淨盈利一定上升；還須考慮餐飲收入及住客對酒店產品的反應。",
+          "The manual classifies restaurants as revenue centres that earn direct income, unlike support centres such as HR or engineering. Reduced expenses do not guarantee higher net profit; lost F&B income and guests' response to the hotel product also matter."
+        ],
+        "hint": [
+          "先區分『前線／後勤』與『收入中心／成本中心』兩套分類，再比較服務縮減對收入和開支兩方面的影響。",
+          "Distinguish front-of-house/back-of-house from revenue/cost centres, then examine both revenue and expense effects of reducing services."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：酒店保留早餐服務，主要住客趕早班車；廚房小、早更人手有限。哪項菜單及服務安排最能配合這些條件？",
+          "Hypothetical extension: a hotel retains breakfast service for guests catching early trains. Its kitchen is small and morning staffing is limited. Which menu and service arrangement best fits these conditions?"
+        ],
+        "options": [
+          [
+            "由現有人手提供廣泛即叫即煮早餐，讓住客按自己的離店時間選擇個別送餐時段。",
+            "Offer an extensive cooked-to-order breakfast with the current team; let guests choose individual delivery times."
+          ],
+          [
+            "在離店高峰前提供選擇適量的自助早餐，計劃補充食物，並安排員工監察安全溫度。",
+            "Offer a limited self-service breakfast before departures, with planned replenishment and staff monitoring of safe food temperatures."
+          ],
+          [
+            "由現有少量員工提供客房早餐，按每位住客要求的準確時間逐房送餐，而不另加送餐人手。",
+            "Use room-service breakfasts at each guest's requested time, with the existing small team and no extra delivery staff."
+          ],
+          [
+            "在離店高峰後才開始早餐，保留完整菜單，讓現有員工能提供較從容的餐桌服務。",
+            "Start breakfast after the departure peak and retain the full menu, allowing existing staff to give unhurried table service."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "菜單規劃須同時考慮顧客時間需要、廚房設施、人手技能及食物安全。適量選擇及自助方式有助在有限資源下提供快捷早餐，但仍須補充食物、監察溫度及維持衛生，不能理解為完全無需員工。",
+          "Menu planning considers guest timing, kitchen capacity, staff skills and food safety. Limited choice and self-service can support efficient breakfast within available resources, but replenishment, temperature monitoring and hygiene still require staff."
+        ],
+        "hint": [
+          "把每個選項與住客離店時間、準備複雜程度、服務所需人手及食品安全逐一對照。",
+          "Check each option against departure times, preparation complexity, service staffing and food safety."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：好處可為減少低需求時段的人手、食材或能源開支，須解釋與實際需求的關係（2 分）。風險可為晚到住客用膳不便、產品吸引力下降或宣傳與實際不符（2 分）。改善可由前堂／禮賓準確提供附近用膳及預訂資料，銷售部更新服務說明；或餐飲部配合前堂離店資料提供合適早餐時間。須連結部門職能（2 分）。不得僅以住宿銷售上升認定整體盈利改善。",
+      "Suggested marking points, not an official marking scheme: savings in labour, ingredients or energy during low-demand hours can be credited when linked to demand (2 marks). Risks include inconvenient meals for late arrivals, weaker product appeal or inaccurate promises (2 marks). Mitigation may coordinate front-office/concierge dining information and bookings with accurate sales descriptions, or align breakfast timing with front-office departure forecasts. Link the measure to departmental functions (2 marks). Rising accommodation sales alone do not prove improved overall profit."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待",
+        "Module II: Hospitality"
+      ],
+      "manual": [
+        "教育局《款待》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality teaching manual (fine-tuned July 2024)"
+      ],
+      "section": [
+        "2.2.3 收入中心與成本中心；3.1 酒店餐飲服務及人手；3.2.1 菜單規劃；3.3 食品安全",
+        "2.2.3 Revenue and cost centres; 3.1 Hotel F&B services and staffing; 3.2.1 Menu planning; 3.3 Food safety"
+      ],
+      "skills": [
+        "分析收入與成本取捨；按顧客及營運條件選擇餐飲模式；運用酒店部門職能。",
+        "Analyse revenue/cost trade-offs; select F&B provision for customer and operational requirements; apply hotel departmental functions."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1026-1",
+    "week": "2026-10-26",
+    "topic": "culture",
+    "title": [
+      "香港電影旅遊：走進銀幕場景",
+      "Hong Kong film tourism: Step into the scene"
+    ],
+    "news": [
+      "旅發局於 10 月 21 日推出「香港 連場好戲」，整理 50 部電影、逾 100 個拍攝地點，串連文化、社區及餐飲體驗。",
+      "On 21 October HKTB launched Hong Kong Good Take, featuring over 100 locations from 50 films, linking cultural, neighbourhood and dining experiences."
+    ],
+    "concept": [
+      "文化旅遊・旅遊動機・產品組合",
+      "Cultural tourism · Motivation · Product bundling"
+    ],
+    "analysis": [
+      "故事使街道成為吸引物，但行程設計需考慮居民日常生活。",
+      "Stories can turn streets into attractions, but itinerary design must respect residents."
+    ],
+    "q": [
+      "你是否支持在住宅社區增加電影主題旅遊？解釋一項可能的社會／文化好處及一項可能的負面影響，並提出一個支持你立場的實行條件。（建議 6 分）",
+      "Do you support expanding film tourism in residential neighbourhoods? Explain one possible social/cultural benefit and one possible negative impact, and propose one implementation condition supporting your position. (Suggested: 6 marks)"
+    ],
+    "source": "https://markets.businessinsider.com/news/stocks/hktb-launches-hong-kong-good-take-an-all-new-movie-tourism-guide-featuring-more-than-100-filming-locations-inviting-visitors-to-explore-the-only-in-hong-kong-charm-1036650496",
+    "publisher": "HKTB press release / GlobeNewswire",
+    "date": "2026-10-21",
+    "questions": [
+      {
+        "q": [
+          "教學假設：電影迷希望了解銀幕中的香港生活，而不只拍照。哪項半日行程最能把這項推動因素與目的地的拉動因素連結？",
+          "Hypothetical extension: film fans want to understand Hong Kong life shown on screen, rather than only take photos. Which half-day itinerary best connects this push factor with destination pull factors?"
+        ],
+        "options": [
+          [
+            "密集遊覽著名電影拍攝點，在每站提供拍照時間及簡短劇情介紹，增加可遊覽的地點。",
+            "Visit famous filming locations in rapid sequence, offering photo opportunities and brief plot summaries at each scheduled stop."
+          ],
+          [
+            "安排攝影棚及戲服工作坊，由電影製作人員介紹拍攝技術、佈景設計及演出技巧。",
+            "Take a studio and costume workshop exploring filming techniques, set design and performance skills with a production specialist."
+          ],
+          [
+            "串連已核實拍攝地點、電影與社區故事及本地餐飲，並預留足夠的交通時間。",
+            "Combine verified filming locations, film and neighbourhood stories, and local dining, allowing realistic travel time between stops."
+          ],
+          [
+            "遊覽明星購物地點及酒店電影裝置，利用品牌紀念品及打卡活動呈現香港電影魅力。",
+            "Visit celebrity shopping venues and film-themed hotel installations, using branded souvenirs and photo activities to present Hong Kong cinema."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "了解文化及生活的內在意欲是推動因素；拍攝地點、社區文化及餐飲可作拉動因素。C 把資源組合成符合動機、亦可運作的體驗。",
+          "The desire to understand culture and daily life is a push factor; filming locations, neighbourhood culture and food can be pull factors. C combines them into a workable experience matching the motivation."
+        ],
+        "hint": [
+          "先找出旅客希望得到的體驗，再檢查活動有否運用相關的目的地資源。",
+          "Identify the experience visitors want, then check whether activities use relevant destination resources."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：旅行社想在有人居住的電影拍攝街道重演場景；居民反映出入口受阻。哪項調整最能兼顧文化旅遊與社區承載力？",
+          "Hypothetical extension: an operator wants to recreate scenes on a residential filming street, but residents report blocked entrances. Which adjustment best balances cultural tourism with community carrying capacity?"
+        ],
+        "options": [
+          [
+            "與居民協商時段及位置，以小組介紹電影故事，並保持住宅出入口暢通。",
+            "Agree times and locations with residents, interpret film stories in small groups, and keep residential entrances clear."
+          ],
+          [
+            "規劃單向遊覽路線及統一停留位置，維持現有團體人數及場景重演時段，方便管理。",
+            "Use a one-way route and standard stopping points, keeping existing group sizes and re-enactment time slots for easier management."
+          ],
+          [
+            "把重演安排在旅遊較少的日子，以時段優惠分散訂位，維持目前的人數及活動位置。",
+            "Move re-enactments to quieter tourist days, use time-slot discounts to spread bookings, and retain current group sizes and locations."
+          ],
+          [
+            "向旅客講解行為守則，由領隊處理居民投訴，並保留目前較受歡迎的重演位置。",
+            "Brief visitors on conduct, appoint group leaders to respond to residents’ complaints, and retain the currently popular re-enactment locations."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "A 在保留故事及文化內容的同時，透過協商、團體規模及空間安排減少滋擾。文化旅遊不應把居民生活完全改造成供旅客消費的場景。",
+          "A retains cultural storytelling while reducing disruption through consultation, group size and spatial arrangements. Cultural tourism should not require residents’ lives to be reshaped entirely for visitor consumption."
+        ],
+        "hint": [
+          "比較每項方案如何影響文化內容、居民日常使用空間，以及旅客體驗。",
+          "Compare each proposal’s effects on cultural content, residents’ everyday use of space and visitor experience."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：好處 2 分、負面影響 2 分、立場及相關條件 2 分。可能好處包括透過導賞加深文化了解，或提升居民對電影及社區歷史的認同；可能影響包括擠塞、私隱及日常生活受擾，或為迎合旅客而改造文化。可支持附帶居民協商、小組／分時安排等條件的發展，也可有理據地反對。須說明影響如何產生，不能只列標籤。",
+      "Suggested marking: benefit, 2 marks; negative impact, 2; position with a relevant condition, 2. Benefits may include cultural understanding through interpretation or pride in film/neighbourhood history. Impacts may include congestion, privacy and daily-life disruption, or altering culture for visitors. Accept conditional support with resident consultation or small/staggered groups, or a justified objection. Explain the mechanism rather than merely naming impacts."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論",
+        "Introduction to Tourism"
+      ],
+      "manual": [
+        "教材 1.1：旅遊導論",
+        "Textbook 1.1 — Introduction to Tourism"
+      ],
+      "section": [
+        "2.2 旅遊形式：文化旅遊（第34頁）；3.2 推拉理論（第63–64頁）；4.1 旅遊產品（第76–78頁）；4.3 承載力（第93–96頁）；7.1 社會及文化影響（第172–179頁）",
+        "2.2 Forms of Travel — Cultural Tourism (p.34); 3.2 Theories of Travel Motivations — Push-and Pull Theory (pp.63–64); 4.1 Tourism Products (pp.76–78); 4.3 Carrying Capacity (pp.93–96); 7.1 The Social and Cultural Impacts of Tourism (pp.172–179)"
+      ],
+      "skills": [
+        "把推拉動機應用於行程；評估文化、居民及旅客之間的取捨",
+        "Apply push–pull motivations to itineraries; evaluate trade-offs among culture, residents and visitors"
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1026-2",
+    "week": "2026-10-26",
+    "topic": "hotel",
+    "title": [
+      "IHG：房價與入住率共同影響 RevPAR",
+      "IHG: Rates and occupancy shape RevPAR"
+    ],
+    "news": [
+      "IHG 於 10 月 22 日公布，2026 第三季全球 RevPAR 按年增 5.3%、ADR 增 3.9%，入住率增 0.9 個百分點。",
+      "IHG reported on 22 October that Q3 2026 global RevPAR rose 5.3%, ADR rose 3.9%, and occupancy increased 0.9 percentage points year on year."
+    ],
+    "concept": [
+      "營運指標・收益管理",
+      "Operating indicators · Revenue management"
+    ],
+    "analysis": [
+      "RevPAR = ADR × 入住率（小數）。百分比與百分點不同；不能把 ADR 增幅直接加上入住率百分點。",
+      "RevPAR = ADR × occupancy as a decimal. Percentages and percentage points differ; do not simply add ADR growth to occupancy-point changes."
+    ],
+    "q": [
+      "教學假設：酒店一晚有 200 間可用客房，售出 150 間，客房收入 HK$180,000。列出算式並計算入住率、ADR 及 RevPAR（每項 1 分）；解釋為何這些結果不能單獨證明盈利理想（2 分），並指出一項需額外收集的成本資料（1 分）。共 6 分。",
+      "Hypothetical extension: a hotel has 200 available rooms, sells 150 and earns HK$180,000 room revenue for one night. Show working and calculate occupancy, ADR and RevPAR (1 mark each). Explain why these results alone cannot establish strong profitability (2 marks), and identify one additional type of cost data needed (1 mark). Total: 6 marks."
+    ],
+    "source": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/third-quarter-trading-update-to-30-september-2026",
+    "publisher": "IHG",
+    "date": "2026-10-22",
+    "questions": [
+      {
+        "q": [
+          "教學假設：酒店 ADR 由 HK$1,000 升至 HK$1,100，入住率則由 80% 降至 70%。哪項最能反映這次加價對 RevPAR 的影響？",
+          "Hypothetical extension: a hotel's ADR rises from HK$1,000 to HK$1,100 while occupancy falls from 80% to 70%. Which statement best describes the effect on RevPAR?"
+        ],
+        "options": [
+          [
+            "RevPAR 由 HK$800 降至 HK$770，下降 3.75%；入住率下降的影響超過平均房價上升的作用。",
+            "RevPAR falls from HK$800 to HK$770, down 3.75%; lower occupancy more than offsets the higher average room rate."
+          ],
+          [
+            "ADR 增加 10%，入住率減少 10 個百分點，兩者相互抵銷，故 RevPAR 保持不變。",
+            "ADR rises 10% and occupancy falls 10 percentage points, so they cancel out and RevPAR is unchanged."
+          ],
+          [
+            "RevPAR 由 HK$800 升至 HK$880，增加 10%；ADR 增幅應套用到每間可用客房。",
+            "RevPAR rises from HK$800 to HK$880, up 10%; the ADR increase applies to every available room."
+          ],
+          [
+            "RevPAR 由 HK$800 降至 HK$720，下降 10%；收入變化應按入住率減少的百分點計算。",
+            "RevPAR falls from HK$800 to HK$720, down 10%; the occupancy-point decrease determines the revenue change."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "RevPAR = ADR × 入住率（小數）。原為 1,000 × 0.80 = HK$800；新為 1,100 × 0.70 = HK$770；(770 − 800) ÷ 800 = −3.75%。百分比與百分點不能直接相加減。",
+          "RevPAR = ADR × occupancy as a decimal: initially 1,000 × 0.80 = HK$800, then 1,100 × 0.70 = HK$770. The change is (770 − 800) ÷ 800 = −3.75%. Percentages and percentage-point changes cannot simply be added or subtracted."
+        ],
+        "hint": [
+          "把兩個時點的 RevPAR 分開計算，再以原本 RevPAR 作相對變化的基數。",
+          "Calculate RevPAR at each point separately, then use the original RevPAR as the base for relative change."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：甲、乙兩酒店各有 200 間可用客房。甲的 ADR 為 HK$900、入住率 80%；乙為 HK$1,200、入住率 60%。哪項比較最有理據？",
+          "Hypothetical extension: Hotels A and B each have 200 available rooms. A has ADR of HK$900 and 80% occupancy; B has ADR of HK$1,200 and 60% occupancy. Which comparison is best justified?"
+        ],
+        "options": [
+          [
+            "乙的 ADR 高三分之一，因此即使入住率較低，客房總收入亦應高三分之一。",
+            "Hotel B's ADR is one-third higher, so total room revenue is also one-third higher despite its lower occupancy."
+          ],
+          [
+            "甲多售出 40 間房，因此即使平均房價較低，客房收入仍比乙多。",
+            "Hotel A sells 40 more rooms, so its room revenue exceeds Hotel B's even though the average rate is lower."
+          ],
+          [
+            "兩者客房收入相同，因此房務人手需求及酒店盈利亦應相同。",
+            "Both earn the same room revenue, so their housekeeping staffing and hotel profit should also be the same."
+          ],
+          [
+            "兩者 RevPAR 均為 HK$720、客房收入均為 HK$144,000；比較盈利仍需成本及其他收入資料。",
+            "Both earn HK$720 RevPAR and HK$144,000 room revenue; costs and other income are needed to compare profit."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "甲：900 × 0.8 = HK$720；乙：1,200 × 0.6 = HK$720。各乘 200 間可用客房，收入均為 HK$144,000。甲售出 160 間、乙 120 間；成本、其他收入及房型不同，不能由相同 RevPAR 推論盈利或工作量相同。",
+          "A: 900 × 0.8 = HK$720; B: 1,200 × 0.6 = HK$720. Multiplying each by 200 available rooms gives HK$144,000. A sells 160 rooms and B 120. Costs, other revenue and room types may differ, so equal RevPAR does not establish equal profit or workload."
+        ],
+        "hint": [
+          "先把價格與銷量合起來比較收入，再列出指標沒有包含的營運因素。",
+          "Combine rate and occupancy to compare revenue, then identify operating factors excluded from the indicators."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：入住率 = 150 ÷ 200 × 100% = 75%；ADR = 180,000 ÷ 150 = HK$1,200；RevPAR = 180,000 ÷ 200 = HK$900（亦可用 1,200 × 0.75），每項正確計算 1 分，共 3 分。解釋這些指標描述客房銷售表現而非收入扣除開支後的盈利，即使收入相同，營運成本不同亦可令盈利不同（2 分）。指出一項相關成本資料，例如同晚人手、清潔或能源開支（1 分）。題設所有 200 間均為可用客房。",
+      "Suggested marking points, not an official marking scheme: occupancy = 150 ÷ 200 × 100% = 75%; ADR = 180,000 ÷ 150 = HK$1,200; RevPAR = 180,000 ÷ 200 = HK$900, or 1,200 × 0.75. Award 1 mark per correct calculation (3 marks). Explain that these indicators describe room-sales performance rather than revenue after expenses: different operating costs can produce different profits even at equal revenue (2 marks). Identify one relevant cost, such as labour, cleaning or energy expenses for that night (1 mark). All 200 rooms are explicitly available."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待",
+        "Module II: Hospitality"
+      ],
+      "manual": [
+        "教育局《款待》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality teaching manual (fine-tuned July 2024)"
+      ],
+      "section": [
+        "2.2.5 前堂部，第 7 節：客房銷售收入及銷售指標（入住率、ADR、RevPAR）",
+        "2.2.5 Front Office Department, part 7: Revenue From Room Sales and Sales Indicators (occupancy, ADR and RevPAR)"
+      ],
+      "skills": [
+        "選用正確分母計算指標；解釋價格與入住率的共同影響；評析營運數據的限制。",
+        "Use correct denominators for indicators; explain combined rate/occupancy effects; evaluate the limits of operating data."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1026-3",
+    "week": "2026-10-26",
+    "topic": "demand",
+    "title": [
+      "日本：整體下跌不代表每個市場下跌",
+      "Japan: Total decline hides market differences"
+    ],
+    "news": [
+      "JNTO 於 10 月 21 日發布初步估算：2026 年 9 月訪日人次 3,103,700，按年跌 5.0%；南韓增 25.6%，香港跌 3.0%。並非只計休閒旅客。",
+      "JNTO preliminary estimates released 21 October recorded 3,103,700 September 2026 arrivals, down 5.0%. South Korea rose 25.6% and Hong Kong fell 3.0%. These are not exclusively leisure visitors."
+    ],
+    "concept": [
+      "客源市場・需求・人手規劃",
+      "Source markets · Demand · Staffing"
+    ],
+    "analysis": [
+      "全國總量未能代表個別酒店的客源及預訂情況。",
+      "National totals do not describe an individual hotel’s guest mix or bookings."
+    ],
+    "q": [
+      "『日本訪客減少，所以所有酒店都應削減人手。』評析此建議：選取兩項本酒店資料，逐項解釋如何用來決定人手（4 分）；再以一項前堂或房務工作的例子，說明為何客量或客源改變未必令所有時段工作量同方向變化（2 分）。共 6 分。",
+      "Evaluate the recommendation: 'Japan's arrivals fell, so all hotels should reduce staffing.' Select two types of property-specific data and explain how each informs staffing (4 marks). Use one front-office or housekeeping task to explain why changes in arrivals or guest mix need not change workload in the same direction in every period (2 marks). Total: 6 marks."
+    ],
+    "source": "https://www.jnto.go.jp/en/news/20261021.pdf",
+    "publisher": "Japan National Tourism Organization",
+    "date": "2026-10-21",
+    "questions": [
+      {
+        "q": [
+          "教學假設：日本全國訪客下降，但某酒店翌日有 40 間客房的展覽團體下午 4 時同時抵達，其餘預訂與去年相若。哪項前堂安排最適當？",
+          "Hypothetical extension: national arrivals to Japan fall, but a hotel expects an exhibition group occupying 40 rooms to arrive together at 4 p.m. tomorrow; other bookings are similar to last year. Which front-office arrangement is most appropriate?"
+        ],
+        "options": [
+          [
+            "按全國跌幅削減全日前堂人手，但保留額外禮賓人員，協助團體搬運行李。",
+            "Reduce the daily front-office roster with the national fall, but keep extra concierge staff for the group's luggage."
+          ],
+          [
+            "預先準備團體房單，與房務確認可交付房態，並支援下午 4 時的團體登記高峰。",
+            "Prepare the rooming list, confirm ready rooms with housekeeping and staff the 4 p.m. group check-in peak."
+          ],
+          [
+            "全日預訂與去年相若，故維持去年各班次人手，在團體抵達後才分配房間。",
+            "Retain last year's staffing by shift because total bookings are similar; allocate rooms after the group arrives."
+          ],
+          [
+            "為較晚抵達住客增加房務人手，前堂維持日常水平，待出現輪候才調整。",
+            "Keep more room attendants for late arrivals, leaving reception at its normal level until actual queues develop."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "前堂經理須按本酒店抵達、離店及市場組合調整人手。團體預先登記、房單和房務房態確認有助處理同時抵達的高峰；全國總量不能取代酒店自己的工作量預測。",
+          "Front-office managers adjust staffing to the property's arrivals, departures and market mix. Group pre-registration, rooming lists and housekeeping confirmation help manage simultaneous arrivals; national totals cannot replace the hotel's own workload forecast."
+        ],
+        "hint": [
+          "區分全國旅客總量與本酒店的抵達時間分布；逐項檢查前堂及房務各自掌握甚麼資料。",
+          "Distinguish national arrivals from the hotel's arrival pattern, and identify the information held by front office and housekeeping."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：一個代表團主要為東京的國際商貿展覽訪日，並在往返展場途中短暫參觀古寺。運用景點分類及旅遊目的，哪項最合理？",
+          "Hypothetical extension: a delegation visits Japan primarily for an international trade exhibition in Tokyo and briefly visits an old temple on the way to or from the venue. Applying attraction classification and travel purpose, which statement is most reasonable?"
+        ],
+        "options": [
+          [
+            "古寺是永久景點，故屬主要景點；暫時的展覽提供旅程變化，故屬次要景點。",
+            "The temple is primary because it is permanent; the temporary exhibition adds variety and is therefore secondary."
+          ],
+          [
+            "兩者都列入行程，故同屬主要景點，毋須考慮哪一項活動促成這次旅程。",
+            "Both are primary attractions because both are on the itinerary, irrespective of which one motivated the trip."
+          ],
+          [
+            "展覽是此團的主要活動景點，古寺屬次要景點；其主要或次要地位由這次旅遊目的決定。",
+            "The exhibition is this group's primary event attraction and the temple is secondary; the traveller's purpose determines their rank."
+          ],
+          [
+            "工作是這次訪問的動機，故兩者皆屬次要景點；商務活動不能成為主要旅遊景點。",
+            "Both are secondary because work motivates the visit; business activities cannot be primary tourist attractions."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "手冊把企業及商貿活動列作活動景點。主要景點是促成該次旅程的核心原因；次要景點可為途中短暫參觀的地點。同一景點的地位可隨旅客目的而異，並非由規模、永久性或旅客國籍決定。",
+          "The manual includes corporate and trade events among event attractions. A primary attraction motivates the trip, while secondary attractions may be brief en-route visits. Rank can differ with visitors' purposes; size, permanence and nationality do not determine it."
+        ],
+        "hint": [
+          "先找出『為何出發』，再區分活動的內容分類與在這趟旅程中的主要／次要地位。",
+          "Identify why the trip was made, then distinguish an attraction's content category from its primary or secondary role in this particular trip."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：可用未來確認預訂及抵達／離店時間預測櫃枱高峰；用房型、離店房與續住房數目及特別要求安排房務人手，每項資料連應用解釋 2 分。例子可為較少客房但大型團體同時登記，或短住增加離店房深度清潔，令某時段仍需較多支援（2 分）。不應只依國籍推定語言、飲食或服務需要，應確認住客實際要求。",
+      "Suggested marking points, not an official marking scheme: confirmed bookings and arrival/departure timing can forecast desk peaks; room types, checkout/stayover counts and special requests can inform housekeeping allocation (2 marks per data type with application). Examples include fewer rooms but a large simultaneous group check-in, or short stays producing more checkout cleaning and peak support needs (2 marks). Do not infer language, dining or service needs solely from nationality; confirm actual guest requirements."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待；單元三：目的地地理",
+        "Module II: Hospitality; Module III: Destination Geography"
+      ],
+      "manual": [
+        "教育局《款待》及《目的地地理》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality and Destination Geography teaching manuals (fine-tuned July 2024)"
+      ],
+      "section": [
+        "《款待》2.1.8 住客類別、2.2.5 前堂人手及團體登記、2.2.6 房務；《目的地地理》2.3 景點類型及主要／次要景點",
+        "Hospitality 2.1.8 Types of hotel guests, 2.2.5 Front-office staffing and group registration, 2.2.6 Housekeeping; Destination Geography 2.3 Attraction typology and primary/secondary attractions"
+      ],
+      "skills": [
+        "按住客目的及本酒店工作量應用部門職能；依個案分析主要及次要景點；避免由全國總數或國籍作過度推論。",
+        "Apply departmental functions to guest purposes and hotel workload; analyse primary/secondary attractions in context; avoid overgeneralising from national totals or nationality."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1026-4",
+    "week": "2026-10-26",
+    "topic": "events",
+    "title": [
+      "美食盛事延伸至全月體驗",
+      "Extending a culinary festival"
+    ],
+    "news": [
+      "10 月 23 日旅發局公告：美酒佳餚巡禮定於 10 月 29 日至 11 月 1 日舉行，並配合 11 月香港美食月及票尾優惠。發布時仍屬未來活動。",
+      "HKTB’s 23 October release scheduled Wine & Dine for 29 October–1 November, alongside November Gourmet Month and ticket-stub offers. These were future activities at publication."
+    ],
+    "concept": [
+      "美食旅遊・盛事・業界合作",
+      "Culinary tourism · Events · Industry cooperation"
+    ],
+    "analysis": [
+      "延伸優惠可能把活動客流帶到酒店及餐廳；需要追蹤實際兌換及增量消費。",
+      "Extended offers may send visitors to hotels and restaurants; actual redemptions and additional spending need tracking."
+    ],
+    "q": [
+      "你認為把四日盛事延伸為全月餐飲推廣，是否較有利於香港旅遊業？解釋一項可能的好處及一項成效限制，並提出有條件的判斷。（建議 6 分）",
+      "Do you think extending a four-day event into a month-long dining promotion is more beneficial to Hong Kong tourism? Explain one possible benefit and one limitation on its effectiveness, then give a conditional judgement. (Suggested: 6 marks)"
+    ],
+    "source": "https://www.globenewswire.com/news-release/2026/10/23/3387383/0/en/hong-kong-tourism-board-presents-hong-kong-wine-dine-festival-and-hong-kong-gourmet-month-under-the-theme-taste-the-world-s-best.html",
+    "publisher": "HKTB press release",
+    "date": "2026-10-23",
+    "questions": [
+      {
+        "q": [
+          "教學假設：酒店與餐廳想把巡禮客流延伸至翌日。哪項安排最能運用旅遊產品的互補性，並配合旅客的實際需要？",
+          "Hypothetical extension: a hotel and restaurant want festival visitors to continue their experience the next day. Which arrangement best applies tourism-product complementarity while meeting practical visitor needs?"
+        ],
+        "options": [
+          [
+            "分別提供客房折扣及餐飲券，讓旅客自行查詢餐廳的訂位時間及酒店與餐廳的交通。",
+            "Offer room discounts and restaurant vouchers separately, leaving visitors to check booking times and travel connections between the businesses."
+          ],
+          [
+            "組合住宿與翌日餐飲，協調訂位、營業時間及到達方式，並清楚列明使用條款。",
+            "Bundle lodging with next-day dining, coordinating reservations, opening hours and access, with clear conditions for using the combined services."
+          ],
+          [
+            "延遲酒店退房時間並提供彈性餐飲額度，各商戶繼續自行決定可兌換時段及名額。",
+            "Extend hotel checkout and issue flexible dining credits, while each business sets its own redemption windows and booking availability."
+          ],
+          [
+            "建立酒店與餐廳的聯合品牌並加強網上宣傳，客房及膳食仍由各商戶分別處理預訂。",
+            "Build a joint hotel–restaurant brand and expand digital promotion, while room and meal bookings remain separate within each business."
+          ]
+        ],
+        "correct": 1,
+        "explain": [
+          "住宿、餐飲及交通是相互影響的服務。B 把服務按時間及到達安排整合；若兌換條件或活動時間衝突，單有折扣仍未能形成可用的組合。",
+          "Lodging, dining and transport affect one another. B integrates services through timing and access; discounts alone do not create a usable combination when redemption conditions or schedules conflict."
+        ],
+        "hint": [
+          "沿旅客實際行程檢查各服務能否順利接續，而不只比較折扣多少。",
+          "Follow the visitor’s itinerary and check whether services connect smoothly, rather than comparing discount size alone."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：一名外地旅客憑票尾在本地餐廳額外消費；餐廳向本地供應商採購並支付員工薪金，員工再在本地商店消費。哪個解釋最準確？",
+          "Hypothetical extension: an overseas visitor makes additional restaurant purchases using a ticket-stub offer. The restaurant buys from local suppliers and pays staff, who then spend in local shops. Which explanation is most accurate?"
+        ],
+        "options": [
+          [
+            "這只是產品互補的例子，因此餐廳採購及員工之後的購物應視為與旅遊無關的影響。",
+            "This shows product complementarity, so restaurant purchases and employees’ subsequent shopping should be counted as effects unrelated to tourism."
+          ],
+          [
+            "餐廳收到的款項全部成為本地淨收入，因此首次付款已足以計算目的地的經濟效益。",
+            "All restaurant receipts become net local income, so the initial visitor payment is sufficient to measure the destination’s economic benefit."
+          ],
+          [
+            "乘數效應主要取決於海外旅客人數，因此每增加一名旅客便會產生相同的收入效應。",
+            "The multiplier depends mainly on overseas visitor numbers, so each additional visitor produces the same income effect within the destination."
+          ],
+          [
+            "旅客開支透過本地供應及薪金再流通，但進口等流失會削弱由此產生的乘數效應。",
+            "Visitor spending recirculates through local supply and wages, while imports and other leakages reduce the multiplier effect it creates."
+          ]
+        ],
+        "correct": 3,
+        "explain": [
+          "乘數效應來自旅客開支在相互依存的本地行業之間再流通；每一輪不會必定保留全部款項。不能只憑活動人流或票尾數目計算整體經濟效益。",
+          "Multiplier effects arise when visitor spending recirculates among interdependent local sectors; each round need not retain the whole amount. Attendance or ticket-stub counts alone cannot measure the full economic benefit."
+        ],
+        "hint": [
+          "區分初次消費、本地供應及收入再消費，並考慮甚麼款項會流出循環。",
+          "Distinguish initial spending, local supply and income respending, and consider which payments leave the cycle."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分：好處 2 分、限制 2 分、有條件判斷 2 分。好處可為把盛事消費帶到其他餐廳／酒店，透過互補及本地聯繫產生效益，或把需求分散到更多日子。限制可為旅客已離港、優惠條款不配合行程、消費只是由其他日子轉移，或進口與匯出利潤造成流失。可用兌換後的額外消費、參與商戶收入或需求時段作判斷依據；一個月推廣並不等於旅客留港一個月。",
+      "Suggested marking: benefit, 2 marks; limitation, 2; conditional judgement, 2. Benefits may include spending in additional restaurants/hotels through complementarity and local linkages, or spreading demand across more days. Limitations include visitors already having departed, unusable terms, spending merely shifted from other dates, or leakage through imports/remitted profits. Additional spending after redemption, participating businesses’ revenue or the timing of demand can inform judgement. A month-long promotion does not mean a month-long visitor stay."
+    ],
+    "curriculum": {
+      "module": [
+        "旅遊導論",
+        "Introduction to Tourism"
+      ],
+      "manual": [
+        "教材 1.1：旅遊導論",
+        "Textbook 1.1 — Introduction to Tourism"
+      ],
+      "section": [
+        "4.1 旅遊產品：互補性（第77–78頁）；5.1 行業分類及聯繫（第98–99頁）；5.4 香港個案：旅發局（第135–136頁）；6.2 旅客特徵（第159–164頁）；7.2 經濟影響（第180–191頁）",
+        "4.1 Tourism Products — Complementarity (pp.77–78); 5.1 Classification of Sectors and Their Linkages (pp.98–99); 5.4 The Case of Hong Kong — HKTB (pp.135–136); 6.2 Visitor Profile (pp.159–164); 7.2 The Economic Impacts of Tourism (pp.180–191)"
+      ],
+      "skills": [
+        "解釋互補及乘數效應；按旅客行程與經濟效益評估盛事合作",
+        "Explain complementarity and multiplier effects; evaluate event cooperation against visitor itineraries and economic benefits"
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
+  },
+  {
+    "id": "1026-5",
+    "week": "2026-10-26",
+    "topic": "sustainability",
+    "title": [
+      "柏林歷史酒店的品牌轉型",
+      "A new chapter for a historic Berlin hotel"
+    ],
+    "news": [
+      "Four Seasons 於 10 月 20 日把 Hotel de Rome 轉型列入 2027 年及以後預期項目。建築原為 19 世紀銀行總部，2006 年已改為酒店。",
+      "Four Seasons’ 20 October announcement included Hotel de Rome’s transformation among anticipated projects for 2027 and beyond. The former 19th-century bank headquarters became a hotel in 2006."
+    ],
+    "concept": [
+      "建築活化・保育・產品差異化",
+      "Adaptive reuse · Conservation · Differentiation"
+    ],
+    "analysis": [
+      "歷史特色形成獨特住宿體驗，但改善現代設施可能遇到保育限制。",
+      "Historic character differentiates a hotel, while modern upgrades may face conservation constraints."
+    ],
+    "q": [
+      "你認為歷史銀行改建酒店應在多大程度採用連鎖品牌的統一設計？解釋一項統一設計的好處（2 分）及一項對歷史真實性的風險（2 分），再提出一項兼顧住客需要與歷史特色的具體建議，並作合理解釋（2 分）。共 6 分。",
+      "To what extent should a hotel converted from a historic bank adopt a chain's standard design? Explain one benefit of standardisation (2 marks) and one risk to historic authenticity (2 marks), then give and justify one specific recommendation balancing guest needs and historic character (2 marks). Total: 6 marks."
+    ],
+    "source": "https://press.fourseasons.com/news-releases/2026/where-to-travel-in-2027/",
+    "publisher": "Four Seasons",
+    "date": "2026-10-20",
+    "questions": [
+      {
+        "q": [
+          "Hotel de Rome 原為銀行總部，2006 年已改作酒店，現公布未來品牌轉型。運用住宿類型及酒店擁有／管理模式概念，哪項判斷最準確？",
+          "Hotel de Rome was a bank headquarters, became a hotel in 2006 and now has a future brand transformation announced. Applying accommodation types and hotel ownership/management concepts, which judgement is most accurate?"
+        ],
+        "options": [
+          [
+            "新品牌代表建築首次由銀行轉作酒店；2006 年開業只建立其歷史旅遊吸引力。",
+            "The brand change marks the first conversion from bank to hotel; the 2006 opening only established its historic appeal."
+          ],
+          [
+            "這是歷史建築轉用酒店，因此加入新國際品牌後，品牌便成為酒店物業擁有人。",
+            "The building is a historic conversion hotel; the new international brand therefore becomes the owner of the property."
+          ],
+          [
+            "保留歷史特色可屬歷史建築轉用酒店；品牌轉型本身不足以判定業權或管理合約細節。",
+            "It is a historic conversion hotel if character is retained; the brand change alone establishes neither ownership nor contract terms."
+          ],
+          [
+            "歷史建築轉用是舊建築的質素評級，因此加入豪華連鎖品牌便會獲得更高類別。",
+            "Historic conversion is a quality rating for older buildings; joining a luxury chain therefore gives it a higher classification."
+          ]
+        ],
+        "correct": 2,
+        "explain": [
+          "手冊將保留歷史特色而改作住宿的建築列作 historic conversion hotels，這是住宿類型而非星級。物業擁有權與品牌、管理合約或特許經營安排須分開，不能只由品牌公告判定交易細節。",
+          "The manual identifies historically significant buildings converted to lodging while retaining character as historic conversion hotels, a type rather than a star rating. Property ownership is distinct from branding, management contracts and franchising; a brand announcement alone does not establish transaction details."
+        ],
+        "hint": [
+          "把『建築原用途』『現時住宿類型』『品牌』『物業擁有人』分開判斷；只選新聞已提供足夠證據支持的推論。",
+          "Separate original building use, accommodation type, brand and property owner; make only inferences supported by the information supplied."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：轉型團隊希望同時保持歷史建築的真實感及提高住宿質素。哪項方案最能兼顧景點的真實性、資源保護與酒店產品需要？",
+          "Hypothetical extension: the transformation team wants to retain the historic building's authenticity while improving accommodation quality. Which plan best balances attraction authenticity, resource protection and hotel-product needs?"
+        ],
+        "options": [
+          [
+            "保留重要特色與歷史說明，評估通行及安全需要，再協調工程改善與合適客房安排。",
+            "Retain significant features and interpretation; assess access and safety, then coordinate engineering and room arrangements."
+          ],
+          [
+            "統一客房室內設計以便維持服務及維修的一致性，把歷史保留重點放在外牆。",
+            "Standardise guest-room interiors for reliable service and easier maintenance; concentrate heritage preservation in the façade."
+          ],
+          [
+            "保留歷史布局及裝置，依靠員工個別協助住客通行，避免改動建築結構。",
+            "Keep historic layouts and fittings; rely on personalised staff assistance to help guests navigate without structural changes."
+          ],
+          [
+            "按連鎖品牌標準改善設施，以複製品重現銀行室內風格，提供一致的歷史氛圍。",
+            "Upgrade facilities to chain standards; recreate the bank's interior style with replicas to offer a consistent historic ambience."
+          ]
+        ],
+        "correct": 0,
+        "explain": [
+          "《目的地地理》將真實性、質素及資源保護列作景點屬性；《款待》說明歷史特色的住宿類型、客房產品及工程部職能。特色與舒適、安全、通行及可靠服務須一併考慮；題目並未假定實際酒店已有缺陷。",
+          "Destination Geography links attraction authenticity with quality and resource protection; Hospitality covers historic accommodation, room products and engineering functions. Character must be considered alongside comfort, safety, access and reliable service. The scenario does not assert defects at the actual hotel."
+        ],
+        "hint": [
+          "檢查每項方案如何處理歷史資源及住客基本需要；思考特色是否可以取代可正常使用的設施和服務。",
+          "Examine how each plan treats heritage resources and basic guest needs; consider whether distinctive character can replace functioning facilities and service."
+        ]
+      }
+    ],
+    "ref": [
+      "建議評分重點，並非官方評卷準則：統一設計可令設施使用、維修或服務表現較一致，須連結住宿需要（2 分）；大量移除歷史特色或以無關複製品取代，可削弱地方特色及真實感（2 分）。建議可保留有歷史意義的空間與說明，同時經評估改善浴室、安全或通行，並協調工程、前堂與房務（2 分）。接受不同立場，只要能比較兩者及說明取捨；不要求學生提出專業建築法規或未經證實的保育限制。",
+      "Suggested marking points, not an official marking scheme: standardisation may improve consistency in facility use, maintenance or service, linked to guest needs (2 marks). Removing historic features or substituting unrelated replicas may weaken sense of place and authenticity (2 marks). A recommendation may retain significant spaces and interpretation while assessing bathroom, safety or access improvements and coordinating engineering, front office and housekeeping (2 marks). Accept different justified positions; specialist building law or unverified conservation restrictions are not required."
+    ],
+    "curriculum": {
+      "module": [
+        "單元二：款待；單元三：目的地地理",
+        "Module II: Hospitality; Module III: Destination Geography"
+      ],
+      "manual": [
+        "教育局《款待》及《目的地地理》教學手冊（2024 年 7 月微調版）",
+        "EDB Hospitality and Destination Geography teaching manuals (fine-tuned July 2024)"
+      ],
+      "section": [
+        "《款待》2.1.3 歷史建築轉用酒店、2.1.7 住宿產品、2.2.1–2.2.3 擁有權／管理及部門；《目的地地理》2.2 景點屬性、2.3 文化及歷史景點",
+        "Hospitality 2.1.3 Historic conversion hotels, 2.1.7 Accommodation product, 2.2.1–2.2.3 Ownership, management and departments; Destination Geography 2.2 Attraction attributes and 2.3 Cultural/historic attractions"
+      ],
+      "skills": [
+        "應用住宿分類及擁有／管理概念；比較真實性、質素及住客需要；提出有理據的改善建議。",
+        "Apply accommodation classification and ownership/management concepts; compare authenticity, quality and guest needs; make justified improvement recommendations."
+      ]
+    },
+    "discussionMarks": 6,
+    "exerciseVersion": "dse-2026-10-31",
+    "feedbackMode": "answers"
   }
-]);
+];
 
 const SUBMISSION_ENDPOINT = /* THS_SUBMISSION_ENDPOINT */ "https://script.google.com/macros/s/AKfycbwNdfT0XlLgGLGdKK6HMOpd1vSpPkOO3ECL15L20nFOmCY08PTn9xDzZl8sLfLjVJ4M/exec";
 const TEACHER_EMAIL = 'wongyt@takoi.edu.hk';
@@ -224,18 +2065,21 @@ const exportPair=a=>a?[a[1],a[0]].filter(Boolean).join(' / '):'';
 const uiText=a=>state.lang==='zh'?a[0]:state.lang==='en'?a[1]:exportPair(a);
 const topics={triangle:['服務金三角專題','Service Triangle spotlight'],hotel:['住宿與收益','Hotels & revenue'],demand:['旅遊需求','Tourism demand'],service:['顧客服務與安全','Service & safety'],transport:['交通運輸','Transport'],sustainability:['可持續旅遊','Sustainability'],mice:['會展旅遊','MICE'],culture:['文化旅遊','Cultural tourism'],events:['節慶與盛事','Events']};
 const KEY='ths-fieldnotes-v1';
-let state={lang:'both',read:{},answers:{},quiz:{},calc:{},name:'',className:'',studentNo:'',submissions:{},requests:{}};
+const EXERCISE_EDITION='dse-2026-10-31';
+const questionsFor=a=>a.questions||a.judgements||[{q:a.mcq,options:a.options,correct:a.correct,explain:a.explain}];
+const promptsOnly=a=>a.feedbackMode==='prompts'||!!a.judgements;
+let state={lang:'both',read:{},answers:{},quiz:{},calc:{},name:'',className:'',studentNo:'',submissions:{},requests:{},exerciseEdition:EXERCISE_EDITION,previousEdition:null};
 let storageOK=true,current=null,pending=null,bridge=null,bridgeWindow=null,bridgeOrigin='',bridgeReady=false;
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'){for(const k of ['read','answers','quiz','calc','submissions','requests'])if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k]))state[k]=s[k];for(const k of ['name','className','studentNo'])if(typeof s[k]==='string')state[k]=s[k];if(['zh','en','both'].includes(s.lang))state.lang=s.lang;}}catch(e){storageOK=false;}
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'){for(const k of ['read','answers','quiz','calc','submissions','requests'])if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k]))state[k]=s[k];for(const k of ['name','className','studentNo'])if(typeof s[k]==='string')state[k]=s[k];if(['zh','en','both'].includes(s.lang))state.lang=s.lang;if(s.previousEdition&&typeof s.previousEdition==='object')state.previousEdition=s.previousEdition;if(s.exerciseEdition!==EXERCISE_EDITION&&(Object.keys(state.answers).length||Object.keys(state.quiz).length)){state.previousEdition={edition:s.exerciseEdition||'earlier version',answers:state.answers,quiz:state.quiz,submissions:state.submissions};state.answers={};state.quiz={};state.submissions={};state.requests={};}state.exerciseEdition=EXERCISE_EDITION;}}catch(e){storageOK=false;}
 const exercises=[{q:['平均房價 HK$1,000，入住率 80%。RevPAR 是多少港元？','ADR is HK$1,000 and occupancy is 80%. What is RevPAR in HK dollars?'],answer:800,explain:['RevPAR = 1,000 × 0.80 = HK$800。','RevPAR = 1,000 × 0.80 = HK$800.']},{q:['RevPAR 為 HK$720，入住率 90%。ADR 是多少港元？','RevPAR is HK$720 and occupancy is 90%. What is ADR in HK dollars?'],answer:800,explain:['ADR = 720 ÷ 0.90 = HK$800。','ADR = 720 ÷ 0.90 = HK$800.']},{q:['RevPAR 為 HK$600，ADR 為 HK$800。入住率是多少百分比？','RevPAR is HK$600 and ADR is HK$800. What is occupancy as a percentage?'],answer:75,explain:['入住率 = 600 ÷ 800 × 100 = 75%。','Occupancy = 600 ÷ 800 × 100 = 75%.']}];
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));storageOK=true;}catch(e){storageOK=false;}$('#saveStatus').innerHTML=pair(storageOK?['草稿保存在這個瀏覽器；按提交才會傳送給老師。','Drafts stay in this browser. Only Submit sends work to your teacher.']:['無法保存草稿：離開前請匯出。','Draft storage unavailable: export before leaving.']);}
 function identity(){return {name:state.name.trim(),className:state.className.trim(),studentNo:state.studentNo.trim()};}
-function payloadFor(id){const student=identity();if(id.startsWith('calc-')){const i=Number(id.slice(5));return {version:1,assignmentId:id,student,selections:[],answer:String(state.calc[i]?.value??'').trim()};}const a=articles.find(x=>x.id===id);return {version:1,assignmentId:id,student,selections:a.judgements?a.judgements.map((_,i)=>state.quiz[a.id+':'+i]?.value??null):[state.quiz[a.id]?.value??null],answer:String(state.answers[a.id]||'').trim()};}
+function payloadFor(id){const student=identity();if(id.startsWith('calc-')){const i=Number(id.slice(5));return {version:1,assignmentId:id,exerciseVersion:'calc-v1',student,selections:[],answer:String(state.calc[i]?.value??'').trim()};}const a=articles.find(x=>x.id===id);return {version:1,assignmentId:id,exerciseVersion:a.exerciseVersion,student,selections:questionsFor(a).map((_,i)=>state.quiz[a.id+':'+i]?.value??null),answer:String(state.answers[a.id]||'').trim()};}
 function signature(id){return JSON.stringify(payloadFor(id));}
 function receiptFor(id){const r=state.submissions[id];return r?.signature===signature(id)?r:null;}
-function stats(){const total=articles.length,mcTotal=articles.reduce((n,a)=>n+(a.judgements?.length||1),0);const selected=articles.reduce((n,a)=>n+(a.judgements?a.judgements.filter((_,i)=>state.quiz[a.id+':'+i]?.value!==undefined).length:(state.quiz[a.id]?.value!==undefined?1:0)),0);$('#stats').innerHTML=[[articles.filter(a=>receiptFor(a.id)).length,`已提交 / ${total}`,`Submitted / ${total}`],[selected,`已選擇 / ${mcTotal}`,`MC responses / ${mcTotal}`],[articles.filter(a=>String(state.answers[a.id]||'').trim()).length,`已作答討論 / ${total}`,`Discussions drafted / ${total}`]].map(x=>`<div class="stat"><b>${x[0]}</b>${pair(x.slice(1))}</div>`).join('');}
+function stats(){const total=articles.length,mcTotal=articles.reduce((n,a)=>n+questionsFor(a).length,0);const selected=articles.reduce((n,a)=>n+questionsFor(a).filter((_,i)=>state.quiz[a.id+':'+i]?.value!==undefined).length,0);$('#stats').innerHTML=[[articles.filter(a=>receiptFor(a.id)).length,`已提交 / ${total}`,`Submitted / ${total}`],[selected,`已選擇 / ${mcTotal}`,`MC responses / ${mcTotal}`],[articles.filter(a=>String(state.answers[a.id]||'').trim()).length,`已作答討論 / ${total}`,`Discussions drafted / ${total}`]].map(x=>`<div class="stat"><b>${x[0]}</b>${pair(x.slice(1))}</div>`).join('');}
 function updateControlText(){const value=$('#topic').value;$('#topic').innerHTML=`<option value="">${esc(uiText(['全部主題','All topics']))}</option>`+Object.entries(topics).map(([k,v])=>`<option value="${k}">${esc(uiText(v))}</option>`).join('');$('#topic').value=value;$('#week').options[0].textContent=uiText(['全部內容','All content']);$('#week').options[1].textContent='29 Oct · '+uiText(['服務金三角專題','Service Triangle spotlight']);$('#exercise').options[2].textContent='3 · '+uiText(['入住率','Occupancy']);$('#search').placeholder=uiText(['例如：入住率、可持續旅遊','e.g. occupancy, sustainability']);}
-function render(){document.body.dataset.lang=state.lang;document.documentElement.lang=state.lang==='zh'?'zh-Hant':'en';$('#language').value=state.lang;updateControlText();stats();const week=$('#week').value,topic=$('#topic').value,query=$('#search').value.toLowerCase().trim();const list=articles.filter(a=>(!week||a.week===week)&&(!topic||a.topic===topic)&&(!query||[...a.title,...a.news,...a.concept].join(' ').toLowerCase().includes(query)));$('#resultCount').innerHTML=pair([`找到 ${list.length} 個案例`,`Showing ${list.length} cases`]);$('#cards').innerHTML=list.length?list.map(a=>`<article class="card"><div class="tag">${a.week} · ${pair(topics[a.topic])}</div><h2>${pair(a.title)}</h2><p>${pair(a.news)}</p><div class="action"><button data-open="${a.id}">${pair(['閱讀與作答','Read & respond'])}</button><span class="saved">${receiptFor(a.id)?pair(['✓ 已提交','✓ Submitted']):state.read[a.id]?pair(['✓ 已閱讀','✓ Read']):''}</span></div></article>`).join(''):`<div class="panel">${pair(['沒有符合條件的案例。','No matching cases.'])}</div>`;$('#connectionNotice').innerHTML=pair(SUBMISSION_ENDPOINT?['先完成作答，再按提交。收到保存確認後才解鎖回饋。','Complete your responses, then Submit. Feedback unlocks only after storage is confirmed.']:['老師尚未啟用網上提交。你可以閱讀、作答及匯出草稿；目前不會寄送電郵，回饋亦未解鎖。','Online submission has not been activated by your teacher. You can read, draft and export your work. No email will be sent and feedback remains locked.']);}
+function render(){document.body.dataset.lang=state.lang;document.documentElement.lang=state.lang==='zh'?'zh-Hant':'en';$('#language').value=state.lang;updateControlText();stats();const week=$('#week').value,topic=$('#topic').value,query=$('#search').value.toLowerCase().trim();const list=articles.filter(a=>(!week||a.week===week)&&(!topic||a.topic===topic)&&(!query||[...a.title,...a.news,...a.concept].join(' ').toLowerCase().includes(query)));$('#resultCount').innerHTML=pair([`找到 ${list.length} 個案例`,`Showing ${list.length} cases`]);$('#cards').innerHTML=list.length?list.map(a=>`<article class="card"><div class="tag">${a.week} · ${pair(topics[a.topic])}</div><h2>${pair(a.title)}</h2><p>${pair(a.news)}</p><div class="action"><button data-open="${a.id}">${pair(['閱讀與作答','Read & respond'])}</button><span class="saved">${receiptFor(a.id)?pair(['✓ 已提交','✓ Submitted']):state.read[a.id]?pair(['✓ 已閱讀','✓ Read']):''}</span></div></article>`).join(''):`<div class="panel">${pair(['沒有符合條件的案例。','No matching cases.'])}</div>`;$('#editionNotice').hidden=!state.previousEdition;$('#connectionNotice').innerHTML=pair(SUBMISSION_ENDPOINT?['先完成作答，再按提交。收到保存確認後才解鎖回饋。','Complete your responses, then Submit. Feedback unlocks only after storage is confirmed.']:['老師尚未啟用網上提交。你可以閱讀、作答及匯出草稿；目前不會寄送電郵，回饋亦未解鎖。','Online submission has not been activated by your teacher. You can read, draft and export your work. No email will be sent and feedback remains locked.']);}
 function identityHTML(prefix){return `<div class="identity-fields"><label for="${prefix}-name">${pair(['姓名（必填）','Name (required)'])}<input id="${prefix}-name" data-identity="name" maxlength="100" autocomplete="off" required value="${esc(state.name)}"></label><label for="${prefix}-class">${pair(['班別（必填）','Class (required)'])}<input id="${prefix}-class" data-identity="className" maxlength="40" autocomplete="off" required value="${esc(state.className)}"></label><label for="${prefix}-number">${pair(['學號（選填）','Student number (optional)'])}<input id="${prefix}-number" data-identity="studentNo" maxlength="30" autocomplete="off" value="${esc(state.studentNo)}"></label></div>`;}
 function bindIdentity(root){root.querySelectorAll('[data-identity]').forEach(el=>el.oninput=()=>{state[el.dataset.identity]=el.value;document.querySelectorAll(`[data-identity="${el.dataset.identity}"]`).forEach(other=>{if(other!==el)other.value=el.value;});save();stats();if(current&&$('#articleDialog').open)refreshGate(current.id);refreshGate('calc-'+$('#exercise').value);});}
 function submissionBox(id){return `<div class="submission-box"><p class="muted">${pair(['按提交即把本題作答及上方身分資料傳送至老師的 Google 試算表，並寄電郵通知 wongyt@takoi.edu.hk。只有提交時才傳送。','Submit sends this assignment and the identity details above to your teacher’s Google Sheet, with an email notification to wongyt@takoi.edu.hk. Draft typing is not transmitted.'])}</p><button data-submit="${id}" ${!SUBMISSION_ENDPOINT?'disabled':''}>${pair(['提交並解鎖回饋','Submit & unlock feedback'])}</button><div id="status-${id}" class="submission-status" role="status" aria-live="polite"></div></div><div id="feedback-${id}"></div>`;}
@@ -243,9 +2087,10 @@ function refreshGate(id){const target=$('#feedback-'+id);if(!target)return;const
 const button=document.querySelector(`[data-submit="${id}"]`);if(button){button.disabled=!SUBMISSION_ENDPOINT||!!pending;button.innerHTML=pair(receipt?['再次傳送相同紀錄','Resend same record']:['提交並解鎖回饋','Submit & unlock feedback']);}
 if(!receipt){target.innerHTML=`<p class="muted">${pair(['🔒 完成並成功提交後，才會顯示本題的回饋。修改作答後須重新提交。','🔒 Feedback appears after a complete response is successfully submitted. Changes require a new submission.'])}</p>`;return;}
 if(id.startsWith('calc-')){const i=Number(id.slice(5)),ok=Math.abs(Number(state.calc[i].value)-exercises[i].answer)<.01;target.innerHTML=`<div class="feedback ${ok?'':'error'}">${pair(ok?['答對了！','Correct!']:['再檢查一下。','Review your calculation.'])}<p>${pair(exercises[i].explain)}</p></div>`;return;}
-const a=articles.find(x=>x.id===id);if(a.judgements){target.innerHTML=`<section class="panel"><h3>${pair(['提交後思考方向','Thinking prompts after submission'])}</h3>${a.judgements.map((q,i)=>`<h4>${pair([`判斷題 ${i+1}`,`Judgement question ${i+1}`])}</h4><p>${pair(q.hint)}</p>`).join('')}<h4>${pair(['討論思考方向','Discussion prompts'])}</h4><p>${pair(a.hint)}</p><p class="muted">${pair(['本專題不提供答案或評分。','This spotlight provides no answer key or grading.'])}</p></section>`;}else{const value=state.quiz[a.id]?.value,ok=Number(value)===a.correct;target.innerHTML=`<section class="panel"><h3>${pair(['提交後回饋','Feedback after submission'])}</h3><div class="feedback ${ok?'':'error'}">${pair(ok?['選擇題答對了。','Your MC response is correct.']:['請比較你的選項與以下解說。','Compare your choice with the explanation below.'])}<p>${pair(a.options[a.correct])}</p><p>${pair(a.explain)}</p></div><h4>${pair(['討論參考思路','Suggested discussion points'])}</h4><p>${pair(a.ref)}</p><p class="muted">${pair(['參考思路並非唯一答案，亦非考評局評分指引。','Suggested points are not the only valid answer or an HKEAA marking scheme.'])}</p></section>`;}}
-function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=a.judgements||[{q:a.mcq,options:a.options}];$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a><div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div><section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(a.judgements?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成選擇題及討論題後提交，才可查看答案解說及參考思路。','Complete the MCQ and discussion, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=a.judgements?state.quiz[a.id+':'+i]?.value:state.quiz[a.id]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair(['表達你的立場','Have your say'])}</h3><label for="discussion">${pair(a.q)}</label><textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${MIN_DISCUSSION_CHARS} 個非空白字元，最多 8,000 字元。`,`At least ${MIN_DISCUSSION_CHARS} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
-bindIdentity($('#articleBody'));$('#articleBody').querySelectorAll('[data-question]').forEach(el=>el.onchange=()=>{const key=a.judgements?a.id+':'+el.dataset.question:a.id;state.quiz[key]={value:Number(el.value),checked:false};save();stats();refreshGate(a.id);});$('#discussion').oninput=e=>{state.answers[a.id]=e.target.value;save();stats();refreshGate(a.id);};$('#markRead').onclick=()=>{state.read[a.id]=!state.read[a.id];save();render();$('#markRead').innerHTML=pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read']);};$('#articleBody').querySelector('[data-submit]').onclick=()=>submitAssignment(a.id);refreshGate(a.id);if(!$('#articleDialog').open)$('#articleDialog').showModal();}
+const a=articles.find(x=>x.id===id),qs=questionsFor(a);if(promptsOnly(a)){target.innerHTML=`<section class="panel"><h3>${pair(['提交後思考方向','Thinking prompts after submission'])}</h3>${qs.map((q,i)=>`<h4>${pair([`判斷題 ${i+1}`,`Judgement question ${i+1}`])}</h4><p>${pair(q.hint)}</p>`).join('')}<h4>${pair(['討論思考方向','Discussion prompts'])}</h4><p>${pair(a.hint)}</p><p class="muted">${pair(['本專題不提供答案或評分。','This spotlight provides no answer key or grading.'])}</p></section>`;}else{target.innerHTML=`<section class="panel"><h3>${pair(['提交後回饋','Feedback after submission'])}</h3>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value,ok=Number(value)===q.correct;return `<h4>MC ${i+1}</h4><div class="feedback ${ok?'':'error'}">${pair(ok?['選擇題答對了。','Your MC response is correct.']:['請比較你的選項與以下解說。','Compare your choice with the explanation below.'])}<p>${String.fromCharCode(65+q.correct)}. ${pair(q.options[q.correct])}</p><p>${pair(q.explain)}</p></div>`;}).join('')}<h4>${pair(['短答／討論參考思路','Suggested written-response points'])}</h4><p>${pair(a.ref)}</p><p class="muted">${pair(['配分為教學建議，回應由老師評閱；並非考評局官方評分指引。','Marks are suggested for classroom practice; written responses are reviewed by the teacher. This is not an official HKEAA marking scheme.'])}</p></section>`;}}
+function curriculumHTML(a){if(!a.curriculum)return '';const c=a.curriculum;return `<section class="curriculum-map"><strong>${pair(['DSE 課程對應','DSE curriculum connection'])}</strong><p>${pair(c.module)} · ${pair(c.section)}</p><p class="muted">${pair(c.manual)}</p><p>${pair(c.skills)}</p><p class="muted">${pair(['依教育局手冊設計的課堂練習，並非考評局官方試題。','Teacher-designed practice based on EDB manuals, not official HKEAA questions.'])}</p></section>`;}
+function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=questionsFor(a);$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a><div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div>${curriculumHTML(a)}<section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(promptsOnly(a)?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成兩道選擇題及短答／討論題後提交，才可查看答案解說及參考思路。','Complete both MCQs and the written response, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}><span class="option-letter">${String.fromCharCode(65+j)}.</span>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair([`短答與討論 · ${a.discussionMarks||4} 分（建議配分）`,`Written response · ${a.discussionMarks||4} marks (suggested)`])}</h3><label for="discussion">${pair(a.q)}</label><textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${MIN_DISCUSSION_CHARS} 個非空白字元，最多 8,000 字元。`,`At least ${MIN_DISCUSSION_CHARS} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
+bindIdentity($('#articleBody'));$('#articleBody').querySelectorAll('[data-question]').forEach(el=>el.onchange=()=>{const key=a.id+':'+el.dataset.question;state.quiz[key]={value:Number(el.value),checked:false};save();stats();refreshGate(a.id);});$('#discussion').oninput=e=>{state.answers[a.id]=e.target.value;save();stats();refreshGate(a.id);};$('#markRead').onclick=()=>{state.read[a.id]=!state.read[a.id];save();render();$('#markRead').innerHTML=pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read']);};$('#articleBody').querySelector('[data-submit]').onclick=()=>submitAssignment(a.id);refreshGate(a.id);if(!$('#articleDialog').open)$('#articleDialog').showModal();}
 function exercise(){const i=Number($('#exercise').value),id='calc-'+i;$('#exerciseQ').innerHTML=pair(exercises[i].q);$('#exerciseAnswer').value=state.calc[i]?.value??'';$('#exerciseSubmission').innerHTML=submissionBox(id);$('#exerciseSubmission').querySelector('[data-submit]').onclick=()=>submitAssignment(id);refreshGate(id);}
 function validatePayload(p){if(!p.student.name||!p.student.className)return ['請填寫姓名及班別。','Enter your name and class.'];if(p.assignmentId.startsWith('calc-')){const input=$('#exerciseAnswer');if(input.value===''||!input.checkValidity())return ['請輸入有效的數值答案。','Enter a valid numerical answer.'];}else{if(p.selections.some(x=>!Number.isInteger(x)))return ['請完成所有選擇題。','Answer every MC question.'];if(p.answer.replace(/\s/g,'').length<MIN_DISCUSSION_CHARS)return [`討論回應至少 ${MIN_DISCUSSION_CHARS} 個非空白字元。`,`Your discussion needs at least ${MIN_DISCUSSION_CHARS} non-space characters.`];}return null;}
 function newRequestId(){return crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');}
@@ -255,13 +2100,13 @@ function submitAssignment(id){if(pending)return;const p=payloadFor(id),invalid=v
 function validEndpoint(url){return /^https:\/\/script\.google\.com\/(?:macros\/s|a\/macros\/[a-z0-9.-]+\/s)\/[A-Za-z0-9_-]+\/exec$/.test(url);}
 function startBridge(){if(bridge)bridge.remove();bridgeReady=false;bridgeWindow=null;bridge=document.createElement('iframe');bridge.title='Submission connection';bridge.className='submission-bridge';bridge.setAttribute('aria-hidden','true');bridge.src=SUBMISSION_ENDPOINT;document.body.append(bridge);}
 function postPending(){if(!pending||!bridgeReady||pending.posted)return;pending.posted=true;bridgeWindow.postMessage({type:'ths-submit-v1',payload:pending.packet},bridgeOrigin);}
-window.addEventListener('message',event=>{const originOK=event.origin==='https://script.google.com'||/^https:\/\/[a-z0-9-]+\.googleusercontent\.com$/.test(event.origin);if(!originOK||!bridge)return;const m=event.data;if(!m||typeof m!=='object')return;if(m.type==='ths-bridge-ready-v1'&&!bridgeReady){bridgeWindow=event.source;bridgeOrigin=event.origin;bridgeReady=true;postPending();return;}if(m.type!=='ths-submit-result-v1'||event.source!==bridgeWindow||!pending||m.requestId!==pending.packet.requestId)return;const p=pending;if(m.ok===true&&typeof m.receiptId==='string'&&typeof m.savedAt==='string'){state.submissions[p.id]={signature:p.signature,receiptId:m.receiptId,savedAt:m.savedAt,mailStatus:m.mailStatus==='sent'?'sent':'queued'};save();finishPending();stats();if(current&&$('#articleDialog').open)refreshGate(current.id);refreshGate('calc-'+$('#exercise').value);render();}else{finishPending();showSubmissionError(p.id,['提交未獲確認。'+(m.code==='NOT_READY'?'請通知老師啟用收件服務。':'請保留草稿並稍後重試。'),'Submission was not confirmed. '+(m.code==='NOT_READY'?'Ask your teacher to activate the receiver.':'Keep your draft and try again later.')]);}});
-function reportText(){const lines=['THS FIELDNOTES · Student learning record / 學生學習紀錄',`Name / 姓名: ${state.name||'—'}`,`Class / 班別: ${state.className||'—'}`,`Student number / 學號: ${state.studentNo||'—'}`,`Exported / 匯出時間: ${new Date().toLocaleString()}`,''];for(const a of articles){const p=payloadFor(a.id);if(!p.answer&&!p.selections.some(x=>x!==null)&&!state.read[a.id])continue;const r=receiptFor(a.id);lines.push(`${a.week} | ${exportPair(a.title)}`,`Status / 狀態: ${r?'Submitted / 已提交':'Draft, not confirmed / 草稿，未確認提交'}`);if(r)lines.push(`Receipt / 收據: ${r.receiptId} · ${r.savedAt}`);const qs=a.judgements||[{q:a.mcq,options:a.options}];qs.forEach((q,i)=>{lines.push(`MC ${i+1}: ${exportPair(q.q)}`,`My choice / 我的選擇: ${p.selections[i]===null?'—':exportPair(q.options[p.selections[i]])}`);if(r&&a.judgements&&$('#includeRefs').checked)lines.push(`Thinking prompts / 思考方向: ${exportPair(q.hint)}`);});lines.push(`Discussion / 討論: ${exportPair(a.q)}`,`My response / 我的答案: ${p.answer||'—'}`);if(r&&$('#includeRefs').checked){if(a.judgements)lines.push(`Discussion prompts / 討論思考方向: ${exportPair(a.hint)}`);else lines.push(`MC explanation / 選擇題解說: ${exportPair(a.explain)}`,`Suggested points / 參考思路: ${exportPair(a.ref)}`);}lines.push(`Source / 來源: ${a.source}`,'');}for(let i=0;i<exercises.length;i++)if(state.calc[i]?.value!==undefined){const r=receiptFor('calc-'+i);lines.push(exportPair(exercises[i].q),`My answer / 我的答案: ${state.calc[i].value}`,r?`Receipt / 收據: ${r.receiptId}`:'Draft, not confirmed / 草稿，未確認提交');if(r&&$('#includeRefs').checked)lines.push(exportPair(exercises[i].explain));lines.push('');}return lines.join('\n');}
+window.addEventListener('message',event=>{const originOK=event.origin==='https://script.google.com'||/^https:\/\/[a-z0-9-]+\.googleusercontent\.com$/.test(event.origin);if(!originOK||!bridge)return;const m=event.data;if(!m||typeof m!=='object')return;if(m.type==='ths-bridge-ready-v1'&&!bridgeReady){bridgeWindow=event.source;bridgeOrigin=event.origin;bridgeReady=true;postPending();return;}if(m.type!=='ths-submit-result-v1'||event.source!==bridgeWindow||!pending||m.requestId!==pending.packet.requestId)return;const p=pending;if(m.ok===true&&typeof m.receiptId==='string'&&typeof m.savedAt==='string'){state.submissions[p.id]={signature:p.signature,receiptId:m.receiptId,savedAt:m.savedAt,mailStatus:m.mailStatus==='sent'?'sent':'queued'};save();finishPending();stats();if(current&&$('#articleDialog').open)refreshGate(current.id);refreshGate('calc-'+$('#exercise').value);render();}else{finishPending();showSubmissionError(p.id,m.code==='OUTDATED'?['收件程式與練習版本不同，請通知老師更新 Google 部署；草稿已保留。','The receiver and exercise editions differ. Ask your teacher to update the Google deployment; your draft is retained.']:['提交未獲確認。'+(m.code==='NOT_READY'?'請通知老師啟用收件服務。':'請保留草稿並稍後重試。'),'Submission was not confirmed. '+(m.code==='NOT_READY'?'Ask your teacher to activate the receiver.':'Keep your draft and try again later.')]);}});
+function reportText(){const lines=['THS FIELDNOTES · Student learning record / 學生學習紀錄',`Name / 姓名: ${state.name||'—'}`,`Class / 班別: ${state.className||'—'}`,`Student number / 學號: ${state.studentNo||'—'}`,`Exported / 匯出時間: ${new Date().toLocaleString()}`,''];for(const a of articles){const p=payloadFor(a.id);if(!p.answer&&!p.selections.some(x=>x!==null)&&!state.read[a.id])continue;const r=receiptFor(a.id);lines.push(`${a.week} | ${exportPair(a.title)}`,`Exercise edition / 練習版本: ${a.exerciseVersion}`,`DSE: ${exportPair(a.curriculum?.module)} — ${exportPair(a.curriculum?.section)}`,`Status / 狀態: ${r?'Submitted / 已提交':'Draft, not confirmed / 草稿，未確認提交'}`);if(r)lines.push(`Receipt / 收據: ${r.receiptId} · ${r.savedAt}`);const qs=questionsFor(a);qs.forEach((q,i)=>{lines.push(`MC ${i+1}: ${exportPair(q.q)}`,`My choice / 我的選擇: ${p.selections[i]===null?'—':exportPair(q.options[p.selections[i]])}`);if(r&&promptsOnly(a)&&$('#includeRefs').checked)lines.push(`Thinking prompts / 思考方向: ${exportPair(q.hint)}`);});lines.push(`Discussion / 討論: ${exportPair(a.q)}`,`My response / 我的答案: ${p.answer||'—'}`);if(r&&$('#includeRefs').checked){if(promptsOnly(a))lines.push(`Discussion prompts / 討論思考方向: ${exportPair(a.hint)}`);else {qs.forEach((q,i)=>lines.push(`MC ${i+1} explanation / 解說: ${exportPair(q.explain)}`));lines.push(`Suggested points / 參考思路: ${exportPair(a.ref)}`);}}lines.push(`Source / 來源: ${a.source}`,'');}for(let i=0;i<exercises.length;i++)if(state.calc[i]?.value!==undefined){const r=receiptFor('calc-'+i);lines.push(exportPair(exercises[i].q),`My answer / 我的答案: ${state.calc[i].value}`,r?`Receipt / 收據: ${r.receiptId}`:'Draft, not confirmed / 草稿，未確認提交');if(r&&$('#includeRefs').checked)lines.push(exportPair(exercises[i].explain));lines.push('');}if(state.previousEdition){lines.push('Previous edition responses / 舊版作答（題目已更新，未套用至新題）');for(const [id,answer] of Object.entries(state.previousEdition.answers||{}))lines.push(id,String(answer));for(const [key,value] of Object.entries(state.previousEdition.quiz||{}))lines.push(key,`Earlier selection / 舊版選項: ${Number(value.value)+1}`);}return lines.join('\n');}
 function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $('#cards').onclick=e=>{const b=e.target.closest('[data-open]');if(b)openArticle(b.dataset.open);};$('#closeDialog').onclick=()=>$('#articleDialog').close();$('#language').onchange=e=>{state.lang=e.target.value;save();render();};['week','topic','search'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('[data-view]').forEach(x=>x.hidden=x.dataset.view!==b.dataset.tab);});
 $('#exercise').onchange=exercise;$('#exerciseAnswer').oninput=()=>{state.calc[Number($('#exercise').value)]={value:$('#exerciseAnswer').value,checked:false};save();refreshGate('calc-'+$('#exercise').value);};
 $('#calculate').onclick=()=>{const adr=$('#adr'),occ=$('#occupancy');if(!adr.checkValidity()||!occ.checkValidity()){adr.reportValidity();occ.reportValidity();return;}const n=Number(adr.value)*Number(occ.value)/100;$('#calcResult').innerHTML=`<strong>RevPAR = HK$${n.toFixed(2)}</strong><p>${pair(['這是房間收入指標，並非利潤。','This measures room revenue, not profit.'])}</p>`;};
-$('#exportTxt').onclick=()=>download(reportText(),'THS-learning-record.txt','text/plain;charset=utf-8');$('#print').onclick=()=>{$('#printReport').innerHTML=`<h1>THS Fieldnotes</h1><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(reportText())}</div>`;window.print();};$('#reset').onclick=()=>{if(pending){alert('Please wait for the pending submission. / 請先等候提交結果。');return;}if(confirm('Clear drafts and local receipts? Server submissions will remain with your teacher. Export first.\n清除草稿及本機收據？老師已收到的紀錄不會被刪除。請先匯出。')){state={lang:state.lang,read:{},answers:{},quiz:{},calc:{},submissions:{},requests:{},name:'',className:'',studentNo:''};save();document.querySelectorAll('[data-identity]').forEach(el=>el.value='');render();exercise();}};
+$('#exportTxt').onclick=()=>download(reportText(),'THS-learning-record.txt','text/plain;charset=utf-8');$('#print').onclick=()=>{$('#printReport').innerHTML=`<h1>THS Fieldnotes</h1><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(reportText())}</div>`;window.print();};$('#reset').onclick=()=>{if(pending){alert('Please wait for the pending submission. / 請先等候提交結果。');return;}if(confirm('Clear drafts and local receipts? Server submissions will remain with your teacher. Export first.\n清除草稿及本機收據？老師已收到的紀錄不會被刪除。請先匯出。')){state={lang:state.lang,read:{},answers:{},quiz:{},calc:{},submissions:{},requests:{},name:'',className:'',studentNo:'',exerciseEdition:EXERCISE_EDITION,previousEdition:null};save();document.querySelectorAll('[data-identity]').forEach(el=>el.value='');render();exercise();}};
 $('#portfolioIdentity').innerHTML=identityHTML('portfolio');$('#labIdentity').innerHTML=identityHTML('lab');bindIdentity($('#portfolioIdentity'));bindIdentity($('#labIdentity'));render();exercise();save();
 </script></body></html>
