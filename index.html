@@ -9,10 +9,10 @@
 .curriculum-map{border-top:2px solid var(--teal);padding:16px 0;margin:20px 0}.curriculum-map p{margin:5px 0}#editionNotice{margin-bottom:18px}
 .choice>.option-letter{flex:0 0 1.25em;font-weight:700}.curriculum-map .pair{display:inline-block;vertical-align:top}
 </style></head>
-<body data-lang="both"><header><div class="brand">THS / FIELDNOTES<small>THE TOURISM &amp; HOSPITALITY JOURNAL</small></div><label for="language"><span class="pair"><span class="en" lang="en">Language</span><span class="zh" lang="zh-Hant">語言</span></span><select id="language"><option value="both">Bilingual · English first / 中英對照</option><option value="en">English</option><option value="zh">繁體中文</option></select></label></header>
+<body data-lang="en"><header><div class="brand">THS / FIELDNOTES<small>THE TOURISM &amp; HOSPITALITY JOURNAL</small></div><label for="language"><span class="pair"><span class="en" lang="en">Language</span><span class="zh" lang="zh-Hant">語言</span></span><select id="language"><option value="both">Bilingual · English first / 中英對照</option><option value="en" selected>English</option><option value="zh">繁體中文</option></select></label></header>
 <main><section class="hero"><div><div class="eyebrow" id="issueEdition">Student edition · Latest issue 2 Nov 2026</div><h1><span class="pair"><span class="en" lang="en">The world is your classroom.</span><span class="zh" lang="zh-Hant">看世界，學懂旅遊與款待。</span></span></h1><p><span class="pair"><span class="en" lang="en">Read real cases, connect course concepts, and build your answers with evidence.</span><span class="zh" lang="zh-Hant">從真實新聞出發：閱讀案例、連結課程概念，再用數據與觀點提出你的答案。</span></span></p><p class="muted" id="archiveSummary"></p></div><div><div id="stats" class="stats"></div><p id="saveStatus" class="saved" role="status"></p></div></section>
 <nav role="tablist" aria-label="Learning areas / 學習區"><button role="tab" aria-selected="true" data-tab="read"><span class="pair"><span class="en" lang="en">01 / Explore</span><span class="zh" lang="zh-Hant">01 / 閱讀案例</span></span></button><button role="tab" aria-selected="false" data-tab="lab" class="secondary"><span class="pair"><span class="en" lang="en">02 / Numbers lab</span><span class="zh" lang="zh-Hant">02 / 數據實驗室</span></span></button><button role="tab" aria-selected="false" data-tab="export" class="secondary"><span class="pair"><span class="en" lang="en">03 / My work</span><span class="zh" lang="zh-Hant">03 / 我的學習紀錄</span></span></button></nav>
-<div id="editionNotice" class="note" hidden><span class="pair"><span class="en" lang="en">DSE exercises have been revised. Earlier drafts are retained in your text export and have not been reused as answers to the new questions.</span><span class="zh" lang="zh-Hant">DSE 練習已修訂。舊版草稿保留在文字匯出中，不會自動套用為新題的答案。</span></span></div><div id="connectionNotice" class="note" role="status"></div><section data-view="read"><div class="filters"><label for="week"><span class="pair"><span class="en" lang="en">Issue</span><span class="zh" lang="zh-Hant">週報日期</span></span><select id="week"></select></label><label for="topic"><span class="pair"><span class="en" lang="en">Topic</span><span class="zh" lang="zh-Hant">課題</span></span><select id="topic"></select></label><label for="search"><span class="pair"><span class="en" lang="en">Search</span><span class="zh" lang="zh-Hant">搜尋</span></span><input id="search" type="search" placeholder="e.g. occupancy, sustainability / 例如：入住率"></label></div><p id="resultCount" class="muted" aria-live="polite"></p><div id="cards" class="grid"></div></section>
+<div id="editionNotice" class="note" hidden><span class="pair"><span class="en" lang="en">Some exercises have changed. Earlier drafts are retained in your text export and have not been reused as answers to different questions.</span><span class="zh" lang="zh-Hant">部分練習已更改。舊版草稿保留在文字匯出中，不會自動套用為不同題目的答案。</span></span></div><div id="connectionNotice" class="note" role="status"></div><section data-view="read"><div class="filters"><label for="week"><span class="pair"><span class="en" lang="en">Issue</span><span class="zh" lang="zh-Hant">週報日期</span></span><select id="week"></select></label><label for="topic"><span class="pair"><span class="en" lang="en">Topic</span><span class="zh" lang="zh-Hant">課題</span></span><select id="topic"></select></label><label for="search"><span class="pair"><span class="en" lang="en">Search</span><span class="zh" lang="zh-Hant">搜尋</span></span><input id="search" type="search" placeholder="e.g. occupancy, sustainability / 例如：入住率"></label></div><p id="resultCount" class="muted" aria-live="polite"></p><div id="cards" class="grid"></div></section>
 <section data-view="lab" hidden><div class="panel"><div class="eyebrow">Numbers tell a story</div><h2><span class="pair"><span class="en" lang="en">Does a full hotel mean higher profit?</span><span class="zh" lang="zh-Hant">入住率高，就代表賺得多？</span></span></h2><p><span class="pair"><span class="en" lang="en">ADR is average daily room rate; occupancy is the share of available rooms sold; RevPAR is room revenue per available room. None directly measures profit.</span><span class="zh" lang="zh-Hant">ADR 是平均每日房價；入住率是已出租客房佔可供出租客房的比例；RevPAR 是每間可供出租客房的房間收入。三者均不直接量度利潤。</span></span></p><div class="note"><span class="pair"><span class="en" lang="en">RevPAR = ADR × Occupancy</span><span class="zh" lang="zh-Hant">RevPAR = ADR × 入住率</span></span><span class="pair"><span class="en" lang="en">Convert the percentage to a decimal: 80% = 0.80.</span><span class="zh" lang="zh-Hant">計算時將百分比化為小數，例如 80% = 0.80。</span></span></div></div><div class="lab-grid"><div class="panel"><h3><span class="pair"><span class="en" lang="en">Practice</span><span class="zh" lang="zh-Hant">練習</span></span></h3><label for="exercise"><span class="pair"><span class="en" lang="en">Select exercise</span><span class="zh" lang="zh-Hant">選擇題目</span></span><select id="exercise"><option value="0">1 · RevPAR</option><option value="1">2 · ADR</option><option value="2">3 · Occupancy / 入住率</option></select></label><p id="exerciseQ"></p><div id="labIdentity"></div><label for="exerciseAnswer"><span class="pair"><span class="en" lang="en">Your numerical answer</span><span class="zh" lang="zh-Hant">你的數值答案</span></span><input type="number" step="any" min="0" required id="exerciseAnswer"></label><div id="exerciseSubmission"></div></div><div class="panel"><h3><span class="pair"><span class="en" lang="en">Scenario calculator</span><span class="zh" lang="zh-Hant">情境計算器</span></span></h3><p class="muted"><span class="pair"><span class="en" lang="en">Hypothetical teaching inputs</span><span class="zh" lang="zh-Hant">教學假設數據</span></span></p><label for="adr">ADR · HK$<input id="adr" type="number" min="0" step="any" required value="1000"></label><label for="occupancy"><span class="pair"><span class="en" lang="en">Occupancy · %</span><span class="zh" lang="zh-Hant">入住率 · %</span></span><input id="occupancy" type="number" min="0" max="100" step="any" required value="80"></label><div class="row"><button id="calculate"><span class="pair"><span class="en" lang="en">Calculate</span><span class="zh" lang="zh-Hant">計算</span></span></button></div><div id="calcResult" aria-live="polite"></div><p class="muted"><span class="pair"><span class="en" lang="en">Try ADR of $1,200 and occupancy of 65%. How does RevPAR change? What else is needed to assess profit?</span><span class="zh" lang="zh-Hant">試把房價提高至 $1,200、入住率降至 65%。RevPAR 有何改變？還需要甚麼資料才能判斷盈利？</span></span></p></div></div></section>
 <section data-view="export" hidden><div class="panel"><div class="eyebrow">Your learning portfolio</div><h2><span class="pair"><span class="en" lang="en">Take your thinking with you.</span><span class="zh" lang="zh-Hant">帶走你的想法。</span></span></h2><div id="portfolioIdentity"></div><p><span class="pair"><span class="en" lang="en">Export your drafts and submission receipts across all issues and the spotlight. Only confirmed submissions unlock feedback. You can also download a text file or print to PDF for Google Classroom.</span><span class="zh" lang="zh-Hant">匯出各期週報及專題中的草稿與提交收據。只有已確認的提交才解鎖回饋。你也可以下載文字檔或列印為 PDF，供 Google Classroom 使用。</span></span></p><label class="choice"><input id="includeRefs" type="checkbox"><span class="pair"><span class="en" lang="en">Include unlocked feedback / thinking prompts</span><span class="zh" lang="zh-Hant">包含已解鎖的回饋／思考方向</span></span></label><div class="row"><button id="exportTxt"><span class="pair"><span class="en" lang="en">Download answers · TXT</span><span class="zh" lang="zh-Hant">下載答案文字檔</span></span></button><button id="print" class="secondary"><span class="pair"><span class="en" lang="en">Print / Save PDF</span><span class="zh" lang="zh-Hant">列印／儲存 PDF</span></span></button></div><div class="note"><span class="pair"><span class="en" lang="en">Drafts stay in this browser. Submit sends the selected assignment, name, class and optional student number to your teacher’s Google Sheet and triggers an email notification. Submitted records remain with your teacher after local records are cleared. Export before switching devices or using a shared computer.</span><span class="zh" lang="zh-Hant">草稿保存在目前瀏覽器。按提交才會把該題作答、姓名、班別及選填學號傳送至老師的 Google 試算表，並觸發電郵通知。清除本機紀錄不會刪除老師收到的提交。轉換裝置或使用共用電腦前請先匯出。</span></span></div><div class="row"><button id="reset" class="secondary"><span class="pair"><span class="en" lang="en">Clear local records</span><span class="zh" lang="zh-Hant">清除本機紀錄</span></span></button></div></div></section>
 <footer><p><span class="pair"><span class="en" lang="en">Published issues preserve their original reporting dates and data periods, including the Service Triangle supplement added on 29 October (news dated 5 October and 21 September). Analysis, questions and suggested points are teaching materials, not official HKEAA content. Consult linked sources for original reports and subsequent corrections.</span><span class="zh" lang="zh-Hant">各期週報保留原有報道日期及數據所屬期間，包括 10 月 29 日加入的服務金三角專題（新聞日期為 10 月 5 日及 9 月 21 日）；分析、題目及參考思路為教學設計，並非香港考評局官方材料。請按來源連結查看原文及後續更正。</span></span></p><p>THS FIELDNOTES · READ. QUESTION. CONNECT.</p></footer></main>
@@ -666,11 +666,10 @@
     ],
     "source": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/make-it-golden-founders-day-tiffanie-boyd-jill-mcdonald.html",
     "q": [
-      "若只能先投資一項，你會選擇服務培訓還是增加繁忙時段人手？表明立場，以「公司—服務—顧客」分析兩項可能影響，並指出一項會令你改變決定的證據。（6 分；重點是論證）",
-      "If only one can be funded first, would you prioritise service training or additional peak-hour staff? State your position, analyse two possible effects using Company–Service–Customer, and identify evidence that would change your decision. (6 marks; focus on justification)"
+      "你認為連鎖快餐店應優先投資服務培訓，還是增加繁忙時段人手？提出你的立場，運用服務金三角解釋對三方的影響，並說明在甚麼條件下你會改變決定。",
+      "Should a fast-food chain prioritise service training or additional peak-hour staffing? State your position, use the Service Triangle to explain the effects on all three parties, and identify conditions that would change your decision."
     ],
     "feedbackMode": "prompts",
-    "discussionMarks": 6,
     "curriculum": {
       "module": [
         "IV 顧客關係及服務",
@@ -692,66 +691,66 @@
     "questions": [
       {
         "q": [
-          "教學假設：一家分店完成培訓後，顧客仍反映錯單及輪候過久。員工知道標準，但繁忙時要同時處理櫃枱、手機及外送訂單。按「公司—服務—顧客」的服務金三角，哪項決定最值得優先採取？",
-          "Teaching scenario: after training, a branch still receives reports of order errors and long waits. Staff know the standards but simultaneously handle counter, mobile and delivery orders at peak times. Using the Company–Service–Customer triangle, which decision most merits priority?"
+          "教學假設：一家分店完成培訓後，顧客仍反映點餐錯誤及輪候過久。經理發現員工知道標準，但繁忙時需同時處理多個渠道訂單。哪項措施最能處理服務金三角中各方的連繫？",
+          "Hypothetical extension: after training, customers still report order errors and long waits. Staff know the standards but handle several ordering channels simultaneously at peak times. Which action best addresses the connections within the Service Triangle?"
         ],
         "options": [
           [
-            "加強親切服務宣傳，並重複培訓現行標準，使顧客及員工對服務有更清楚的期望。",
-            "Expand the friendly-service campaign and repeat training on existing standards, so customers and staff share clearer expectations."
+            "加強對外宣傳親切服務，以更清晰地提高顧客對品牌的期望。",
+            "Promote friendly service more strongly to clarify and raise customer expectations of the brand."
           ],
           [
-            "按個人出餐速度給獎勵，同時保留準確度檢查，讓員工在每更自行協調不同渠道的優次。",
-            "Reward individual serving speed while retaining accuracy checks; let employees negotiate the competing channel priorities during each shift."
+            "按個人出餐速度給獎勵，讓員工自行決定如何兼顧準確性與接待。",
+            "Reward individual serving speed and let staff decide how to balance accuracy with hospitality."
           ],
           [
-            "結合員工回饋與訂單資料調整工作分配，再追蹤實際服務及顧客體驗。",
-            "Use staff feedback and order data to revise work allocation, then monitor actual service and customer experience."
+            "維持服務承諾，結合前線意見與訂單數據調整工作分配，並檢視顧客體驗。",
+            "Retain the service promise, use staff feedback and order data to adjust work allocation, and review customer experiences."
           ],
           [
-            "向投訴者提供優惠券並每月檢視評分，待取得完整一季結果後才改變現有渠道安排。",
-            "Offer complaint vouchers and review ratings monthly; retain current channel arrangements until a full quarter of results is available."
+            "先降低對外輪候時間承諾，待投訴減少後再決定是否檢討前線安排。",
+            "First relax advertised waiting-time commitments, then decide whether to review frontline arrangements after complaints decline."
           ]
         ],
         "hint": [
-          "用同一標準逐項比較：公司改變了甚麼、服務過程會怎樣改變、哪些顧客可能受到甚麼影響？列出支持或反對每項選擇所需的證據。",
-          "Compare every option using the same questions: what does the company change, how might service delivery change, and which customers may be affected? Identify evidence needed for and against each choice."
+          "分別追蹤每個選項如何改變公司、員工與顧客之間的關係；區分改善服務能力與改變顧客期望，並評估短期及長期影響。",
+          "Trace how each option changes relationships among company, employees and customers. Distinguish service capability from customer expectations and assess short- and long-term effects."
         ]
       },
       {
         "q": [
-          "教學假設：試點分店的培訓完成率達 95%，平均出餐時間縮短，但顧客評分沒有明顯變化。經理要判斷計劃是否改善服務金三角的關係，哪種跟進最有說服力？",
-          "Teaching scenario: pilot branches reach 95% training completion and shorter average serving times, but customer ratings show no clear change. Which follow-up would best support a judgement about whether the initiative improved relationships in the Service Triangle?"
+          "教學假設：新計劃後，顧客滿意度上升，但員工反映加班增加、沒有時間回報問題。管理層據此認為服務金三角已全面改善。哪項判斷最有理據？",
+          "Hypothetical extension: customer satisfaction rises after the initiative, but staff report more overtime and no time to raise problems. Management concludes that the entire Service Triangle has improved. Which judgement is best supported?"
         ],
         "options": [
           [
-            "主要以完成率及平均出餐時間衡量成效，因這些資料容易在全部試點分店之間比較。",
-            "Use completion rates and average serving time as principal measures, since they provide comparable data across every pilot branch."
+            "滿意度上升已反映三方關係改善，員工加班屬於獨立的人事議題。",
+            "Higher satisfaction demonstrates improvement across all relationships; overtime is a separate personnel issue."
           ],
           [
-            "向進步最大的分店收集詳細回饋，再以其經驗評估計劃推廣至其他分店的潛力。",
-            "Collect detailed feedback from the branches with the strongest improvements, then use their experiences to assess the programme’s wider potential."
+            "顧客體驗可能改善，但仍須檢視公司對員工的支援及服務能否持續。",
+            "Customer experience may have improved, but organisational support for staff and the sustainability of delivery still require review."
           ],
           [
-            "先擴大宣傳才收集更多顧客回饋，讓足夠顧客認識新的服務標準後再作評價。",
-            "Extend promotion before collecting further customer feedback, so enough customers recognise the new service standard to evaluate it."
+            "員工加班足以證明顧客滿意度數據不可靠，因此應以員工意見取代它。",
+            "Overtime proves the satisfaction data unreliable, so employee feedback should replace it."
           ],
           [
-            "比較相近營業時段的前線員工支援、服務觀察及不同顧客回饋，並考慮其他營運變化。",
-            "Compare frontline staff support, observed service and varied customer feedback across comparable trading periods, allowing for other operational changes."
+            "只要公司已安排培訓，便可把後續服務穩定性主要交由員工承擔。",
+            "Once training is provided, responsibility for stable delivery can mainly be left to employees."
           ]
         ],
         "hint": [
-          "先界定你要量度的是投入、服務表現還是顧客感受。對每種資料，問它能支持甚麼結論、有甚麼限制，以及比較對象是否合適。",
-          "Define whether you are measuring inputs, service performance or customer perceptions. For each source, ask what it can establish, its limitations and whether the comparison is appropriate."
+          "思考一項結果指標能證明多少事情。辨別某一方的感受、三方關係的整體狀況，以及判斷可持續性所需的證據。",
+          "Consider what a single outcome indicator can establish. Distinguish one party’s experience from the health of the whole triangle and identify evidence needed to judge sustainability."
         ]
       }
     ],
     "hint": [
-      "先界定情境、預算及優先目標，然後以同一準則比較兩個選擇。你的推論用了哪些已知事實、哪些假設？可用甚麼資料檢驗你的立場？只提供思考方向，不設答案或自動評分。",
-      "Define the situation, budget and priorities, then compare both choices using consistent criteria. Which parts of your reasoning are facts and which are assumptions? What evidence could test your position? Thinking prompts only; no answer key or automatic marking."
+      "先界定你重視的服務目標，再比較成本、員工工作條件與顧客體驗；指出你仍需要哪些資料。考慮你的方案能否同時適用於不同時段。",
+      "Define your service priorities, compare costs, working conditions and customer experiences, and identify missing evidence. Consider whether your proposal suits different trading periods."
     ],
-    "exerciseVersion": "dse-2026-10-31"
+    "exerciseVersion": "triangle-original-2026-10-29"
   },
   {
     "id": "triangle-starbucks",
@@ -777,11 +776,10 @@
     ],
     "source": "https://stories.starbucks.com/emea/stories/2026/space-for-every-voice-making-ordering-feel-easier-for-people-who-stammer/",
     "q": [
-      "如果你是分店經理，會否容許員工因應個別顧客需要超出一般點餐時間目標？表明立場及界線，以「公司—服務—顧客」分析兩項影響，並回應一項合理反對意見。（6 分；重點是論證）",
-      "As store manager, would you allow staff to exceed normal ordering-time targets for individual customer needs? State your position and limits, analyse two effects using Company–Service–Customer, and respond to one reasonable opposing view. (6 marks; focus on justification)"
+      "如果你是分店經理，你會否容許員工為照顧個別顧客而超出一般點餐時間目標？提出你的立場及界線，運用服務金三角分析，並回應一項反對意見。",
+      "As a store manager, would you allow staff to exceed normal ordering-time targets to accommodate individual customers? State your position and limits, analyse them using the Service Triangle, and respond to one opposing view."
     ],
     "feedbackMode": "prompts",
-    "discussionMarks": 6,
     "curriculum": {
       "module": [
         "IV 顧客關係及服務",
@@ -803,66 +801,66 @@
     "questions": [
       {
         "q": [
-          "教學假設：公司已培訓員工照顧口吃顧客，但分店仍按每宗點餐時間評核員工。員工因怕超時而感到兩難。按「公司—服務—顧客」的服務金三角，哪項經理決定最值得採用？",
-          "Teaching scenario: staff have been trained to support customers who stammer, but a store still evaluates staff by time per order. Employees feel conflicted about exceeding the target. Using Company–Service–Customer, which management decision most merits adoption?"
+          "教學假設：一位口吃顧客正在點餐，後方隊伍變長，而公司同時要求親切接待及控制平均點餐時間。經理應如何最有系統地支援員工作判斷？",
+          "Hypothetical extension: a customer who stammers is ordering, the queue is growing, and the company expects both welcoming service and controlled average ordering times. How should the manager most systematically support staff judgement?"
         ],
         "options": [
           [
-            "保留原有時間目標但容許非正式例外，要求主管嘉許能兼顧兩種要求的員工。",
-            "Keep the time target unchanged but permit informal exceptions; ask supervisors to recognise staff who balance both demands."
+            "給予顧客表達時間，同時安排隊伍支援並容許有理由的時間彈性，再檢視整體體驗。",
+            "Allow the customer time, arrange queue support and permit justified timing flexibility, then review the overall experience."
           ],
           [
-            "與員工檢討服務目標及工作安排，界定可行服務彈性，並評估不同顧客的體驗。",
-            "Review service targets and work arrangements with staff, define practical service flexibility, and assess experiences across different customers."
+            "由員工一律改用書寫點餐，以統一程序並減少口頭溝通需要。",
+            "Require written ordering in every such case to standardise the process and reduce spoken communication."
           ],
           [
-            "保留相同員工目標，但更明確宣傳包容承諾，使顧客更清楚公司希望提供的服務。",
-            "Keep the same staff targets but communicate the inclusion commitment more prominently, so customers better understand the intended service."
+            "讓員工自行在時間與包容目標之間選擇，但保留原有個人速度評核。",
+            "Let staff choose between timing and inclusion goals while retaining existing individual speed assessments."
           ],
           [
-            "取消正式時間目標，讓員工自行決定每次接待長度，並依靠顧客投訴找出服務不一致的地方。",
-            "Remove formal time targets and let staff determine each encounter’s length, relying on customer complaints to identify inconsistent service."
+            "向輪候顧客解釋包容政策，先維持人手與評核安排，以觀察宣傳的效果。",
+            "Explain the inclusion policy to waiting customers and retain staffing and assessment arrangements to observe the effect of communication first."
           ]
         ],
         "hint": [
-          "逐項追蹤公司制度、實際服務與顧客感受的關係。每個選項可能解決甚麼問題，又可能產生甚麼新問題？不要假設所有顧客的需要相同。",
-          "Trace company systems, delivered service and customer perceptions for every option. What problem might each solve and what new problem might arise? Do not assume identical needs for all customers."
+          "檢視公司要求是否彼此配合，以及誰承擔取捨的壓力。比較標準化與個人選擇，並思考對其他顧客及前線員工的影響。",
+          "Examine whether organisational expectations align and who bears the trade-off. Compare standardisation with individual choice and consider effects on other customers and frontline staff."
         ]
       },
       {
         "q": [
-          "教學假設：一名顧客表示需要較多時間說出訂單，另一名輪候顧客投訴等候。分店經理要建立可持續使用的處理安排。哪項方案最值得進一步評估？",
-          "Teaching scenario: one customer asks for more time to say an order, while another complains about waiting. A manager wants a workable ongoing arrangement. Which proposal most merits further evaluation?"
+          "教學假設：公司宣稱歡迎所有顧客，並錄得很高的培訓完成率；觀察卻發現員工仍常打斷口吃顧客，員工則表示擔心被扣減速度評分。哪項後續調查最能評估服務金三角是否協調？",
+          "Hypothetical extension: the company promotes a welcome for everyone and reports high training completion, yet observations show frequent interruptions of customers who stammer. Staff fear losing speed scores. Which follow-up investigation best evaluates alignment within the Service Triangle?"
         ],
         "options": [
           [
-            "按輪候者投訴決定是否容許例外，每月檢討政策，讓個別照顧反映其他顧客承受的輪候壓力。",
-            "Make exceptions depend on queue complaints, reviewing the policy monthly so individual accommodation reflects the pressures on other customers."
+            "比較不同分店的培訓完成率，以判斷服務質素差異是否源於知識不足。",
+            "Compare training completion rates across stores to judge whether service differences arise from insufficient knowledge."
           ],
           [
-            "引導需要較多時間的顧客使用手機點餐，作簡短示範，使櫃枱服務可以維持正常速度。",
-            "Direct customers needing extra time to mobile ordering, giving a short demonstration so counter service can maintain its normal pace."
+            "調查顧客是否記得包容宣傳，以判斷公司是否清楚表達承諾。",
+            "Survey customers’ recall of the inclusion campaign to judge how clearly the promise was communicated."
           ],
           [
-            "讓員工全權處理每次接待並監察平均出餐時間，只有當整體數字超標時才介入。",
-            "Give employees discretion over every encounter and monitor average serving time, intervening only when the overall figure exceeds its target."
+            "比較員工的點餐速度排名，以找出最能兼顧服務要求的員工。",
+            "Compare staff ordering-speed rankings to identify employees best able to balance service requirements."
           ],
           [
-            "檢視分店人手、輪候溝通及可選點餐渠道，再比較不同顧客的服務體驗，並保留其表達方式選擇。",
-            "Review store staffing, queue communication and optional ordering channels; compare different customers’ service experiences while retaining their communication choices."
+            "結合顧客敘述、實際互動觀察、員工意見與評核制度，檢視承諾能否落實。",
+            "Combine customer accounts, observed interactions, staff feedback and assessment rules to examine whether the promise can be delivered."
           ]
         ],
         "hint": [
-          "界定每個選項如何分配時間及選擇權，並從不同顧客與員工角度檢查可行性。你還缺少哪些資料，才能判斷公平與成效？",
-          "Identify how each option allocates time and choice, and examine feasibility from different customers’ and employees’ perspectives. What information is missing before you can judge fairness and effectiveness?"
+          "為每種資料來源列出它能回答與不能回答的問題。思考「完成活動」與「產生效果」的分別，並檢查是否涵蓋三方關係。",
+          "List what each evidence source can and cannot answer. Distinguish completing an activity from achieving an outcome and check coverage of the three relationships."
         ]
       }
     ],
     "hint": [
-      "說明你對「有效率」與「公平」的理解，再檢查立場能否適用於不同顧客及繁忙程度。列明你的假設與可能推翻立場的證據。只提供思考方向，不設答案或自動評分。",
-      "Explain what you mean by efficiency and fairness, then test your position across customers and levels of demand. State your assumptions and evidence that could challenge your view. Thinking prompts only; no answer key or automatic marking."
+      "考慮公平是否等於每位顧客獲得完全相同的安排。比較個別需要、其他顧客的體驗、員工承受的壓力及公司的資源限制，並提出評估你方案的方法。",
+      "Consider whether fairness requires identical treatment. Weigh individual needs, other customers’ experiences, employee pressures and organisational resource limits, and propose how your approach could be evaluated."
     ],
-    "exerciseVersion": "dse-2026-10-31"
+    "exerciseVersion": "triangle-original-2026-10-29"
   },
   {
     "id": "1012-1",
@@ -2693,9 +2691,31 @@ const KEY='ths-fieldnotes-v1';
 const EXERCISE_EDITION='dse-2026-10-31';
 const questionsFor=a=>a.questions||a.judgements||[{q:a.mcq,options:a.options,correct:a.correct,explain:a.explain}];
 const promptsOnly=a=>a.feedbackMode==='prompts'||!!a.judgements;
-let state={lang:'both',read:{},answers:{},quiz:{},calc:{},name:'',className:'',studentNo:'',submissions:{},requests:{},exerciseEdition:EXERCISE_EDITION,previousEdition:null};
+const RESTORED_TRIANGLE_IDS=['triangle-mcd','triangle-starbucks'];
+const restoredCaseVersions=()=>Object.fromEntries(RESTORED_TRIANGLE_IDS.map(id=>[id,articles.find(a=>a.id===id).exerciseVersion]));
+const PRE_RESTORE_TRIANGLE_WORDING={"triangle-mcd":{"questions":[{"q":["教學假設：一家分店完成培訓後，顧客仍反映錯單及輪候過久。員工知道標準，但繁忙時要同時處理櫃枱、手機及外送訂單。按「公司—服務—顧客」的服務金三角，哪項決定最值得優先採取？","Teaching scenario: after training, a branch still receives reports of order errors and long waits. Staff know the standards but simultaneously handle counter, mobile and delivery orders at peak times. Using the Company–Service–Customer triangle, which decision most merits priority?"],"options":[["加強親切服務宣傳，並重複培訓現行標準，使顧客及員工對服務有更清楚的期望。","Expand the friendly-service campaign and repeat training on existing standards, so customers and staff share clearer expectations."],["按個人出餐速度給獎勵，同時保留準確度檢查，讓員工在每更自行協調不同渠道的優次。","Reward individual serving speed while retaining accuracy checks; let employees negotiate the competing channel priorities during each shift."],["結合員工回饋與訂單資料調整工作分配，再追蹤實際服務及顧客體驗。","Use staff feedback and order data to revise work allocation, then monitor actual service and customer experience."],["向投訴者提供優惠券並每月檢視評分，待取得完整一季結果後才改變現有渠道安排。","Offer complaint vouchers and review ratings monthly; retain current channel arrangements until a full quarter of results is available."]]},{"q":["教學假設：試點分店的培訓完成率達 95%，平均出餐時間縮短，但顧客評分沒有明顯變化。經理要判斷計劃是否改善服務金三角的關係，哪種跟進最有說服力？","Teaching scenario: pilot branches reach 95% training completion and shorter average serving times, but customer ratings show no clear change. Which follow-up would best support a judgement about whether the initiative improved relationships in the Service Triangle?"],"options":[["主要以完成率及平均出餐時間衡量成效，因這些資料容易在全部試點分店之間比較。","Use completion rates and average serving time as principal measures, since they provide comparable data across every pilot branch."],["向進步最大的分店收集詳細回饋，再以其經驗評估計劃推廣至其他分店的潛力。","Collect detailed feedback from the branches with the strongest improvements, then use their experiences to assess the programme’s wider potential."],["先擴大宣傳才收集更多顧客回饋，讓足夠顧客認識新的服務標準後再作評價。","Extend promotion before collecting further customer feedback, so enough customers recognise the new service standard to evaluate it."],["比較相近營業時段的前線員工支援、服務觀察及不同顧客回饋，並考慮其他營運變化。","Compare frontline staff support, observed service and varied customer feedback across comparable trading periods, allowing for other operational changes."]]}],"q":["若只能先投資一項，你會選擇服務培訓還是增加繁忙時段人手？表明立場，以「公司—服務—顧客」分析兩項可能影響，並指出一項會令你改變決定的證據。（6 分；重點是論證）","If only one can be funded first, would you prioritise service training or additional peak-hour staff? State your position, analyse two possible effects using Company–Service–Customer, and identify evidence that would change your decision. (6 marks; focus on justification)"]},"triangle-starbucks":{"questions":[{"q":["教學假設：公司已培訓員工照顧口吃顧客，但分店仍按每宗點餐時間評核員工。員工因怕超時而感到兩難。按「公司—服務—顧客」的服務金三角，哪項經理決定最值得採用？","Teaching scenario: staff have been trained to support customers who stammer, but a store still evaluates staff by time per order. Employees feel conflicted about exceeding the target. Using Company–Service–Customer, which management decision most merits adoption?"],"options":[["保留原有時間目標但容許非正式例外，要求主管嘉許能兼顧兩種要求的員工。","Keep the time target unchanged but permit informal exceptions; ask supervisors to recognise staff who balance both demands."],["與員工檢討服務目標及工作安排，界定可行服務彈性，並評估不同顧客的體驗。","Review service targets and work arrangements with staff, define practical service flexibility, and assess experiences across different customers."],["保留相同員工目標，但更明確宣傳包容承諾，使顧客更清楚公司希望提供的服務。","Keep the same staff targets but communicate the inclusion commitment more prominently, so customers better understand the intended service."],["取消正式時間目標，讓員工自行決定每次接待長度，並依靠顧客投訴找出服務不一致的地方。","Remove formal time targets and let staff determine each encounter’s length, relying on customer complaints to identify inconsistent service."]]},{"q":["教學假設：一名顧客表示需要較多時間說出訂單，另一名輪候顧客投訴等候。分店經理要建立可持續使用的處理安排。哪項方案最值得進一步評估？","Teaching scenario: one customer asks for more time to say an order, while another complains about waiting. A manager wants a workable ongoing arrangement. Which proposal most merits further evaluation?"],"options":[["按輪候者投訴決定是否容許例外，每月檢討政策，讓個別照顧反映其他顧客承受的輪候壓力。","Make exceptions depend on queue complaints, reviewing the policy monthly so individual accommodation reflects the pressures on other customers."],["引導需要較多時間的顧客使用手機點餐，作簡短示範，使櫃枱服務可以維持正常速度。","Direct customers needing extra time to mobile ordering, giving a short demonstration so counter service can maintain its normal pace."],["讓員工全權處理每次接待並監察平均出餐時間，只有當整體數字超標時才介入。","Give employees discretion over every encounter and monitor average serving time, intervening only when the overall figure exceeds its target."],["檢視分店人手、輪候溝通及可選點餐渠道，再比較不同顧客的服務體驗，並保留其表達方式選擇。","Review store staffing, queue communication and optional ordering channels; compare different customers’ service experiences while retaining their communication choices."]]}],"q":["如果你是分店經理，會否容許員工因應個別顧客需要超出一般點餐時間目標？表明立場及界線，以「公司—服務—顧客」分析兩項影響，並回應一項合理反對意見。（6 分；重點是論證）","As store manager, would you allow staff to exceed normal ordering-time targets for individual customer needs? State your position and limits, analyse two effects using Company–Service–Customer, and respond to one reasonable opposing view. (6 marks; focus on justification)"]}};
+const writtenTitleFor=a=>Number.isInteger(a.discussionMarks)&&a.discussionMarks>0?[`短答與討論 · ${a.discussionMarks} 分（建議配分）`,`Written response · ${a.discussionMarks} marks (suggested)`]:['討論題','Discussion'];
+
+let state={lang:'en',read:{},answers:{},quiz:{},calc:{},name:'',className:'',studentNo:'',submissions:{},requests:{},exerciseEdition:EXERCISE_EDITION,previousEdition:null,caseVersions:{},caseArchives:{}};
 let storageOK=true,current=null,pending=null,bridge=null,bridgeWindow=null,bridgeOrigin='',bridgeReady=false,issueFilterReady=false;
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'){for(const k of ['read','answers','quiz','calc','submissions','requests'])if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k]))state[k]=s[k];for(const k of ['name','className','studentNo'])if(typeof s[k]==='string')state[k]=s[k];if(['zh','en','both'].includes(s.lang))state.lang=s.lang;if(s.previousEdition&&typeof s.previousEdition==='object')state.previousEdition=s.previousEdition;if(s.exerciseEdition!==EXERCISE_EDITION&&(Object.keys(state.answers).length||Object.keys(state.quiz).length)){state.previousEdition={edition:s.exerciseEdition||'earlier version',answers:state.answers,quiz:state.quiz,submissions:state.submissions};state.answers={};state.quiz={};state.submissions={};state.requests={};}state.exerciseEdition=EXERCISE_EDITION;}}catch(e){storageOK=false;}
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'){for(const k of ['read','answers','quiz','calc','submissions','requests','caseVersions','caseArchives'])if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k]))state[k]=s[k];for(const k of ['name','className','studentNo'])if(typeof s[k]==='string')state[k]=s[k];if(s.previousEdition&&typeof s.previousEdition==='object')state.previousEdition=s.previousEdition;if(s.exerciseEdition!==EXERCISE_EDITION&&(Object.keys(state.answers).length||Object.keys(state.quiz).length)){state.previousEdition={edition:s.exerciseEdition||'earlier version',answers:state.answers,quiz:state.quiz,submissions:state.submissions};state.answers={};state.quiz={};state.submissions={};state.requests={};}state.exerciseEdition=EXERCISE_EDITION;}}catch(e){storageOK=false;}
+// Archive only the superseded triangle drafts. Other cases and receipts retain their meaning.
+for(const id of RESTORED_TRIANGLE_IDS){
+ const expected=restoredCaseVersions()[id];
+ if(state.caseVersions[id]!==expected){
+  const keys=Object.keys(state.quiz).filter(k=>k===id||k.startsWith(id+':'));
+  if(state.answers[id]||keys.length||state.submissions[id]){
+   const known=!state.caseVersions[id]||state.caseVersions[id]==='dse-2026-10-31';
+   const record={exerciseVersion:state.caseVersions[id]||'dse-2026-10-31',answer:state.answers[id]||'',quiz:Object.fromEntries(keys.map(k=>[k,state.quiz[k]])),submission:state.submissions[id]||null,wording:known?PRE_RESTORE_TRIANGLE_WORDING[id]:null};
+   if(!Array.isArray(state.caseArchives[id]))state.caseArchives[id]=[];
+   state.caseArchives[id].push(record);
+  }
+  delete state.answers[id];delete state.submissions[id];delete state.requests[id];
+  for(const key of keys)delete state.quiz[key];
+ }
+ state.caseVersions[id]=expected;
+}
+
 const exercises=[{q:['平均房價 HK$1,000，入住率 80%。RevPAR 是多少港元？','ADR is HK$1,000 and occupancy is 80%. What is RevPAR in HK dollars?'],answer:800,explain:['RevPAR = 1,000 × 0.80 = HK$800。','RevPAR = 1,000 × 0.80 = HK$800.']},{q:['RevPAR 為 HK$720，入住率 90%。ADR 是多少港元？','RevPAR is HK$720 and occupancy is 90%. What is ADR in HK dollars?'],answer:800,explain:['ADR = 720 ÷ 0.90 = HK$800。','ADR = 720 ÷ 0.90 = HK$800.']},{q:['RevPAR 為 HK$600，ADR 為 HK$800。入住率是多少百分比？','RevPAR is HK$600 and ADR is HK$800. What is occupancy as a percentage?'],answer:75,explain:['入住率 = 600 ÷ 800 × 100 = 75%。','Occupancy = 600 ÷ 800 × 100 = 75%.']}];
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));storageOK=true;}catch(e){storageOK=false;}$('#saveStatus').innerHTML=pair(storageOK?['草稿保存在這個瀏覽器；按提交才會傳送給老師。','Drafts stay in this browser. Only Submit sends work to your teacher.']:['無法保存草稿：離開前請匯出。','Draft storage unavailable: export before leaving.']);}
 function identity(){return {name:state.name.trim(),className:state.className.trim(),studentNo:state.studentNo.trim()};}
@@ -2726,7 +2746,7 @@ function updateControlText(){
   $('#exercise').options[2].textContent='3 · '+uiText(['入住率','Occupancy']);
   $('#search').placeholder=uiText(['例如：入住率、可持續旅遊','e.g. occupancy, sustainability']);
 }
-function render(){document.body.dataset.lang=state.lang;document.documentElement.lang=state.lang==='zh'?'zh-Hant':'en';$('#language').value=state.lang;updateControlText();stats();const week=$('#week').value,topic=$('#topic').value,query=$('#search').value.toLowerCase().trim();const list=articles.filter(a=>(!week||a.week===week)&&(!topic||a.topic===topic)&&(!query||[...a.title,...a.news,...a.concept].join(' ').toLowerCase().includes(query)));$('#resultCount').innerHTML=pair([`找到 ${list.length} 個案例`,`Showing ${list.length} cases`]);$('#cards').innerHTML=list.length?list.map(a=>`<article class="card"><div class="tag">${a.week} · ${pair(topics[a.topic])}</div><h2>${pair(a.title)}</h2><p>${pair(a.news)}</p><div class="action"><button data-open="${a.id}">${pair(['閱讀與作答','Read & respond'])}</button><span class="saved">${receiptFor(a.id)?pair(['✓ 已提交','✓ Submitted']):state.read[a.id]?pair(['✓ 已閱讀','✓ Read']):''}</span></div></article>`).join(''):`<div class="panel">${pair(['沒有符合條件的案例。','No matching cases.'])}</div>`;$('#editionNotice').hidden=!state.previousEdition;$('#connectionNotice').innerHTML=pair(SUBMISSION_ENDPOINT?['先完成作答，再按提交。收到保存確認後才解鎖回饋。','Complete your responses, then Submit. Feedback unlocks only after storage is confirmed.']:['老師尚未啟用網上提交。你可以閱讀、作答及匯出草稿；目前不會寄送電郵，回饋亦未解鎖。','Online submission has not been activated by your teacher. You can read, draft and export your work. No email will be sent and feedback remains locked.']);}
+function render(){document.body.dataset.lang=state.lang;document.documentElement.lang=state.lang==='zh'?'zh-Hant':'en';$('#language').value=state.lang;updateControlText();stats();const week=$('#week').value,topic=$('#topic').value,query=$('#search').value.toLowerCase().trim();const list=articles.filter(a=>(!week||a.week===week)&&(!topic||a.topic===topic)&&(!query||[...a.title,...a.news,...a.concept].join(' ').toLowerCase().includes(query)));$('#resultCount').innerHTML=pair([`找到 ${list.length} 個案例`,`Showing ${list.length} cases`]);$('#cards').innerHTML=list.length?list.map(a=>`<article class="card"><div class="tag">${a.week} · ${pair(topics[a.topic])}</div><h2>${pair(a.title)}</h2><p>${pair(a.news)}</p><div class="action"><button data-open="${a.id}">${pair(['閱讀與作答','Read & respond'])}</button><span class="saved">${receiptFor(a.id)?pair(['✓ 已提交','✓ Submitted']):state.read[a.id]?pair(['✓ 已閱讀','✓ Read']):''}</span></div></article>`).join(''):`<div class="panel">${pair(['沒有符合條件的案例。','No matching cases.'])}</div>`;$('#editionNotice').hidden=!state.previousEdition&&!Object.keys(state.caseArchives).length;$('#connectionNotice').innerHTML=pair(SUBMISSION_ENDPOINT?['先完成作答，再按提交。收到保存確認後才解鎖回饋。','Complete your responses, then Submit. Feedback unlocks only after storage is confirmed.']:['老師尚未啟用網上提交。你可以閱讀、作答及匯出草稿；目前不會寄送電郵，回饋亦未解鎖。','Online submission has not been activated by your teacher. You can read, draft and export your work. No email will be sent and feedback remains locked.']);}
 function identityHTML(prefix){return `<div class="identity-fields"><label for="${prefix}-name">${pair(['姓名（必填）','Name (required)'])}<input id="${prefix}-name" data-identity="name" maxlength="100" autocomplete="off" required value="${esc(state.name)}"></label><label for="${prefix}-class">${pair(['班別（必填）','Class (required)'])}<input id="${prefix}-class" data-identity="className" maxlength="40" autocomplete="off" required value="${esc(state.className)}"></label><label for="${prefix}-number">${pair(['學號（選填）','Student number (optional)'])}<input id="${prefix}-number" data-identity="studentNo" maxlength="30" autocomplete="off" value="${esc(state.studentNo)}"></label></div>`;}
 function bindIdentity(root){root.querySelectorAll('[data-identity]').forEach(el=>el.oninput=()=>{state[el.dataset.identity]=el.value;document.querySelectorAll(`[data-identity="${el.dataset.identity}"]`).forEach(other=>{if(other!==el)other.value=el.value;});save();stats();if(current&&$('#articleDialog').open)refreshGate(current.id);refreshGate('calc-'+$('#exercise').value);});}
 function submissionBox(id){return `<div class="submission-box"><p class="muted">${pair(['按提交即把本題作答及上方身分資料傳送至老師的 Google 試算表，並寄電郵通知 wongyt@takoi.edu.hk。只有提交時才傳送。','Submit sends this assignment and the identity details above to your teacher’s Google Sheet, with an email notification to wongyt@takoi.edu.hk. Draft typing is not transmitted.'])}</p><button data-submit="${id}" ${!SUBMISSION_ENDPOINT?'disabled':''}>${pair(['提交並解鎖回饋','Submit & unlock feedback'])}</button><div id="status-${id}" class="submission-status" role="status" aria-live="polite"></div></div><div id="feedback-${id}"></div>`;}
@@ -2736,7 +2756,7 @@ if(!receipt){target.innerHTML=`<p class="muted">${pair(['🔒 完成並成功提
 if(id.startsWith('calc-')){const i=Number(id.slice(5)),ok=Math.abs(Number(state.calc[i].value)-exercises[i].answer)<.01;target.innerHTML=`<div class="feedback ${ok?'':'error'}">${pair(ok?['答對了！','Correct!']:['再檢查一下。','Review your calculation.'])}<p>${pair(exercises[i].explain)}</p></div>`;return;}
 const a=articles.find(x=>x.id===id),qs=questionsFor(a);if(promptsOnly(a)){target.innerHTML=`<section class="panel"><h3>${pair(['提交後思考方向','Thinking prompts after submission'])}</h3>${qs.map((q,i)=>`<h4>${pair([`判斷題 ${i+1}`,`Judgement question ${i+1}`])}</h4><p>${pair(q.hint)}</p>`).join('')}<h4>${pair(['討論思考方向','Discussion prompts'])}</h4><p>${pair(a.hint)}</p><p class="muted">${pair(['本專題不提供答案或評分。','This spotlight provides no answer key or grading.'])}</p></section>`;}else{target.innerHTML=`<section class="panel"><h3>${pair(['提交後回饋','Feedback after submission'])}</h3>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value,ok=Number(value)===q.correct;return `<h4>MC ${i+1}</h4><div class="feedback ${ok?'':'error'}">${pair(ok?['選擇題答對了。','Your MC response is correct.']:['請比較你的選項與以下解說。','Compare your choice with the explanation below.'])}<p>${String.fromCharCode(65+q.correct)}. ${pair(q.options[q.correct])}</p><p>${pair(q.explain)}</p></div>`;}).join('')}<h4>${pair(['短答／討論參考思路','Suggested written-response points'])}</h4><p>${pair(a.ref)}</p><p class="muted">${pair(['配分為教學建議，回應由老師評閱；並非考評局官方評分指引。','Marks are suggested for classroom practice; written responses are reviewed by the teacher. This is not an official HKEAA marking scheme.'])}</p></section>`;}}
 function curriculumHTML(a){if(!a.curriculum)return '';const c=a.curriculum;return `<section class="curriculum-map"><strong>${pair(['DSE 課程對應','DSE curriculum connection'])}</strong><p>${pair(c.module)} · ${pair(c.section)}</p><p class="muted">${pair(c.manual)}</p><p>${pair(c.skills)}</p><p class="muted">${pair(['依教育局手冊設計的課堂練習，並非考評局官方試題。','Teacher-designed practice based on EDB manuals, not official HKEAA questions.'])}</p></section>`;}
-function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=questionsFor(a);$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a><div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div>${curriculumHTML(a)}<section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(promptsOnly(a)?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成兩道選擇題及短答／討論題後提交，才可查看答案解說及參考思路。','Complete both MCQs and the written response, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}><span class="option-letter">${String.fromCharCode(65+j)}.</span>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair([`短答與討論 · ${a.discussionMarks||4} 分（建議配分）`,`Written response · ${a.discussionMarks||4} marks (suggested)`])}</h3><label for="discussion">${pair(a.q)}</label><textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${MIN_DISCUSSION_CHARS} 個非空白字元，最多 8,000 字元。`,`At least ${MIN_DISCUSSION_CHARS} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
+function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=questionsFor(a);$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a><div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div>${curriculumHTML(a)}<section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(promptsOnly(a)?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成兩道選擇題及短答／討論題後提交，才可查看答案解說及參考思路。','Complete both MCQs and the written response, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}><span class="option-letter">${String.fromCharCode(65+j)}.</span>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair(writtenTitleFor(a))}</h3><label for="discussion">${pair(a.q)}</label><textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${MIN_DISCUSSION_CHARS} 個非空白字元，最多 8,000 字元。`,`At least ${MIN_DISCUSSION_CHARS} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
 bindIdentity($('#articleBody'));$('#articleBody').querySelectorAll('[data-question]').forEach(el=>el.onchange=()=>{const key=a.id+':'+el.dataset.question;state.quiz[key]={value:Number(el.value),checked:false};save();stats();refreshGate(a.id);});$('#discussion').oninput=e=>{state.answers[a.id]=e.target.value;save();stats();refreshGate(a.id);};$('#markRead').onclick=()=>{state.read[a.id]=!state.read[a.id];save();render();$('#markRead').innerHTML=pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read']);};$('#articleBody').querySelector('[data-submit]').onclick=()=>submitAssignment(a.id);refreshGate(a.id);if(!$('#articleDialog').open)$('#articleDialog').showModal();}
 function exercise(){const i=Number($('#exercise').value),id='calc-'+i;$('#exerciseQ').innerHTML=pair(exercises[i].q);$('#exerciseAnswer').value=state.calc[i]?.value??'';$('#exerciseSubmission').innerHTML=submissionBox(id);$('#exerciseSubmission').querySelector('[data-submit]').onclick=()=>submitAssignment(id);refreshGate(id);}
 function validatePayload(p){if(!p.student.name||!p.student.className)return ['請填寫姓名及班別。','Enter your name and class.'];if(p.assignmentId.startsWith('calc-')){const input=$('#exerciseAnswer');if(input.value===''||!input.checkValidity())return ['請輸入有效的數值答案。','Enter a valid numerical answer.'];}else{if(p.selections.some(x=>!Number.isInteger(x)))return ['請完成所有選擇題。','Answer every MC question.'];if(p.answer.replace(/\s/g,'').length<MIN_DISCUSSION_CHARS)return [`討論回應至少 ${MIN_DISCUSSION_CHARS} 個非空白字元。`,`Your discussion needs at least ${MIN_DISCUSSION_CHARS} non-space characters.`];}return null;}
@@ -2748,12 +2768,24 @@ function validEndpoint(url){return /^https:\/\/script\.google\.com\/(?:macros\/s
 function startBridge(){if(bridge)bridge.remove();bridgeReady=false;bridgeWindow=null;bridge=document.createElement('iframe');bridge.title='Submission connection';bridge.className='submission-bridge';bridge.setAttribute('aria-hidden','true');bridge.src=SUBMISSION_ENDPOINT;document.body.append(bridge);}
 function postPending(){if(!pending||!bridgeReady||pending.posted)return;pending.posted=true;bridgeWindow.postMessage({type:'ths-submit-v1',payload:pending.packet},bridgeOrigin);}
 window.addEventListener('message',event=>{const originOK=event.origin==='https://script.google.com'||/^https:\/\/[a-z0-9-]+\.googleusercontent\.com$/.test(event.origin);if(!originOK||!bridge)return;const m=event.data;if(!m||typeof m!=='object')return;if(m.type==='ths-bridge-ready-v1'&&!bridgeReady){bridgeWindow=event.source;bridgeOrigin=event.origin;bridgeReady=true;postPending();return;}if(m.type!=='ths-submit-result-v1'||event.source!==bridgeWindow||!pending||m.requestId!==pending.packet.requestId)return;const p=pending;if(m.ok===true&&typeof m.receiptId==='string'&&typeof m.savedAt==='string'){state.submissions[p.id]={signature:p.signature,receiptId:m.receiptId,savedAt:m.savedAt,mailStatus:m.mailStatus==='sent'?'sent':'queued'};save();finishPending();stats();if(current&&$('#articleDialog').open)refreshGate(current.id);refreshGate('calc-'+$('#exercise').value);render();}else{finishPending();showSubmissionError(p.id,m.code==='OUTDATED'?['收件程式與練習版本不同，請通知老師更新 Google 部署；草稿已保留。','The receiver and exercise editions differ. Ask your teacher to update the Google deployment; your draft is retained.']:['提交未獲確認。'+(m.code==='NOT_READY'?'請通知老師啟用收件服務。':'請保留草稿並稍後重試。'),'Submission was not confirmed. '+(m.code==='NOT_READY'?'Ask your teacher to activate the receiver.':'Keep your draft and try again later.')]);}});
-function reportText(){const lines=['THS FIELDNOTES · Student learning record / 學生學習紀錄',`Name / 姓名: ${state.name||'—'}`,`Class / 班別: ${state.className||'—'}`,`Student number / 學號: ${state.studentNo||'—'}`,`Exported / 匯出時間: ${new Date().toLocaleString()}`,''];for(const a of articles){const p=payloadFor(a.id);if(!p.answer&&!p.selections.some(x=>x!==null)&&!state.read[a.id])continue;const r=receiptFor(a.id);lines.push(`${a.week} | ${exportPair(a.title)}`,`Exercise edition / 練習版本: ${a.exerciseVersion}`,`DSE: ${exportPair(a.curriculum?.module)} — ${exportPair(a.curriculum?.section)}`,`Status / 狀態: ${r?'Submitted / 已提交':'Draft, not confirmed / 草稿，未確認提交'}`);if(r)lines.push(`Receipt / 收據: ${r.receiptId} · ${r.savedAt}`);const qs=questionsFor(a);qs.forEach((q,i)=>{lines.push(`MC ${i+1}: ${exportPair(q.q)}`,`My choice / 我的選擇: ${p.selections[i]===null?'—':exportPair(q.options[p.selections[i]])}`);if(r&&promptsOnly(a)&&$('#includeRefs').checked)lines.push(`Thinking prompts / 思考方向: ${exportPair(q.hint)}`);});lines.push(`Discussion / 討論: ${exportPair(a.q)}`,`My response / 我的答案: ${p.answer||'—'}`);if(r&&$('#includeRefs').checked){if(promptsOnly(a))lines.push(`Discussion prompts / 討論思考方向: ${exportPair(a.hint)}`);else {qs.forEach((q,i)=>lines.push(`MC ${i+1} explanation / 解說: ${exportPair(q.explain)}`));lines.push(`Suggested points / 參考思路: ${exportPair(a.ref)}`);}}lines.push(`Source / 來源: ${a.source}`,'');}for(let i=0;i<exercises.length;i++)if(state.calc[i]?.value!==undefined){const r=receiptFor('calc-'+i);lines.push(exportPair(exercises[i].q),`My answer / 我的答案: ${state.calc[i].value}`,r?`Receipt / 收據: ${r.receiptId}`:'Draft, not confirmed / 草稿，未確認提交');if(r&&$('#includeRefs').checked)lines.push(exportPair(exercises[i].explain));lines.push('');}if(state.previousEdition){lines.push('Previous edition responses / 舊版作答（題目已更新，未套用至新題）');for(const [id,answer] of Object.entries(state.previousEdition.answers||{}))lines.push(id,String(answer));for(const [key,value] of Object.entries(state.previousEdition.quiz||{}))lines.push(key,`Earlier selection / 舊版選項: ${Number(value.value)+1}`);}return lines.join('\n');}
+function reportText(){const lines=['THS FIELDNOTES · Student learning record / 學生學習紀錄',`Name / 姓名: ${state.name||'—'}`,`Class / 班別: ${state.className||'—'}`,`Student number / 學號: ${state.studentNo||'—'}`,`Exported / 匯出時間: ${new Date().toLocaleString()}`,''];for(const a of articles){const p=payloadFor(a.id);if(!p.answer&&!p.selections.some(x=>x!==null)&&!state.read[a.id])continue;const r=receiptFor(a.id);lines.push(`${a.week} | ${exportPair(a.title)}`,`Exercise edition / 練習版本: ${a.exerciseVersion}`,`DSE: ${exportPair(a.curriculum?.module)} — ${exportPair(a.curriculum?.section)}`,`Status / 狀態: ${r?'Submitted / 已提交':'Draft, not confirmed / 草稿，未確認提交'}`);if(r)lines.push(`Receipt / 收據: ${r.receiptId} · ${r.savedAt}`);const qs=questionsFor(a);qs.forEach((q,i)=>{lines.push(`MC ${i+1}: ${exportPair(q.q)}`,`My choice / 我的選擇: ${p.selections[i]===null?'—':exportPair(q.options[p.selections[i]])}`);if(r&&promptsOnly(a)&&$('#includeRefs').checked)lines.push(`Thinking prompts / 思考方向: ${exportPair(q.hint)}`);});lines.push(`Discussion / 討論: ${exportPair(a.q)}`,`My response / 我的答案: ${p.answer||'—'}`);if(r&&$('#includeRefs').checked){if(promptsOnly(a))lines.push(`Discussion prompts / 討論思考方向: ${exportPair(a.hint)}`);else {qs.forEach((q,i)=>lines.push(`MC ${i+1} explanation / 解說: ${exportPair(q.explain)}`));lines.push(`Suggested points / 參考思路: ${exportPair(a.ref)}`);}}lines.push(`Source / 來源: ${a.source}`,'');}for(let i=0;i<exercises.length;i++)if(state.calc[i]?.value!==undefined){const r=receiptFor('calc-'+i);lines.push(exportPair(exercises[i].q),`My answer / 我的答案: ${state.calc[i].value}`,r?`Receipt / 收據: ${r.receiptId}`:'Draft, not confirmed / 草稿，未確認提交');if(r&&$('#includeRefs').checked)lines.push(exportPair(exercises[i].explain));lines.push('');}for(const [id,records] of Object.entries(state.caseArchives||{}))for(const r of records){
+ lines.push('Archived Service Triangle draft / 專題舊稿（未套用至已還原原題）',id,`Exercise edition / 練習版本: ${r.exerciseVersion}`);
+ if(r.submission)lines.push(`Earlier receipt / 舊收據: ${r.submission.receiptId} · ${r.submission.savedAt}`);
+ const wording=r.wording;
+ for(const [key,response] of Object.entries(r.quiz||{})){
+  const i=Number(key.slice(key.lastIndexOf(':')+1)),value=response?.value;
+  if(wording?.questions?.[i])lines.push(`Earlier MC ${i+1}: ${exportPair(wording.questions[i].q)}`);
+  lines.push(`Earlier selection / 舊版選項: ${Number.isInteger(value)?String.fromCharCode(65+value):'—'}`);
+  if(Number.isInteger(value)&&wording?.questions?.[i]?.options?.[value])lines.push(exportPair(wording.questions[i].options[value]));
+ }
+ if(wording)lines.push(`Earlier discussion / 舊版討論: ${exportPair(wording.q)}`);
+ lines.push(`Earlier response / 舊版回應: ${r.answer||'—'}`,'');
+}if(state.previousEdition){lines.push('Previous edition responses / 舊版作答（題目已更新，未套用至新題）');for(const [id,answer] of Object.entries(state.previousEdition.answers||{}))lines.push(id,String(answer));for(const [key,value] of Object.entries(state.previousEdition.quiz||{}))lines.push(key,`Earlier selection / 舊版選項: ${Number(value.value)+1}`);}return lines.join('\n');}
 function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $('#cards').onclick=e=>{const b=e.target.closest('[data-open]');if(b)openArticle(b.dataset.open);};$('#closeDialog').onclick=()=>$('#articleDialog').close();$('#language').onchange=e=>{state.lang=e.target.value;save();render();};['week','topic','search'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('[data-view]').forEach(x=>x.hidden=x.dataset.view!==b.dataset.tab);});
 $('#exercise').onchange=exercise;$('#exerciseAnswer').oninput=()=>{state.calc[Number($('#exercise').value)]={value:$('#exerciseAnswer').value,checked:false};save();refreshGate('calc-'+$('#exercise').value);};
 $('#calculate').onclick=()=>{const adr=$('#adr'),occ=$('#occupancy');if(!adr.checkValidity()||!occ.checkValidity()){adr.reportValidity();occ.reportValidity();return;}const n=Number(adr.value)*Number(occ.value)/100;$('#calcResult').innerHTML=`<strong>RevPAR = HK$${n.toFixed(2)}</strong><p>${pair(['這是房間收入指標，並非利潤。','This measures room revenue, not profit.'])}</p>`;};
-$('#exportTxt').onclick=()=>download(reportText(),'THS-learning-record.txt','text/plain;charset=utf-8');$('#print').onclick=()=>{$('#printReport').innerHTML=`<h1>THS Fieldnotes</h1><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(reportText())}</div>`;window.print();};$('#reset').onclick=()=>{if(pending){alert('Please wait for the pending submission. / 請先等候提交結果。');return;}if(confirm('Clear drafts and local receipts? Server submissions will remain with your teacher. Export first.\n清除草稿及本機收據？老師已收到的紀錄不會被刪除。請先匯出。')){state={lang:state.lang,read:{},answers:{},quiz:{},calc:{},submissions:{},requests:{},name:'',className:'',studentNo:'',exerciseEdition:EXERCISE_EDITION,previousEdition:null};save();document.querySelectorAll('[data-identity]').forEach(el=>el.value='');render();exercise();}};
+$('#exportTxt').onclick=()=>download(reportText(),'THS-learning-record.txt','text/plain;charset=utf-8');$('#print').onclick=()=>{$('#printReport').innerHTML=`<h1>THS Fieldnotes</h1><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(reportText())}</div>`;window.print();};$('#reset').onclick=()=>{if(pending){alert('Please wait for the pending submission. / 請先等候提交結果。');return;}if(confirm('Clear drafts and local receipts? Server submissions will remain with your teacher. Export first.\n清除草稿及本機收據？老師已收到的紀錄不會被刪除。請先匯出。')){state={lang:state.lang,read:{},answers:{},quiz:{},calc:{},submissions:{},requests:{},name:'',className:'',studentNo:'',exerciseEdition:EXERCISE_EDITION,previousEdition:null,caseVersions:restoredCaseVersions(),caseArchives:{}};save();document.querySelectorAll('[data-identity]').forEach(el=>el.value='');render();exercise();}};
 $('#portfolioIdentity').innerHTML=identityHTML('portfolio');$('#labIdentity').innerHTML=identityHTML('lab');bindIdentity($('#portfolioIdentity'));bindIdentity($('#labIdentity'));render();exercise();save();
 </script></body></html>
