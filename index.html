@@ -8,15 +8,638 @@
 
 .curriculum-map{border-top:2px solid var(--teal);padding:16px 0;margin:20px 0}.curriculum-map p{margin:5px 0}#editionNotice{margin-bottom:18px}
 .choice>.option-letter{flex:0 0 1.25em;font-weight:700}.curriculum-map .pair{display:inline-block;vertical-align:top}
+
+.response-frame{margin:16px 0;padding:0 0 0 12px;border-left:3px solid #14645d}.response-frame p{margin:6px 0 0}
 </style></head>
 <body data-lang="en"><header><div class="brand">THS / FIELDNOTES<small>THE TOURISM &amp; HOSPITALITY JOURNAL</small></div><label for="language"><span class="pair"><span class="en" lang="en">Language</span><span class="zh" lang="zh-Hant">語言</span></span><select id="language"><option value="both">Bilingual · English first / 中英對照</option><option value="en" selected>English</option><option value="zh">繁體中文</option></select></label></header>
-<main><section class="hero"><div><div class="eyebrow" id="issueEdition">Student edition · Latest issue 9 Nov 2026</div><h1><span class="pair"><span class="en" lang="en">The world is your classroom.</span><span class="zh" lang="zh-Hant">看世界，學懂旅遊與款待。</span></span></h1><p><span class="pair"><span class="en" lang="en">Read real cases, connect course concepts, and build your answers with evidence.</span><span class="zh" lang="zh-Hant">從真實新聞出發：閱讀案例、連結課程概念，再用數據與觀點提出你的答案。</span></span></p><p class="muted" id="archiveSummary"></p></div><div><div id="stats" class="stats"></div><p id="saveStatus" class="saved" role="status"></p></div></section>
+<main><section class="hero"><div><div class="eyebrow" id="issueEdition">Student edition · Latest issue 15 Nov 2026</div><h1><span class="pair"><span class="en" lang="en">The world is your classroom.</span><span class="zh" lang="zh-Hant">看世界，學懂旅遊與款待。</span></span></h1><p><span class="pair"><span class="en" lang="en">Read real cases, connect course concepts, and build your answers with evidence.</span><span class="zh" lang="zh-Hant">從真實新聞出發：閱讀案例、連結課程概念，再用數據與觀點提出你的答案。</span></span></p><p class="muted" id="archiveSummary"></p></div><div><div id="stats" class="stats"></div><p id="saveStatus" class="saved" role="status"></p></div></section>
 <nav role="tablist" aria-label="Learning areas / 學習區"><button role="tab" aria-selected="true" data-tab="read"><span class="pair"><span class="en" lang="en">01 / Explore</span><span class="zh" lang="zh-Hant">01 / 閱讀案例</span></span></button><button role="tab" aria-selected="false" data-tab="lab" class="secondary"><span class="pair"><span class="en" lang="en">02 / Numbers lab</span><span class="zh" lang="zh-Hant">02 / 數據實驗室</span></span></button><button role="tab" aria-selected="false" data-tab="export" class="secondary"><span class="pair"><span class="en" lang="en">03 / My work</span><span class="zh" lang="zh-Hant">03 / 我的學習紀錄</span></span></button></nav>
 <div id="editionNotice" class="note" hidden><span class="pair"><span class="en" lang="en">Some exercises have changed. Earlier drafts are retained in your text export and have not been reused as answers to different questions.</span><span class="zh" lang="zh-Hant">部分練習已更改。舊版草稿保留在文字匯出中，不會自動套用為不同題目的答案。</span></span></div><div id="connectionNotice" class="note" role="status"></div><section data-view="read"><div class="filters"><label for="week"><span class="pair"><span class="en" lang="en">Issue</span><span class="zh" lang="zh-Hant">週報日期</span></span><select id="week"></select></label><label for="topic"><span class="pair"><span class="en" lang="en">Topic</span><span class="zh" lang="zh-Hant">課題</span></span><select id="topic"></select></label><label for="search"><span class="pair"><span class="en" lang="en">Search</span><span class="zh" lang="zh-Hant">搜尋</span></span><input id="search" type="search" placeholder="e.g. occupancy, sustainability / 例如：入住率"></label></div><p id="resultCount" class="muted" aria-live="polite"></p><div id="cards" class="grid"></div></section>
 <section data-view="lab" hidden><div class="panel"><div class="eyebrow">Numbers tell a story</div><h2><span class="pair"><span class="en" lang="en">Does a full hotel mean higher profit?</span><span class="zh" lang="zh-Hant">入住率高，就代表賺得多？</span></span></h2><p><span class="pair"><span class="en" lang="en">ADR is average daily room rate; occupancy is the share of available rooms sold; RevPAR is room revenue per available room. None directly measures profit.</span><span class="zh" lang="zh-Hant">ADR 是平均每日房價；入住率是已出租客房佔可供出租客房的比例；RevPAR 是每間可供出租客房的房間收入。三者均不直接量度利潤。</span></span></p><div class="note"><span class="pair"><span class="en" lang="en">RevPAR = ADR × Occupancy</span><span class="zh" lang="zh-Hant">RevPAR = ADR × 入住率</span></span><span class="pair"><span class="en" lang="en">Convert the percentage to a decimal: 80% = 0.80.</span><span class="zh" lang="zh-Hant">計算時將百分比化為小數，例如 80% = 0.80。</span></span></div></div><div class="lab-grid"><div class="panel"><h3><span class="pair"><span class="en" lang="en">Practice</span><span class="zh" lang="zh-Hant">練習</span></span></h3><label for="exercise"><span class="pair"><span class="en" lang="en">Select exercise</span><span class="zh" lang="zh-Hant">選擇題目</span></span><select id="exercise"><option value="0">1 · RevPAR</option><option value="1">2 · ADR</option><option value="2">3 · Occupancy / 入住率</option></select></label><p id="exerciseQ"></p><div id="labIdentity"></div><label for="exerciseAnswer"><span class="pair"><span class="en" lang="en">Your numerical answer</span><span class="zh" lang="zh-Hant">你的數值答案</span></span><input type="number" step="any" min="0" required id="exerciseAnswer"></label><div id="exerciseSubmission"></div></div><div class="panel"><h3><span class="pair"><span class="en" lang="en">Scenario calculator</span><span class="zh" lang="zh-Hant">情境計算器</span></span></h3><p class="muted"><span class="pair"><span class="en" lang="en">Hypothetical teaching inputs</span><span class="zh" lang="zh-Hant">教學假設數據</span></span></p><label for="adr">ADR · HK$<input id="adr" type="number" min="0" step="any" required value="1000"></label><label for="occupancy"><span class="pair"><span class="en" lang="en">Occupancy · %</span><span class="zh" lang="zh-Hant">入住率 · %</span></span><input id="occupancy" type="number" min="0" max="100" step="any" required value="80"></label><div class="row"><button id="calculate"><span class="pair"><span class="en" lang="en">Calculate</span><span class="zh" lang="zh-Hant">計算</span></span></button></div><div id="calcResult" aria-live="polite"></div><p class="muted"><span class="pair"><span class="en" lang="en">Try ADR of $1,200 and occupancy of 65%. How does RevPAR change? What else is needed to assess profit?</span><span class="zh" lang="zh-Hant">試把房價提高至 $1,200、入住率降至 65%。RevPAR 有何改變？還需要甚麼資料才能判斷盈利？</span></span></p></div></div></section>
 <section data-view="export" hidden><div class="panel"><div class="eyebrow">Your learning portfolio</div><h2><span class="pair"><span class="en" lang="en">Take your thinking with you.</span><span class="zh" lang="zh-Hant">帶走你的想法。</span></span></h2><div id="portfolioIdentity"></div><p><span class="pair"><span class="en" lang="en">Export your drafts and submission receipts across all issues and the spotlight. Only confirmed submissions unlock feedback. You can also download a text file or print to PDF for Google Classroom.</span><span class="zh" lang="zh-Hant">匯出各期週報及專題中的草稿與提交收據。只有已確認的提交才解鎖回饋。你也可以下載文字檔或列印為 PDF，供 Google Classroom 使用。</span></span></p><label class="choice"><input id="includeRefs" type="checkbox"><span class="pair"><span class="en" lang="en">Include unlocked feedback / thinking prompts</span><span class="zh" lang="zh-Hant">包含已解鎖的回饋／思考方向</span></span></label><div class="row"><button id="exportTxt"><span class="pair"><span class="en" lang="en">Download answers · TXT</span><span class="zh" lang="zh-Hant">下載答案文字檔</span></span></button><button id="print" class="secondary"><span class="pair"><span class="en" lang="en">Print / Save PDF</span><span class="zh" lang="zh-Hant">列印／儲存 PDF</span></span></button></div><div class="note"><span class="pair"><span class="en" lang="en">Drafts stay in this browser. Submit sends the selected assignment, name, class and optional student number to your teacher’s Google Sheet and triggers an email notification. Submitted records remain with your teacher after local records are cleared. Export before switching devices or using a shared computer.</span><span class="zh" lang="zh-Hant">草稿保存在目前瀏覽器。按提交才會把該題作答、姓名、班別及選填學號傳送至老師的 Google 試算表，並觸發電郵通知。清除本機紀錄不會刪除老師收到的提交。轉換裝置或使用共用電腦前請先匯出。</span></span></div><div class="row"><button id="reset" class="secondary"><span class="pair"><span class="en" lang="en">Clear local records</span><span class="zh" lang="zh-Hant">清除本機紀錄</span></span></button></div></div></section>
 <footer><p><span class="pair"><span class="en" lang="en">Published issues preserve their original reporting dates and data periods, including the Service Triangle supplement added on 29 October (news dated 5 October and 21 September). Analysis, questions and suggested points are teaching materials, not official HKEAA content. Consult linked sources for original reports and subsequent corrections.</span><span class="zh" lang="zh-Hant">各期週報保留原有報道日期及數據所屬期間，包括 10 月 29 日加入的服務金三角專題（新聞日期為 10 月 5 日及 9 月 21 日）；分析、題目及參考思路為教學設計，並非香港考評局官方材料。請按來源連結查看原文及後續更正。</span></span></p><p>THS FIELDNOTES · READ. QUESTION. CONNECT.</p></footer></main>
 <dialog id="articleDialog" aria-label="Case and activities / 案例與練習"><div class="dialog-bar"><span>FIELDNOTES / CASE STUDY</span><button id="closeDialog"><span class="pair"><span class="en" lang="en">Close ×</span><span class="zh" lang="zh-Hant">關閉 ×</span></span></button></div><div class="inner" id="articleBody"></div></dialog><div id="printReport"></div><script>const articles = [
+{
+    "id": "1115-1",
+    "week": "2026-11-15",
+    "topic": "operations",
+    "title": [
+      "清潔機械人加入關島酒店團隊",
+      "A cleaning robot joins a Guam hotel"
+    ],
+    "news": [
+      "Marianas Business Journal 於 2026 年 11 月 12 日報道關島凱悅酒店正在試用地板清潔機械人。供應商表示，在公開介紹前曾觀察 60–75 天。機械人處理走廊地板，員工則集中準備客房。報道未列明確切啟用日期或經獨立核實的節省人手成效。",
+      "On 12 November 2026, Marianas Business Journal reported an ongoing floor-cleaning robot pilot at Hyatt Regency Guam. The supplier described 60–75 days of observation before publicising it. The equipment handles corridor floor care while staff focus on preparing guest rooms. The exact launch date and independently verified labour-saving results were not stated."
+    ],
+    "analysis": [
+      "留意實際工作：機械人執行其中一項工序，酒店團隊仍須確保整體結果。請從工作線索初步猜測所屬部門；以下新增課堂情境均為假設。",
+      "Look at the work being done: a machine carries out one task, while a hotel team remains responsible for the overall result. Use work clues to make a first guess about the department. Added classroom situations below are hypothetical."
+    ],
+    "concept": [
+      "酒店部門職能・工作分配・質素檢查",
+      "Hotel department functions · Work allocation · Quality checks"
+    ],
+    "date": "2026-11-12",
+    "publisher": "Marianas Business Journal",
+    "source": "https://siteadmin.mbjguam.com/reporting-duty-robots-support-hospitality-services",
+    "curriculum": {
+      "module": [
+        "模組 II：款待",
+        "Module II: Hospitality"
+      ],
+      "manual": [
+        "教育局《款待》手冊",
+        "Textbook 2_Hospitality_English.doc"
+      ],
+      "section": [
+        "§2.2.3 酒店部門——組織及職能；部門名稱將於課堂討論。",
+        "§2.2.3 Hotel Departments—organisation and functions; department labels will be discussed in class."
+      ],
+      "skills": [
+        "從工作推測部門並提出具體職責；可作有根據的猜測。",
+        "Infer a department from its work and suggest specific duties; an informed guess is welcome."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "教學假設：負責準備客房及保持走廊清潔的團隊，最可能同時負責哪項工作？",
+          "Hypothetical extension: which additional task most naturally belongs to the team that prepares guest rooms and maintains clean corridors?"
+        ],
+        "options": [
+          [
+            "核對住客信用卡付款及結清未繳酒店賬項。",
+            "Check guest credit-card payments and close outstanding hotel accounts."
+          ],
+          [
+            "安排酒店廣告及與企業客戶洽談合約。",
+            "Arrange hotel advertising and negotiate contracts with corporate customers."
+          ],
+          [
+            "管理乾淨床單布草及補充客房用品。",
+            "Control clean bed linen and replenish supplies in guest rooms."
+          ],
+          [
+            "招聘季節性員工及準備正式僱傭合約。",
+            "Recruit seasonal employees and prepare their formal employment contracts."
+          ]
+        ],
+        "hint": [
+          "比較每項工作的目的，不要只看設備或職稱。",
+          "Compare the purpose of each job, rather than the equipment or job title."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：機械人試用期間，清潔地板所需時間下降。主管建議取消最後的客房及走廊檢查。哪項判斷最能考慮團隊的完整職能？",
+          "Hypothetical extension: floor-cleaning time falls during a robot trial. A supervisor proposes removing final room and corridor checks. Which judgement best considers the team’s full role?"
+        ],
+        "options": [
+          [
+            "保留最後檢查並檢視清潔標準，因為機械人只處理團隊的部分工作。",
+            "Keep final inspections and review cleanliness, since the robot handles only one part of the team’s work."
+          ],
+          [
+            "以投訴數目取代檢查，因為顧客報告能提供服務失誤的有用紀錄。",
+            "Replace inspections with complaint counts, since guest reports provide a useful record of service failures."
+          ],
+          [
+            "把全部檢查交予接待處，因為接待處需要知道哪些客房可以出售。",
+            "Transfer all checks to reception, since reception needs to know which rooms are available for sale."
+          ],
+          [
+            "以機械人平均速度作主要檢查，因為全酒店均使用同一種設備。",
+            "Use average machine speed as the main check, since the same equipment operates across the hotel."
+          ]
+        ],
+        "hint": [
+          "分辨完成一項工序與檢查最終工作質素。",
+          "Separate completing a task from checking the quality of the finished work."
+        ]
+      }
+    ],
+    "q": [
+      "根據新聞，猜測這個團隊屬於哪一個酒店部門。寫出一項工作線索，並推測該部門一般負責的兩項工作。可用下方句式寫三個短點；作合理初步猜測即可，不需要 RC／CC 或 FOH／BOH 標籤。",
+      "From the news, identify ONE hotel department you think this team belongs to. Give ONE work clue and suggest TWO duties the department normally performs. Write three short points using the frame below. A reasonable first guess is enough; you do not need RC/CC or FOH/BOH labels."
+    ],
+    "hint": [
+      "這個團隊照顧甚麼？下一位住客抵達前，哪些事情必須準備好？考慮部門的整體工作，不只看機械人的工序。",
+      "What does this team look after, and what must be ready before the next guest arrives? Think about a department’s whole job, not just the robot’s task."
+    ],
+    "feedbackMode": "prompts",
+    "exerciseVersion": "dse-2026-11-15",
+    "responseKind": "department-discovery",
+    "minResponseChars": 12,
+    "responseFrame": [
+      "1. 我猜是＿＿部門。\n2. 新聞中的線索是＿＿。\n3. 這個部門一般會＿＿及＿＿。",
+      "1. I think it is the ___ department.\n2. My clue from the news is ___.\n3. It usually ___ and ___."
+    ],
+    "responsePlaceholder": [
+      "部門：……\n新聞線索：……\n兩項日常職責：……",
+      "Department: ...\nNews clue: ...\nTwo usual duties: ..."
+    ]
+  },
+  {
+    "id": "1115-2",
+    "week": "2026-11-15",
+    "topic": "events",
+    "title": [
+      "香港繽紛冬日巡禮擴展至三個地區",
+      "Hong Kong WinterFest expands across three districts"
+    ],
+    "news": [
+      "旅發局於 11 月 10 日公布，繽紛冬日巡禮將於 2026 年 11 月 18 日至 2027 年 1 月 5 日舉行，在中環、尖沙咀及銅鑼灣設節慶活動，並推出逾 100,000 項冬日優惠。各區開放日期不同；這是公布的安排及優惠，並非已量度的旅客消費或人次。",
+      "On 10 November, HKTB announced WinterFest for 18 November 2026–5 January 2027, with festive programmes in Central, Tsim Sha Tsui and Causeway Bay and over 100,000 winter offers. Individual district opening dates differ. These are announced arrangements and offers, not measured visitor spending or attendance."
+    ],
+    "analysis": [
+      "臨時活動亦可成為出遊的主要原因；本地效益則與旅客消費如何流向其他企業有關。以下新增旅客情境均為教學假設。",
+      "A temporary event can be the main reason for a trip. Its local benefits also depend on how visitor spending reaches other businesses. All extra visitor situations below are hypothetical."
+    ],
+    "concept": [
+      "主要及次要景點・旅遊乘數效應・社區影響",
+      "Primary and secondary attractions · Tourism multiplier · Community impacts"
+    ],
+    "date": "2026-11-10",
+    "publisher": "Hong Kong Tourism Board",
+    "source": "https://www.discoverhongkong.com/content/dam/dhk/intl/corporate/newsroom/press-release/hktb/2026/hk-winterfest-2026-announcement-EN.pdf",
+    "curriculum": {
+      "module": [
+        "模組 III 及 I",
+        "Modules III and I"
+      ],
+      "manual": [
+        "教育局《目的地地理》及《旅遊導論》手冊",
+        "Textbook 3.1_Destination_Geography_English.doc; Textbook 1.1_Introduction to Tourism_Eng.docx"
+      ],
+      "section": [
+        "III §2.3 景點分類——按地位分類；I §7.2 經濟影響，包括 §7.2.3 旅遊乘數效應；§7.1 社會文化影響。",
+        "III §2.3 Typology of Attractions—classification by rank; I §7.2 Economic Impacts, including §7.2.3 Tourism Multiplier; §7.1 Social and Cultural Impacts."
+      ],
+      "skills": [
+        "按個別旅客的行程分類景點，並解釋本地經濟聯繫。",
+        "Classify attractions for a particular visitor and explain a local economic linkage."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "某家庭主要為參與冬日巡禮而來港，另外短暫到山頂遊覽。哪個分類最符合這個家庭的行程？",
+          "A family travels mainly to attend WinterFest and adds a brief visit to the Peak. Which classification best fits THIS family’s trip?"
+        ],
+        "options": [
+          [
+            "山頂永遠是主要景點，因為它是永久且國際知名的景點。",
+            "The Peak is always primary because it is a permanent and internationally known attraction."
+          ],
+          [
+            "對這個家庭而言，冬日巡禮是主要景點，額外的山頂短遊是次要景點。",
+            "WinterFest is primary for this family; the brief additional Peak visit is secondary."
+          ],
+          [
+            "兩者對所有旅客均是主要景點，因為都出現在香港旅遊廣告中。",
+            "Both are primary for every visitor because both appear in Hong Kong travel advertising."
+          ],
+          [
+            "冬日巡禮是次要景點，因為較短的營運季節限制旅客逗留時間。",
+            "WinterFest is secondary because its short operating season limits how long guests can stay."
+          ]
+        ],
+        "hint": [
+          "先找出這次個別行程的主要出發原因。",
+          "Identify the main reason for this particular trip."
+        ],
+        "correct": 1,
+        "explain": [
+          "主要景點取決於個別旅客出遊的主要目的，而非只看永久性或知名度。冬日巡禮促成這次旅程，額外山頂短遊則增加行程變化。",
+          "Primary status depends on the visitor’s main trip purpose, not simply permanence or fame. WinterFest motivates this trip, while the additional Peak visit adds variety."
+        ]
+      },
+      {
+        "q": [
+          "旅客在冬日巡禮附近用膳，餐廳再向本地供應商購買蔬菜。哪個概念解釋其後的本地交易？",
+          "A visitor buys dinner near WinterFest. The restaurant then buys vegetables from a local supplier. Which concept explains the further LOCAL transaction?"
+        ],
+        "options": [
+          [
+            "進口漏損：企業把旅客消費送往海外，向外國供應商購買產品。",
+            "Import leakage: businesses send visitor spending abroad to purchase products from overseas suppliers."
+          ],
+          [
+            "排擠：旅客需求增加，減少居民使用同一本地設施及服務的機會。",
+            "Displacement: increased visitor demand reduces residents’ access to the same local facilities and services."
+          ],
+          [
+            "季節性：旅客人次及商業需求在一年不同時段上升或下降。",
+            "Seasonality: visitor numbers and business demand rise and fall at different times of year."
+          ],
+          [
+            "乘數效應：旅客消費被再次使用，在本地經濟內帶來更多交易。",
+            "Multiplier effect: tourist spending is spent again, creating further transactions within the local economy."
+          ]
+        ],
+        "hint": [
+          "追蹤旅客首次付款後，金錢再流向哪裏。",
+          "Follow where the money goes after the visitor’s first payment."
+        ],
+        "correct": 3,
+        "explain": [
+          "餐廳把所得收入再向本地供應商消費，反映乘數過程。這個例子顯示本地聯繫，但不能量度乘數的實際大小。",
+          "The restaurant re-spends receipts with a local supplier, illustrating the multiplier process. The example establishes a local linkage, not the numerical size of a multiplier."
+        ]
+      }
+    ],
+    "q": [
+      "解釋冬日巡禮對本地社區可能帶來的一項正面經濟影響，以及一項社會或環境成本，分別應用至公布活動的一項特色。（4 分：兩點各概念 1 分＋案例解釋 1 分。）",
+      "Explain ONE possible positive economic impact and ONE possible social or environmental cost of WinterFest for the local community. Apply each to a feature of the announced programme. (4 marks: two points × concept 1 + case explanation 1.)"
+    ],
+    "hint": [
+      "誰獲得消費收益？誰與旅客共用公共空間？分辨可能影響與已量度的成果。",
+      "Who receives spending, and who shares public space with visitors? Separate possible effects from results already measured."
+    ],
+    "feedbackMode": "answers",
+    "exerciseVersion": "dse-2026-11-15",
+    "discussionMarks": 4,
+    "ref": [
+      "建議方向：解釋一項經濟效益，如本地餐廳銷售及供應商聯繫（2 分），以及一項社會／環境成本，如活動區人流擠迫或噪音（2 分）。兩者均須連結活動及居民；接受有理據的其他答案。優惠數目不等於實際消費成果。",
+      "Suggested points: explain a relevant economic benefit, such as local restaurant sales and supplier links (2), and a social/environmental cost, such as crowding or noise around event districts (2). Tie both to the programme and residents. Accept reasoned alternatives; the number of offers is not a measured spending result."
+    ]
+  },
+  {
+    "id": "1115-3",
+    "week": "2026-11-15",
+    "topic": "culture",
+    "title": [
+      "泰國地區餐飲受到更多關注",
+      "Thailand’s regional dining enters the spotlight"
+    ],
+    "news": [
+      "米芝蓮於 2026 年 11 月 10 日公布泰國 2027 年版名單：收錄 507 家餐飲場所，其中 53 家為星級餐廳。清邁首次有餐廳獲星，普吉首次有餐廳獲二星。數字描述新指南名單，並非旅客或餐廳收益增幅。",
+      "On 10 November 2026, Michelin unveiled its Thailand 2027 selection: 507 dining establishments, including 53 starred restaurants. Chiang Mai gained its first starred restaurant and Phuket its first two-star restaurant. The figures describe the new guide edition, not visitor growth or restaurant revenue."
+    ],
+    "analysis": [
+      "地方菜式可影響目的地選擇，本地採購則影響旅遊收益留在哪裏。獲指南收錄本身不能證明社區受惠；以下新增行程情境為教學假設。",
+      "Regional cuisine can shape destination choice, while local sourcing affects where tourism income remains. A guide listing alone does not establish community benefit. Added itinerary scenarios are hypothetical."
+    ],
+    "concept": [
+      "推拉因素・文化旅遊・地方繁榮",
+      "Push and pull factors · Cultural tourism · Local prosperity"
+    ],
+    "date": "2026-11-10",
+    "publisher": "MICHELIN Guide",
+    "source": "https://guide.michelin.com/nz/en/article/michelin-guide-ceremony/michelin-guide-thailand-2027",
+    "curriculum": {
+      "module": [
+        "模組 I 及 V",
+        "Modules I and V"
+      ],
+      "manual": [
+        "教育局《旅遊導論》及《趨勢與議題》手冊",
+        "Textbook 1.1_Introduction to Tourism_Eng.docx; Textbook 5_Trend_and_Issue_English.doc"
+      ],
+      "section": [
+        "I §3.2 旅遊動機理論——推拉因素；§2.2 旅遊形式——文化旅遊；V §2.4 可持續旅遊目標——地方繁榮及文化豐富性。",
+        "I §3.2 Travel-motivation Theories—Push and Pull; §2.2 Forms of Travel—Cultural Tourism; V §2.4 Sustainable Tourism Aims—Local Prosperity and Cultural Richness."
+      ],
+      "skills": [
+        "區分個人動機及目的地特點，評估與社區連繫的美食旅遊。",
+        "Distinguish personal motives from destination attributes and evaluate community-linked food tourism."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "某旅客希望擺脫日常壓力，閱讀地區餐廳報道後選擇清邁。哪個分類最恰當？",
+          "A traveller wants to escape daily stress, then chooses Chiang Mai after reading about its regional restaurants. Which classification is most appropriate?"
+        ],
+        "options": [
+          [
+            "擺脫壓力是拉因素；地區餐廳是推因素。",
+            "Escape from stress is a pull factor; regional restaurants are a push factor."
+          ],
+          [
+            "兩者均是推因素，因為都影響旅客個人的出遊決定。",
+            "Both are push factors, because both affect the traveller’s personal decision to travel."
+          ],
+          [
+            "擺脫壓力是推因素；地區餐廳是拉因素。",
+            "Escape from stress is a push factor; regional restaurants are a pull factor."
+          ],
+          [
+            "兩者均是拉因素，因為都可影響目的地選擇。",
+            "Both are pull factors, because both can influence the choice of a destination."
+          ]
+        ],
+        "hint": [
+          "區分離開日常環境的原因與選擇某地的原因。",
+          "Distinguish the reason to leave from the reason to choose a place."
+        ],
+        "correct": 2,
+        "explain": [
+          "擺脫壓力的內在願望促使旅客出遊，屬推因素；目的地的地區餐廳吸引旅客選擇清邁，屬拉因素。",
+          "The internal desire to escape stress pushes the person to travel; the destination’s regional restaurants pull the traveller toward Chiang Mai."
+        ]
+      },
+      {
+        "q": [
+          "旅遊營辦商希望同時提供地區美食體驗及支持地方繁榮。哪項行程規劃最能兼顧兩個目標？",
+          "A tour operator wants both a regional food experience and local prosperity. Which itinerary plan best supports both aims?"
+        ],
+        "options": [
+          [
+            "安排小組與地區生產者體驗用膳，協議公平報酬並檢視接待容量。",
+            "Arrange small-group meals with regional producers, agree fair payment and check visitor capacity."
+          ],
+          [
+            "帶領所有團前往同一家著名餐廳，整個地區均使用一套標準餐單。",
+            "Direct every group to the same famous restaurant, using one standard menu throughout the region."
+          ],
+          [
+            "進口食材製作一致的國際餐單，主要以星級餐廳數目宣傳路線。",
+            "Import ingredients for a consistent international menu and promote the route mainly through star counts."
+          ],
+          [
+            "預訂最大規模的餐廳，主要按每日售出膳食數目比較成效。",
+            "Book the largest available dining halls and compare success mainly by meals sold per day."
+          ]
+        ],
+        "hint": [
+          "檢視文化接觸、誰獲得報酬，以及團體規模的影響。",
+          "Examine cultural contact, who receives payment and the effects of group size."
+        ],
+        "correct": 0,
+        "explain": [
+          "小組與地區生產者接觸有助文化體驗，公平付款亦有助收益留在本地；容量檢查可減低接待壓力。名氣、規模或進口餐單本身不能同時滿足兩個目標。",
+          "Small-group contact with regional producers can support cultural experience while agreed payment retains income locally. Capacity checks address pressure on hosts; fame, scale or imported menus alone do not fulfil both aims."
+        ]
+      }
+    ],
+    "q": [
+      "為地區美食旅遊行程建議兩項安排：一項支持文化豐富性，一項支持地方繁榮。分別以清楚列出的行程例子及可能影響解釋。（6 分：每項目標／安排 1 分＋應用 1 分＋影響 1 分。）",
+      "Recommend TWO arrangements for a regional food-tourism itinerary: ONE that supports cultural richness and ONE that supports local prosperity. Explain each using a clearly stated itinerary example and its likely effect. (6 marks: each aim/arrangement 1 + application 1 + effect 1.)"
+    ],
+    "hint": [
+      "不要只看星級數目：旅客會學到甚麼？消費會流向哪裏？",
+      "Think beyond the number of stars: what would visitors learn, and where would their spending go?"
+    ],
+    "feedbackMode": "answers",
+    "exerciseVersion": "dse-2026-11-15",
+    "discussionMarks": 6,
+    "ref": [
+      "建議方向：一項文化安排，如由本地接待者講解地區飲食傳統，配合具體行程及學習影響（3 分）；一項地方繁榮安排，如向本地企業簽訂公平採購合約，配合應用及收益留在本地的影響（3 分）。接受有理據的其他例子；不可把全部 507 家收錄場所當作星級餐廳。",
+      "Suggested points: one cultural arrangement, such as a host-led explanation of regional food traditions, with a specific itinerary and learning effect (3); one local-prosperity arrangement, such as contracting locally owned producers with fair payment, with an application and retained-income effect (3). Accept other justified examples. Do not treat all 507 listed venues as starred restaurants."
+    ]
+  },
+  {
+    "id": "1115-4",
+    "week": "2026-11-15",
+    "topic": "transport",
+    "title": [
+      "航空收益增長遇上燃油成本上升",
+      "Higher airline revenue meets higher fuel costs"
+    ],
+    "news": [
+      "新加坡航空集團於 11 月 11 日公布，2026 年 4–9 月收益為 112.97 億新加坡元，按年升 16.8%；淨利潤為 1.34 億新加坡元，跌 43.9%；淨燃油成本升 56.0%。這是集團半年業績，並非每條航線的表現或所有航空公司的預測。",
+      "On 11 November, SIA Group reported April–September 2026 revenue of S$11.297 billion, up 16.8% year on year, and net profit of S$134 million, down 43.9%. Net fuel cost increased 56.0%. These are half-year group results, not results for every route or a forecast for all airlines."
+    ],
+    "analysis": [
+      "交通費是整體旅遊預算的一部分，成本壓力可影響相連的住宿及旅遊產品，但須按個別市場判斷。以下訂價及顧客情境均屬假設，並非新航公布的政策。",
+      "Transport cost forms part of the total holiday budget. Cost pressures can affect connected accommodation and tour products, but the effect depends on each market. The pricing and customer situations below are hypothetical, not announced SIA policies."
+    ],
+    "concept": [
+      "旅遊產品互補性・行業相互依存・旅程可負擔程度",
+      "Tourism-product complementarity · Sector interdependence · Trip affordability"
+    ],
+    "date": "2026-11-11",
+    "publisher": "Singapore Airlines",
+    "source": "https://www.singaporeair.com/en_UK/id/about-us/information-for-investors/financial-results-and-briefings/News-Release-for-1H-FY2627/",
+    "curriculum": {
+      "module": [
+        "模組 I 及 V",
+        "Modules I and V"
+      ],
+      "manual": [
+        "教育局《旅遊導論》及《趨勢與議題》手冊",
+        "Textbook 1.1_Introduction to Tourism_Eng.docx; Textbook 5_Trend_and_Issue_English.doc"
+      ],
+      "section": [
+        "I §4.1 旅遊產品——互補性；§5.1 行業聯繫；V §4.1.1 可支配收入及 §4.1.2 旅遊模式。",
+        "I §4.1 Tourism Products—Complementarity; §5.1 Sector Linkages; V §4.1.1 Disposable Income and §4.1.2 Travel Patterns."
+      ],
+      "skills": [
+        "分析交通成本如何影響整體旅遊產品及相連供應商。",
+        "Analyse how transport costs affect a complete tourism product and connected suppliers."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "教學假設：機票價格上升，但目的地酒店房價不變。哪項判斷最符合旅遊產品的互補性？",
+          "Hypothetical extension: airfares rise while a destination’s hotel rates stay unchanged. Which judgement best applies tourism-product complementarity?"
+        ],
+        "options": [
+          [
+            "酒店需求應維持穩定，因為住宿購買主要由房價決定。",
+            "Hotel demand should remain stable, since accommodation purchases are determined mainly by room rates."
+          ],
+          [
+            "酒店需求可能減弱，因為機票與住宿共用旅客的整體旅遊預算。",
+            "Hotel demand may weaken, since flights and accommodation share the visitor’s total holiday budget."
+          ],
+          [
+            "酒店需求應增加，因為較高機票價格通常代表旅客消費能力較強。",
+            "Hotel demand should increase, since higher airfares usually identify visitors with greater spending power."
+          ],
+          [
+            "酒店需求應上升，因為航空收益增長代表每條航線的乘客均增加。",
+            "Hotel demand should rise, since airline revenue growth indicates more passengers on every route."
+          ]
+        ],
+        "hint": [
+          "考慮完整旅程的費用，不只看酒店部分。",
+          "Consider the cost of the complete trip, not only the hotel component."
+        ],
+        "correct": 1,
+        "explain": [
+          "機票與酒店是旅程中互相配合的部分。即使房價不變，較高機票費仍可令整段假期較難負擔，影響客房需求；這是可能影響，並非每個市場必然出現。",
+          "Flights and hotels are complementary parts of a trip. Higher airfares can make the whole holiday less affordable and affect room demand even if room prices do not change. The effect is possible, not certain for every market."
+        ]
+      },
+      {
+        "q": [
+          "旅遊營辦商正為價格敏感的家庭修訂機票連住宿套票。哪項做法最能協調相互依存的服務？",
+          "A tour operator is revising a flight-inclusive package for price-sensitive families. Which approach best coordinates the interdependent services?"
+        ],
+        "options": [
+          [
+            "保留現有日期、減少酒店住宿晚數，讓客人自行安排機場接送。",
+            "Retain current dates, cut hotel nights and leave airport transfers for guests to arrange."
+          ],
+          [
+            "先選最便宜的航班，再要求酒店配合航班所導致的抵達時間。",
+            "Choose the cheapest flight first, then ask hotels to accommodate the resulting arrival times."
+          ],
+          [
+            "維持酒店現有房價，並減少所有機票連住宿產品的宣傳。",
+            "Maintain the hotel’s present rate and reduce promotion across all flight-inclusive travel products."
+          ],
+          [
+            "同時比較其他出發日期，以及相互配合的航班、酒店和接送供應。",
+            "Compare alternative departure dates together with connected flight, hotel and transfer availability."
+          ]
+        ],
+        "hint": [
+          "檢查每個方案有否把假期視為一組互相配合的服務。",
+          "Check whether each proposal treats the holiday as a connected set of services."
+        ],
+        "correct": 3,
+        "explain": [
+          "共同比較能同時考慮相連供應商的價格、時間及供應。未檢查其他部分便先選定或改動單一服務，可能令家庭面對額外成本或服務衝突。",
+          "Joint comparison considers price, timing and availability across linked suppliers. Selecting or changing one component before checking the others can create cost or service conflicts for the family."
+        ]
+      }
+    ],
+    "q": [
+      "運用兩個不同的行業部門，解釋航空交通成本上升可如何影響航空公司以外的旅遊企業。每項把交通成本變化連結至一項具體營運決定及可能影響。（6 分：每個部門各聯繫 1 分＋案例應用 1 分＋影響 1 分。）",
+      "Explain TWO ways higher air-transport costs could affect tourism businesses beyond airlines. Use TWO different sectors; for each, link the transport-cost change to a specific business decision and likely effect. (6 marks: linkage 1 + case application 1 + effect 1, for each sector.)"
+    ],
+    "hint": [
+      "沿整段假期追蹤影響，並列明有關顧客預算、日期或其他目的地的假設。",
+      "Trace a change through the whole holiday. State any assumptions about customer budgets, timing or alternative destinations."
+    ],
+    "feedbackMode": "answers",
+    "exerciseVersion": "dse-2026-11-15",
+    "discussionMarks": 6,
+    "ref": [
+      "建議方向：兩個不同部門各 3 分。例如交通成本上升削弱需求時，酒店可考慮針對性套票；旅遊營辦商可協調其他日期及供應商以維持可負擔程度。須解釋具體決定及影響，不只重複所有企業收入下跌。接受有理據的正面或負面影響及清楚假設。",
+      "Suggested points: two different sectors, 3 marks each. For example, hotels might use targeted packages if higher transport cost weakens demand; tour operators might coordinate alternative dates and suppliers to preserve affordability. Explain the particular decision and effect rather than repeating that all firms earn less. Accept justified positive or negative effects and stated assumptions."
+    ]
+  },
+  {
+    "id": "1115-5",
+    "week": "2026-11-15",
+    "topic": "attractions",
+    "title": [
+      "奧蘭多環球影城更新節慶體驗",
+      "Universal Orlando refreshes its holiday experience"
+    ],
+    "news": [
+      "環球影城於 11 月 12 日刊出的公告（內文日期為 11 月 11 日）介紹 2026 年 11 月 14 日至 2027 年 1 月 3 日的節慶體驗。活動涵蓋佛羅里達環球影城、冒險島及 Epic Universe，並包括 Epic Universe 的新節慶佈置。公告沒有公布活動人次或收益成果。",
+      "Universal’s page was published on 12 November, with release text dated 11 November, announcing holiday experiences for 14 November 2026–3 January 2027. The programme spans Universal Studios Florida, Islands of Adventure and Epic Universe, including new seasonal décor at Epic Universe. No attendance or revenue outcome was reported in the announcement."
+    ],
+    "analysis": [
+      "季節性表演、餐飲及佈置可更新主題體驗，而不一定要新增機動遊戲；其價值亦取決於營運規劃及遊客流動安排。以下家庭及人流情境均屬假設。",
+      "Seasonal shows, food and décor can renew a themed experience without requiring a new ride. Their value also depends on operational planning and visitor flow. The family and crowd situations below are hypothetical."
+    ],
+    "concept": [
+      "主題營造・重遊・主動管理・遊客流動",
+      "Theming · Repeat visitation · Pro-active management · Visitor flow"
+    ],
+    "date": "2026-11-12",
+    "publisher": "Universal Orlando Resort",
+    "source": "https://media.universalparksusa.com/press-releases/universal-orlando-resort-kicks-off-its-destination-wide-holidaycelebration-trade-111126/",
+    "curriculum": {
+      "module": [
+        "模組 III：主題公園；模組 I",
+        "Module III: Theme Parks; Module I"
+      ],
+      "manual": [
+        "教育局《主題公園》及《旅遊導論》手冊",
+        "Textbook 3.2_Theme_Park_English.doc; Textbook 1.1_Introduction to Tourism_Eng.docx"
+      ],
+      "section": [
+        "III §2.1(I) 獨特而有趣的主題；§2.3(I) 主動管理；I §4.3 承載力。",
+        "III §2.1(I) Unique and Interesting Theme; §2.3(I) Pro-active Management; I §4.3 Carrying Capacity."
+      ],
+      "skills": [
+        "把主題營造應用至季節活動，評估應付人流壓力的營運措施。",
+        "Apply theming to a seasonal programme and evaluate an operational response to crowd pressure."
+      ]
+    },
+    "questions": [
+      {
+        "q": [
+          "主題公園在現有園區加入角色主題的季節表演、餐飲及佈置。哪項主題公園原則最能解釋這個選擇？",
+          "A park adds character-based seasonal shows, food and décor within existing lands. Which theme-park principle best explains this choice?"
+        ],
+        "options": [
+          [
+            "讓娛樂及服務貫徹同一主題，以更新遊客體驗。",
+            "Use a consistent theme across entertainment and services to renew the visitor experience."
+          ],
+          [
+            "以額外機動遊戲容量取代主題故事，讓每位遊客有相同體驗。",
+            "Replace thematic storytelling with extra ride capacity so each visitor receives identical experiences."
+          ],
+          [
+            "把餐廳及商店視為獨立企業，其設計毋須配合園區。",
+            "Treat restaurants and shops as separate businesses whose design need not follow the land."
+          ],
+          [
+            "不同季節均維持相同節目，讓重遊者重複同一流程。",
+            "Keep the programme unchanged between seasons so return visits repeat the same sequence."
+          ]
+        ],
+        "hint": [
+          "留意故事、環境及不同服務之間的連繫。",
+          "Look for connections among the story, surroundings and different services."
+        ],
+        "correct": 0,
+        "explain": [
+          "主題營造把表演、餐飲、零售及環境結合成可辨認的體驗。季節變化可在現有故事內帶來新鮮感並增加重遊興趣，但不能據此證明實際重遊人次。",
+          "Theming coordinates shows, food, retail and surroundings into a recognisable experience. A seasonal variation can offer something new within the existing story and encourage repeat interest, without proving actual repeat attendance."
+        ]
+      },
+      {
+        "q": [
+          "教學假設：多場表演同時完結，遊客擠在狹窄出口通道。在人手預算不變下，哪項措施最直接處理這項壓力？",
+          "Hypothetical extension: several shows finish together and guests crowd a narrow exit walkway. With the same staffing budget, which response most directly addresses that pressure?"
+        ],
+        "options": [
+          [
+            "巡遊後增加餐飲折扣，同時保留現有出口路線及時間安排。",
+            "Expand meal discounts after the parade while retaining the existing exit routes and timing."
+          ],
+          [
+            "增加日間門票宣傳，同時維持晚間表演時間及人手模式。",
+            "Increase daytime ticket advertising while keeping evening show times and staffing patterns unchanged."
+          ],
+          [
+            "錯開表演完結時間，並安排職員引導遊客使用其他可用出口。",
+            "Stagger show endings and assign staff to guide guests through other available exits."
+          ],
+          [
+            "提早開園以縮短遊戲輪候時間，但不改晚間表演完結時間。",
+            "Open the park earlier to shorten ride queues without changing evening show finishing times."
+          ]
+        ],
+        "hint": [
+          "把措施對準擠迫發生的地點及時間。",
+          "Match the measure to where and when the congestion occurs."
+        ],
+        "correct": 2,
+        "explain": [
+          "錯開離場時間可減少同時使用通道的需求，職員引導使用其他出口則可分散人流。其他措施未直接改變題目指出的晚間樽頸。",
+          "Staggering departures reduces simultaneous demand on the walkway, while staff-guided alternative exits spread flow. The other measures do not directly change the identified evening bottleneck."
+        ]
+      }
+    ],
+    "q": [
+      "評估在現有主題公園加入季節活動：運用公告節目或清楚列出的假設，解釋一項可能好處、一項營運風險，以及一項處理該風險的有理據措施。（6 分：好處 2 分＋風險 2 分＋有理據措施 2 分。）",
+      "Evaluate adding a seasonal programme to an existing theme park. Explain ONE likely benefit, ONE operational risk, and ONE justified measure addressing that risk, using the announced programme or a stated assumption. (6 marks: benefit 2 + risk 2 + justified measure 2.)"
+    ],
+    "hint": [
+      "考慮重遊者會體驗甚麼變化，以及繁忙時段員工須管理甚麼。",
+      "Consider what changes for returning guests and what staff must manage during busy periods."
+    ],
+    "feedbackMode": "answers",
+    "exerciseVersion": "dse-2026-11-15",
+    "discussionMarks": 6,
+    "ref": [
+      "建議方向：解釋相關好處，如更新主題興趣及可能增加重遊（2 分）；具體營運風險，如多場表演同時完結造成擠迫（2 分）；有理據措施，如錯開時間及引導使用其他路線（2 分）。接受其他連結節目的風險及可行措施，不可宣稱公布活動已增加人次或盈利。",
+      "Suggested points: a linked benefit such as renewed themed interest and possible repeat visits (2); a specific operational risk such as crowd pressure after simultaneous shows (2); a justified response such as staggered timings and guided alternative routes (2). Accept other programme-linked risks and workable measures. Do not claim that announced activities have already increased attendance or profit."
+    ]
+  },
+
 {
     "id": "1109-1",
     "week": "2026-11-09",
@@ -3321,11 +3944,12 @@
 const SUBMISSION_ENDPOINT = /* THS_SUBMISSION_ENDPOINT */ "https://script.google.com/macros/s/AKfycbwNdfT0XlLgGLGdKK6HMOpd1vSpPkOO3ECL15L20nFOmCY08PTn9xDzZl8sLfLjVJ4M/exec";
 const TEACHER_EMAIL = 'wongyt@takoi.edu.hk';
 const MIN_DISCUSSION_CHARS = 40;
+const minCharsFor=a=>Number.isInteger(a?.minResponseChars)&&a.minResponseChars>0?a.minResponseChars:MIN_DISCUSSION_CHARS;
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pair=a=>`<span class="pair"><span class="en" lang="en">${esc(a[1])}</span><span class="zh" lang="zh-Hant">${esc(a[0])}</span></span>`;
 const exportPair=a=>a?[a[1],a[0]].filter(Boolean).join(' / '):'';
 const uiText=a=>state.lang==='zh'?a[0]:state.lang==='en'?a[1]:exportPair(a);
-const topics={triangle:['服務金三角專題','Service Triangle spotlight'],hotel:['住宿與收益','Hotels & revenue'],demand:['旅遊需求','Tourism demand'],service:['顧客服務與安全','Service & safety'],transport:['交通運輸','Transport'],sustainability:['可持續旅遊','Sustainability'],mice:['會展旅遊','MICE'],culture:['文化旅遊','Cultural tourism'],events:['節慶與盛事','Events']};
+const topics={operations:['酒店營運','Hotel operations'],attractions:['景點與主題公園','Attractions & theme parks'],triangle:['服務金三角專題','Service Triangle spotlight'],hotel:['住宿與收益','Hotels & revenue'],demand:['旅遊需求','Tourism demand'],service:['顧客服務與安全','Service & safety'],transport:['交通運輸','Transport'],sustainability:['可持續旅遊','Sustainability'],mice:['會展旅遊','MICE'],culture:['文化旅遊','Cultural tourism'],events:['節慶與盛事','Events']};
 const KEY='ths-fieldnotes-v1';
 const EXERCISE_EDITION='dse-2026-10-31';
 const questionsFor=a=>a.questions||a.judgements||[{q:a.mcq,options:a.options,correct:a.correct,explain:a.explain}];
@@ -3371,7 +3995,7 @@ function updateControlText(){
   $('#topic').innerHTML=`<option value="">${esc(uiText(['全部主題','All topics']))}</option>`+Object.entries(topics).map(([k,v])=>`<option value="${k}">${esc(uiText(v))}</option>`).join('');
   $('#topic').value=previousTopic;
   const weeks=[...new Set(articles.map(a=>a.week))].sort((a,b)=>b.localeCompare(a));
-  const spotlightWeeks=weeks.filter(w=>articles.filter(a=>a.week===w).every(promptsOnly));
+  const spotlightWeeks=weeks.filter(w=>articles.filter(a=>a.week===w).every(a=>a.topic==='triangle'));
   $('#week').innerHTML=`<option value="">${esc(uiText(['全部內容','All content']))}</option>`+weeks.map(w=>{
     const label=issueDate(w);
     if(spotlightWeeks.includes(w)){label[0]+=' · 服務金三角專題';label[1]+=' · Service Triangle spotlight';}
@@ -3393,12 +4017,12 @@ function refreshGate(id){const target=$('#feedback-'+id);if(!target)return;const
 const button=document.querySelector(`[data-submit="${id}"]`);if(button){button.disabled=!SUBMISSION_ENDPOINT||!!pending;button.innerHTML=pair(receipt?['再次傳送相同紀錄','Resend same record']:['提交並解鎖回饋','Submit & unlock feedback']);}
 if(!receipt){target.innerHTML=`<p class="muted">${pair(['🔒 完成並成功提交後，才會顯示本題的回饋。修改作答後須重新提交。','🔒 Feedback appears after a complete response is successfully submitted. Changes require a new submission.'])}</p>`;return;}
 if(id.startsWith('calc-')){const i=Number(id.slice(5)),ok=Math.abs(Number(state.calc[i].value)-exercises[i].answer)<.01;target.innerHTML=`<div class="feedback ${ok?'':'error'}">${pair(ok?['答對了！','Correct!']:['再檢查一下。','Review your calculation.'])}<p>${pair(exercises[i].explain)}</p></div>`;return;}
-const a=articles.find(x=>x.id===id),qs=questionsFor(a);if(promptsOnly(a)){target.innerHTML=`<section class="panel"><h3>${pair(['提交後思考方向','Thinking prompts after submission'])}</h3>${qs.map((q,i)=>`<h4>${pair([`判斷題 ${i+1}`,`Judgement question ${i+1}`])}</h4><p>${pair(q.hint)}</p>`).join('')}<h4>${pair(['討論思考方向','Discussion prompts'])}</h4><p>${pair(a.hint)}</p><p class="muted">${pair(['本專題不提供答案或評分。','This spotlight provides no answer key or grading.'])}</p></section>`;}else{target.innerHTML=`<section class="panel"><h3>${pair(['提交後回饋','Feedback after submission'])}</h3>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value,ok=Number(value)===q.correct;return `<h4>MC ${i+1}</h4><div class="feedback ${ok?'':'error'}">${pair(ok?['選擇題答對了。','Your MC response is correct.']:['請比較你的選項與以下解說。','Compare your choice with the explanation below.'])}<p>${String.fromCharCode(65+q.correct)}. ${pair(q.options[q.correct])}</p><p>${pair(q.explain)}</p></div>`;}).join('')}<h4>${pair(['短答／討論參考思路','Suggested written-response points'])}</h4><p>${pair(a.ref)}</p><p class="muted">${pair(['配分為教學建議，回應由老師評閱；並非考評局官方評分指引。','Marks are suggested for classroom practice; written responses are reviewed by the teacher. This is not an official HKEAA marking scheme.'])}</p></section>`;}}
+const a=articles.find(x=>x.id===id),qs=questionsFor(a);if(promptsOnly(a)){target.innerHTML=`<section class="panel"><h3>${pair(['提交後思考方向','Thinking prompts after submission'])}</h3>${qs.map((q,i)=>`<h4>${pair([`判斷題 ${i+1}`,`Judgement question ${i+1}`])}</h4><p>${pair(q.hint)}</p>`).join('')}<h4>${pair(['討論思考方向','Discussion prompts'])}</h4><p>${pair(a.hint)}</p><p class="muted">${pair(a.responseKind==='department-discovery'?['這是課前初步回應；只提供思考方向，不顯示答案或評分。','This first response is for class discussion; only thinking prompts are provided, with no answer key or grading.']:['本專題不提供答案或評分。','This spotlight provides no answer key or grading.'])}</p></section>`;}else{target.innerHTML=`<section class="panel"><h3>${pair(['提交後回饋','Feedback after submission'])}</h3>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value,ok=Number(value)===q.correct;return `<h4>MC ${i+1}</h4><div class="feedback ${ok?'':'error'}">${pair(ok?['選擇題答對了。','Your MC response is correct.']:['請比較你的選項與以下解說。','Compare your choice with the explanation below.'])}<p>${String.fromCharCode(65+q.correct)}. ${pair(q.options[q.correct])}</p><p>${pair(q.explain)}</p></div>`;}).join('')}<h4>${pair(['短答／討論參考思路','Suggested written-response points'])}</h4><p>${pair(a.ref)}</p><p class="muted">${pair(['配分為教學建議，回應由老師評閱；並非考評局官方評分指引。','Marks are suggested for classroom practice; written responses are reviewed by the teacher. This is not an official HKEAA marking scheme.'])}</p></section>`;}}
 function curriculumHTML(a){if(!a.curriculum)return '';const c=a.curriculum;return `<section class="curriculum-map"><strong>${pair(['DSE 課程對應','DSE curriculum connection'])}</strong><p>${pair(c.module)} · ${pair(c.section)}</p><p class="muted">${pair(c.manual)}</p><p>${pair(c.skills)}</p><p class="muted">${pair(['依教育局手冊設計的課堂練習，並非考評局官方試題。','Teacher-designed practice based on EDB manuals, not official HKEAA questions.'])}</p></section>`;}
-function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=questionsFor(a);$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a>${(a.additionalSources||[]).map(s=>` · <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${pair(s.label)}</a>`).join('')}<div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div>${curriculumHTML(a)}<section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(promptsOnly(a)?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成兩道選擇題及短答／討論題後提交，才可查看答案解說及參考思路。','Complete both MCQs and the written response, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}><span class="option-letter">${String.fromCharCode(65+j)}.</span>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair(writtenTitleFor(a))}</h3><label for="discussion">${pair(a.q)}</label><textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${MIN_DISCUSSION_CHARS} 個非空白字元，最多 8,000 字元。`,`At least ${MIN_DISCUSSION_CHARS} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
+function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;current=a;const qs=questionsFor(a);$('#articleBody').innerHTML=`<div class="tag">${a.week} · ${esc(a.publisher)} · ${a.date}</div><h2 class="dialog-title">${pair(a.title)}</h2><div class="section-title">${pair(['新聞事實','News facts'])}</div><p>${pair(a.news)}</p><a href="${esc(a.source)}" target="_blank" rel="noopener noreferrer">${pair(['查看原始來源 ↗','Read original source ↗'])}</a>${(a.additionalSources||[]).map(s=>` · <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${pair(s.label)}</a>`).join('')}<div class="dialog-grid"><div><div class="section-title">${pair(['教學分析','Teaching analysis'])}</div><p>${pair(a.analysis)}</p></div><div><div class="section-title">${pair(['課程連結','Course connections'])}</div><p>${pair(a.concept)}</p></div></div>${curriculumHTML(a)}<section class="panel"><h3>${pair(['你的學習紀錄','Your learning record'])}</h3>${identityHTML('case')}<p class="muted">${pair(a.responseKind==='department-discovery'?['先選兩道 MC，再用三個短點寫下你的初步猜測及理由。提交給老師後只顯示思考方向，課堂再討論。','Choose both MC responses, then write three short points with your first guess and reasons. Submit to your teacher; only thinking prompts unlock before the class discussion.']:promptsOnly(a)?['完成兩道選擇題及討論題後提交，只解鎖思考方向，不提供答案或評分。','Complete both MCQs and the discussion, then submit to unlock thinking prompts only. No answer key or grading.']:['完成兩道選擇題及短答／討論題後提交，才可查看答案解說及參考思路。','Complete both MCQs and the written response, then submit to view the explanation and suggested points.'])}</p></section>${qs.map((q,i)=>{const value=state.quiz[a.id+':'+i]?.value;return `<section class="panel"><h3>${pair([`選擇題 ${i+1}`,`MC question ${i+1}`])}</h3><p>${pair(q.q)}</p><fieldset style="border:0;padding:0"><legend>${pair(['選出最有理據的一項','Choose the best-supported option'])}</legend>${q.options.map((o,j)=>`<label class="choice"><input type="radio" name="mc-${i}" data-question="${i}" value="${j}" ${value===j?'checked':''}><span class="option-letter">${String.fromCharCode(65+j)}.</span>${pair(o)}</label>`).join('')}</fieldset></section>`;}).join('')}<section class="panel"><h3>${pair(writtenTitleFor(a))}</h3><label for="discussion">${pair(a.q)}</label>${a.responseFrame?`<div class="response-frame"><strong>${pair(['句式框架','Sentence frame'])}</strong><p style="white-space:pre-line">${pair(a.responseFrame)}</p></div>`:''}<textarea id="discussion" maxlength="8000" placeholder="${esc(uiText(a.responsePlaceholder||['你的立場與理由','Your position and reasons']))}">${esc(state.answers[a.id]||'')}</textarea><p class="muted">${pair([`至少 ${minCharsFor(a)} 個非空白字元，最多 8,000 字元。`,`At least ${minCharsFor(a)} non-space characters; up to 8,000 characters.`])}</p>${submissionBox(a.id)}</section><button id="markRead" class="secondary">${pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read'])}</button>`;
 bindIdentity($('#articleBody'));$('#articleBody').querySelectorAll('[data-question]').forEach(el=>el.onchange=()=>{const key=a.id+':'+el.dataset.question;state.quiz[key]={value:Number(el.value),checked:false};save();stats();refreshGate(a.id);});$('#discussion').oninput=e=>{state.answers[a.id]=e.target.value;save();stats();refreshGate(a.id);};$('#markRead').onclick=()=>{state.read[a.id]=!state.read[a.id];save();render();$('#markRead').innerHTML=pair(state.read[a.id]?['✓ 已閱讀（點擊取消）','✓ Read (click to undo)']:['標記為已閱讀','Mark as read']);};$('#articleBody').querySelector('[data-submit]').onclick=()=>submitAssignment(a.id);refreshGate(a.id);if(!$('#articleDialog').open)$('#articleDialog').showModal();}
 function exercise(){const i=Number($('#exercise').value),id='calc-'+i;$('#exerciseQ').innerHTML=pair(exercises[i].q);$('#exerciseAnswer').value=state.calc[i]?.value??'';$('#exerciseSubmission').innerHTML=submissionBox(id);$('#exerciseSubmission').querySelector('[data-submit]').onclick=()=>submitAssignment(id);refreshGate(id);}
-function validatePayload(p){if(!p.student.name||!p.student.className)return ['請填寫姓名及班別。','Enter your name and class.'];if(p.assignmentId.startsWith('calc-')){const input=$('#exerciseAnswer');if(input.value===''||!input.checkValidity())return ['請輸入有效的數值答案。','Enter a valid numerical answer.'];}else{if(p.selections.some(x=>!Number.isInteger(x)))return ['請完成所有選擇題。','Answer every MC question.'];if(p.answer.replace(/\s/g,'').length<MIN_DISCUSSION_CHARS)return [`討論回應至少 ${MIN_DISCUSSION_CHARS} 個非空白字元。`,`Your discussion needs at least ${MIN_DISCUSSION_CHARS} non-space characters.`];}return null;}
+function validatePayload(p){if(!p.student.name||!p.student.className)return ['請填寫姓名及班別。','Enter your name and class.'];if(p.assignmentId.startsWith('calc-')){const input=$('#exerciseAnswer');if(input.value===''||!input.checkValidity())return ['請輸入有效的數值答案。','Enter a valid numerical answer.'];}else{if(p.selections.some(x=>!Number.isInteger(x)))return ['請完成所有選擇題。','Answer every MC question.'];const minimum=minCharsFor(articles.find(a=>a.id===p.assignmentId));if(p.answer.replace(/\s/g,'').length<minimum)return [`回應至少 ${minimum} 個非空白字元；短點作答亦可。`,`Your response needs at least ${minimum} non-space characters; short points are fine.`];}return null;}
 function newRequestId(){return crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');}
 function showSubmissionError(id,message){const el=$('#status-'+id);if(el)el.innerHTML=`<div class="feedback error">${pair(message)}</div>`;}
 function finishPending(){if(!pending)return;clearTimeout(pending.timeout);pending=null;document.querySelectorAll('[data-submit]').forEach(el=>el.disabled=!SUBMISSION_ENDPOINT);}
